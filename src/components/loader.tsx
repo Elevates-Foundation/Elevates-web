@@ -131,9 +131,9 @@ export default function Loader() {
 
                 {/* Pixel Counter */}
                 <div className="relative">
-                    <h1 className="text-[100px] md:text-[150px] font-[family-name:var(--font-pixel)] leading-none text-graphite">
+                    <div className="text-[100px] md:text-[150px] font-[family-name:var(--font-pixel)] leading-none text-graphite">
                         <span ref={counterRef}>0</span>%
-                    </h1>
+                    </div>
                     {/* Overlay Tape */}
                     <div className="loader-sticker absolute -top-4 -right-8 bg-flame/90 px-4 py-1 rotate-12 shadow-sm">
                         <span className="font-mono text-paper text-xs uppercase tracking-widest font-bold">Initializing</span>

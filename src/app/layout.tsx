@@ -26,7 +26,7 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
-  description: "ELEVATES is a student community that finds skilled but shy or introverted students, upskills them through real projects and support, and showcases their work so they don't stay invisible.",
+  description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
   keywords: [
     "ELEVATES",
     "skilled but shy students",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
-    description: "ELEVATES is a student community that finds skilled but shy or introverted students, upskills them through real projects and support, and showcases their work so they don't stay invisible.",
+    description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
     url: "https://www.elevates.live",
     siteName: "ELEVATES",
     locale: "en_US",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
-    description: "ELEVATES is a student community that finds skilled but shy or introverted students, upskills them through real projects and support, and showcases their work so they don't stay invisible.",
+    description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
     images: ["/og-image.png"],
   },
   icons: {
