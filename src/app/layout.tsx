@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Kalam, VT323 } from "next/font/google"; // Switched back to Inter
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
@@ -236,6 +237,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google Tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7J7QQSR9ZZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7J7QQSR9ZZ');
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${kalam.variable} ${vt323.variable} antialiased cursor-none`}
