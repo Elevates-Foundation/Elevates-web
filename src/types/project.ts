@@ -1,3 +1,10 @@
+export type ProjectStatus =
+  | "live"
+  | "live-unmaintained"
+  | "paused"
+  | "archived"
+  | "never-launched";
+
 export interface ProjectMetric {
   value: string;
   label: string;
@@ -14,7 +21,8 @@ export interface FlagshipProject {
   title: string;
   client: string;
   date: string;
-  type: "flagship";
+  type: "flagship" | "open-tool";
+  status: ProjectStatus;
   summary: string;
   tagline: string;
   metrics: ProjectMetric[];
@@ -33,6 +41,8 @@ export interface FlagshipProject {
   };
   numbers: ProjectMetric[];
   whatWeBuilt: string[];
+  whatActuallyRunsToday?: string;
+  whatStalled?: string;
   howItHeldUp: {
     summary: string;
     metrics: ProjectMetric[];
@@ -49,7 +59,13 @@ export interface FlagshipProject {
       url: string;
       note: string;
     };
+    attributionsList?: string[];
   };
+  datasets?: Array<{
+    name: string;
+    description: string;
+    endpoint: string;
+  }>;
 }
 
 export interface MemberShowcase {
@@ -61,5 +77,6 @@ export interface MemberShowcase {
   description: string;
   repo: string | null;
   live: string | null;
+  status?: ProjectStatus;
   thumb?: string;
 }

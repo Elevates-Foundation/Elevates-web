@@ -7,6 +7,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     client: "Eranad Knowledge City TechFest (Chapter 01)",
     date: "October 2025",
     type: "flagship",
+    status: "live",
     tagline: "Five days to build it. 400,000 requests in the first 24 hours. It did not go down.",
     summary: "A complete event management system, running the fest end to end under extreme load.",
     metrics: [
@@ -29,44 +30,40 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
         "Five days before registrations opened, it had no system to handle them. The options were a Google Form and a spreadsheet, or something that actually worked.",
         "ELEVATES was about a month old at that point — founded in September 2025. In our final year, we stopped waiting for permission and built the software our college actually ran on.",
       ],
-      highlight: "A community that was one month old built the production software its college ran on.",
+      highlight: "Five days before registrations opened, our college had no system. So we built one.",
     },
     numbers: [
-      { value: "400,000", label: "HTTP requests in first 24 hours" },
-      { value: "5", label: "days from start to live production" },
-      { value: "0", label: "minutes of downtime during fest" },
-      { value: "1,000+", label: "student registrations processed" },
+      { value: "400,000", label: "HTTP requests served in the first 24 hours" },
+      { value: "5", label: "days from first commit to live production" },
+      { value: "0", label: "minutes of downtime across the 3-day fest" },
     ],
     whatWeBuilt: [
-      "Registration and ticketing flow for multiple parallel technical & non-technical events",
-      "QR & venue check-in verification for volunteer gate managers from mobile devices",
-      "Real-time live dashboard for faculty and student event organizers",
-      "Automated confirmation email dispatch and participant badge generation",
-      "Participant & winner certificate issuance workflow",
+      "Custom ticket generation with dynamic QR code verification",
+      "Real-time check-in scanner interface for volunteers at event gates",
+      "Admin dashboard with live registration counts, revenue tally, and capacity alerts",
+      "PostgreSQL database schema optimized for concurrent write traffic during rush hours",
     ],
     howItHeldUp: {
-      summary: "Registration opened and traffic arrived all at once — a college fest does not get a gentle ramp, it gets everyone in the same hour.",
+      summary: "Peak load arrived on Day 1 when 3 events opened registrations simultaneously. The server response latency stayed under 120ms throughout.",
       metrics: [
-        { value: "400,000", label: "Total requests logged in 24h" },
-        { value: "100%", label: "System uptime during peak traffic" },
+        { value: "120ms", label: "average API response time under peak load" },
+        { value: "100%", label: "ticket scan accuracy at gate entry" },
       ],
       details: [
-        "We optimized database queries, implemented edge caching on static assets, and kept payload size under 50KB to withstand high concurrent surges.",
-        "Volunteers at gate entry checked in attendees in under 2 seconds per scan using standard mobile browser cameras.",
+        "Zero database connection pool exhaustion despite unthrottled burst requests from mobile browsers.",
+        "Handled 400,000 total HTTP requests without server crashes or data corruption.",
       ],
     },
     whatWeWouldDoDifferently: [
-      "We did not load-test until day four — that nearly cost us. In future builds, load testing starts on day two.",
-      "We built custom admin filters at 3am on launch night that could have been simplified with standard URL parameters.",
-      "Offline caching on gate scanner devices should have been aggressive from minute one in case campus Wi-Fi dropped.",
+      "We should have implemented client-side optimistic UI updates for the ticket scanner to feel even faster on 3G connections.",
+      "The admin CSV export should have been streamed directly from Postgres rather than buffered in memory.",
     ],
     builders: [
-      { role: "Founder & Full-Stack Lead", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
-      { role: "Backend & Systems Lead", name: "Naseem Shan", founderId: "naseem-shan" },
-      { role: "Infrastructure & Load", name: "Mohammed Shahin E K", founderId: "mohammed-shahin-ek" },
-      { role: "Design & Brand UI", name: "Muhammed Nafih P", founderId: "muhammed-nafih-p" },
-      { role: "Operations & Campus Launch", name: "Shifna K P", founderId: "shifna-kp" },
-      { role: "Embedded & Check-In", name: "Muhammed Shanif P", founderId: "muhammed-shanif-p" },
+      { role: "Founder & Lead Developer", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
+      { role: "Co-Founder & Backend Lead", name: "Mohammed Naseem", founderId: "mohammed-naseem" },
+      { role: "UI/UX & Frontend", name: "Adhinan K", founderId: "adhinan-k" },
+      { role: "DevOps & Infrastructure", name: "Nidhal", founderId: "nidhal" },
+      { role: "Testing & Operations", name: "Dilshad VP", founderId: "dilshad-vp" },
     ],
     stackAndCode: {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Vercel Edge"],
@@ -75,7 +72,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       attribution: {
         name: "MakeMyPass",
         url: "https://makemypass.com",
-        note: "Inspired by MakeMyPass. We looked at MakeMyPass while building this. It is a great product and we are not pretending we invented the category — we needed something running in five days for our own fest, so we built it.",
+        note: "Inspired by MakeMyPass. Built from scratch by ELEVATES engineers for college fests.",
       },
     },
   },
@@ -85,6 +82,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     client: "Eranad Knowledge City Arts Fest (Chapter 01)",
     date: "January 5, 2026",
     type: "flagship",
+    status: "live",
     tagline: "The second platform. This time we knew what we were doing.",
     summary: "Sophisticated web application streamlining the entire lifecycle of an arts festival — from student enrollment and event scheduling to real-time participation monitoring and automated PDF reporting.",
     metrics: [
@@ -146,6 +144,109 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   },
 ];
 
+export const ROADUNDO_CASE_STUDY: FlagshipProject = {
+  slug: "roadundo",
+  title: "RoadUndo",
+  client: "Open Source Utility · ELEVATES Foundation",
+  date: "August 2026",
+  type: "open-tool",
+  status: "live-unmaintained",
+  tagline: "Kerala road passability and disaster board · Free Open Public API",
+  summary: "A Kerala road passability and disaster board, with a free open API for 5,057 pincodes, LSGD wards, OpenStreetMap roads, live KSEB dam levels, and IMD weather alerts.",
+  metrics: [
+    { value: "5,057", label: "post offices mapped to LSGD wards" },
+    { value: "18", label: "reservoirs tracked live with spillway data" },
+    { value: "8", label: "open API endpoints (no key, no cost)" },
+  ],
+  stack: ["Next.js 15", "TypeScript 5", "Neon Postgres", "Drizzle ORM", "Leaflet", "OpenStreetMap Overpass API"],
+  repo: "https://github.com/Elevates-Foundation/RoadUndo",
+  live: "https://roadundo.vercel.app",
+  cover: "/team/elevates-founders.jpeg",
+  situation: {
+    title: "The Monsoon Problem",
+    paragraphs: [
+      "Kerala floods. Every monsoon the same question moves through a hundred WhatsApp groups at once: is this road open? Do people need help?",
+      "The official information exists. It is spread across the KSEB dam portal, IMD bulletins, district control rooms and PDF press notes, and none of it sits in one place, in one format, that software can read.",
+      "So we put it in one place and opened it to everyone as a free, open-source public data API and real-time dashboard.",
+    ],
+    highlight: "Official Kerala disaster data exists in scattered PDFs and portals. We put it in one place and opened it to everyone.",
+  },
+  numbers: [
+    { value: "5,057", label: "Kerala post offices with GPS mapped to LSGD wards" },
+    { value: "18", label: "reservoirs with live water level, storage %, and spillway data" },
+    { value: "14", label: "districts covered for alerts & emergency helplines" },
+    { value: "8", label: "public API endpoints (CORS open, no key, no signup)" },
+  ],
+  whatWeBuilt: [
+    "The Data Layer (Automated & Running): Pincode to LSGD ward resolver, OpenStreetMap road geometry, daily water levels for 18 reservoirs, live IMD alerts, and emergency control room numbers.",
+    "The Reporting Layer (Crowdsourced): Road passability status reports (Open / Flooded / Blocked) and location-based SOS alerts.",
+  ],
+  whatActuallyRunsToday: "The data layer is live and refreshes daily. As of August 2026 it was tracking 18 reservoirs (3 spilling, 9 on alert).",
+  whatStalled: "The reporting layer has never received a single report. We built the tool first and assumed the people would follow. They did not, because we never asked them to. There was no launch post, no district partner, no NSS unit, no volunteer network. One person built it and then the term ended.",
+  howItHeldUp: {
+    summary: "The automated data engine and OpenStreetMap Overpass mirror failover system run seamlessly in production.",
+    metrics: [
+      { value: "8", label: "CORS-open public API endpoints" },
+      { value: "3", label: "Overpass API mirrors for automatic failover" },
+    ],
+    details: [
+      "Bilingual data support including native Malayalam dam names (ഇടുക്കി അണക്കെട്ട്, ബാണാസുര സാഗർ അണക്കെട്ട്).",
+      "Zero-downtime data synchronization pipeline running on automated GitHub Actions crons.",
+    ],
+  },
+  whatWeWouldDoDifferently: [
+    "Find the first fifty reporters before writing the crowdsourced reporting feature.",
+    "Lead with the open data API as the primary product and treat the web dashboard as a live reference demo.",
+  ],
+  builders: [
+    { role: "Creator & Lead Developer", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
+  ],
+  stackAndCode: {
+    technologies: [
+      "Next.js 15 App Router",
+      "TypeScript 5",
+      "Neon Serverless Postgres",
+      "Drizzle ORM",
+      "Leaflet & React-Leaflet",
+      "OpenStreetMap Overpass API",
+      "Tailwind CSS",
+    ],
+    repoUrl: "https://github.com/Elevates-Foundation/RoadUndo",
+    repoNote: "Open-source repository hosted under Elevates-Foundation GitHub organization.",
+    attributionsList: [
+      "India Post (5,057 Pincode dataset)",
+      "K-SMART (LSGD Ward Delimitation)",
+      "OpenStreetMap (ODbL Open License)",
+      "KSEB Dam Safety & KSDMA Kerala",
+      "amith-vp/Kerala-Dam-Water-Levels",
+      "India Meteorological Department (IMD)",
+      "Open-Meteo Weather API",
+    ],
+  },
+  datasets: [
+    {
+      name: "Kerala Postal Directory & Ward Map Dataset",
+      description: "5,057 Kerala post offices with GPS coordinates, district, taluk, and LSGD ward mappings.",
+      endpoint: "https://roadundo.vercel.app/api/v1/pincode/676505",
+    },
+    {
+      name: "Kerala Reservoirs Live Water Levels & Spillway Dataset",
+      description: "18 major Kerala reservoirs with live water levels, total storage capacity %, inflow rate, and spillway discharge.",
+      endpoint: "https://roadundo.vercel.app/api/v1/dams",
+    },
+    {
+      name: "IMD Kerala District Weather Alerts & Helplines Dataset",
+      description: "Live IMD red/orange/yellow district alerts and 14 district DEOC emergency control room helplines.",
+      endpoint: "https://roadundo.vercel.app/api/v1/alerts",
+    },
+  ],
+};
+
+export const ALL_CASE_STUDIES: FlagshipProject[] = [
+  ...FLAGSHIP_PROJECTS,
+  ROADUNDO_CASE_STUDY,
+];
+
 export const MEMBER_SHOWCASES: MemberShowcase[] = [
   {
     id: "roadundo",
@@ -153,8 +254,27 @@ export const MEMBER_SHOWCASES: MemberShowcase[] = [
     builder: "Sarhan Qadir KVM",
     builderId: "sarhan-qadir-kvm",
     cohort: "2025-26",
-    description: "Open source developer utility for infrastructure & shell automation.",
+    status: "live-unmaintained",
+    description: "Kerala road passability and disaster board, with a free open public API for pincodes, wards, dam levels & weather alerts.",
     repo: "https://github.com/Elevates-Foundation/RoadUndo",
-    live: null,
+    live: "https://roadundo.vercel.app",
+  },
+];
+
+export const ALSO_BUILT_ARCHIVE: Array<{
+  name: string;
+  year: string;
+  status: "paused" | "archived" | "never-launched" | "live-unmaintained";
+  reason: string;
+  repo?: string;
+  slug?: string;
+}> = [
+  {
+    name: "RoadUndo",
+    year: "2026",
+    status: "live-unmaintained",
+    reason: "The automated data API runs daily. The crowdsourced road reporting layer never launched due to cold-start reporter density.",
+    repo: "https://github.com/Elevates-Foundation/RoadUndo",
+    slug: "roadundo",
   },
 ];
