@@ -120,7 +120,7 @@ export default function Navbar() {
                     {/* Explore / Index Button */}
                     <button
                         onClick={() => setMobileMenuOpen(true)}
-                        className={`group relative transition-all duration-300 ${
+                        className={`group relative cursor-pointer transition-all duration-300 ${
                             scrolled ? "hover:rotate-6 opacity-80 hover:opacity-100" : "hover:scale-105"
                         }`}
                     >
@@ -159,7 +159,7 @@ export default function Navbar() {
                 /* Inner Pages: 3D Neo-brutalist Floating Header Bar */
                 <>
                     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl hidden md:flex items-center justify-between bg-paper/95 backdrop-blur-md px-6 py-2.5 border-4 border-graphite shadow-[8px_8px_0px_0px_rgba(45,45,52,1)] rounded-full transition-all">
-                        <Link href="/" className="font-black text-xl uppercase tracking-tighter text-graphite hover:text-flame transition-colors flex items-center gap-2">
+                        <Link href="/" className="font-black text-xl uppercase tracking-tighter text-graphite hover:text-flame transition-colors flex items-center gap-2 cursor-pointer">
                             <span className="bg-flame text-paper px-3 py-1 rounded-sm font-mono text-xs rotate-[-2deg] border border-graphite shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                                 ELEVATES
                             </span>
@@ -167,19 +167,19 @@ export default function Navbar() {
                         </Link>
 
                         <nav className="flex items-center gap-5 font-mono text-xs uppercase font-bold text-graphite">
-                            <Link href="/peer-labs" className={`hover:text-flame transition-colors ${pathname.startsWith('/peer-labs') ? 'text-flame underline font-extrabold' : ''}`}>
+                            <Link href="/peer-labs" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/peer-labs') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Peer Labs
                             </Link>
-                            <Link href="/events" className={`hover:text-flame transition-colors ${pathname.startsWith('/events') ? 'text-flame underline font-extrabold' : ''}`}>
+                            <Link href="/events" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/events') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Events
                             </Link>
-                            <Link href="/clusters" className={`hover:text-flame transition-colors ${pathname.startsWith('/clusters') ? 'text-flame underline font-extrabold' : ''}`}>
+                            <Link href="/clusters" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/clusters') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Clusters
                             </Link>
-                            <Link href="/chapters" className={`hover:text-flame transition-colors ${pathname.startsWith('/chapters') ? 'text-flame underline font-extrabold' : ''}`}>
+                            <Link href="/chapters" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/chapters') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Chapters
                             </Link>
-                            <Link href="/about" className={`hover:text-flame transition-colors ${pathname.startsWith('/about') ? 'text-flame underline font-extrabold' : ''}`}>
+                            <Link href="/about" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/about') ? 'text-flame underline font-extrabold' : ''}`}>
                                 About
                             </Link>
                         </nav>
@@ -188,7 +188,7 @@ export default function Navbar() {
                         <div className="flex items-center gap-2.5">
                             <button
                                 onClick={() => setSearchOpen(true)}
-                                className="bg-paper text-graphite font-mono text-xs font-bold px-3 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-1.5"
+                                className="bg-paper text-graphite font-mono text-xs font-bold px-3 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-1.5 cursor-pointer"
                             >
                                 <span>🔍</span>
                                 <span className="hidden lg:inline">SEARCH</span>
@@ -197,7 +197,7 @@ export default function Navbar() {
 
                             <button
                                 onClick={() => setMobileMenuOpen(true)}
-                                className="bg-flame text-paper font-mono text-xs font-bold px-3.5 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-1.5 uppercase"
+                                className="bg-flame text-paper font-mono text-xs font-bold px-3.5 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-1.5 uppercase cursor-pointer"
                             >
                                 <span>INDEX</span>
                                 <Doodle type="scribble" color="#fff" className="w-3.5 h-3.5" />
@@ -209,14 +209,14 @@ export default function Navbar() {
                     <div className="fixed top-4 right-5 z-50 md:hidden flex items-center gap-2">
                         <button
                             onClick={() => setSearchOpen(true)}
-                            className="bg-paper text-graphite font-mono font-bold text-xs p-2 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]"
+                            className="bg-paper text-graphite font-mono font-bold text-xs p-2 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] cursor-pointer"
                         >
                             🔍
                         </button>
 
                         <button
                             onClick={() => setMobileMenuOpen(true)}
-                            className="bg-flame text-paper font-mono font-bold text-xs px-4 py-2 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] flex items-center gap-2"
+                            className="bg-flame text-paper font-mono font-bold text-xs px-4 py-2 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] flex items-center gap-2 cursor-pointer"
                         >
                             <span>MENU</span>
                             <Doodle type="arrow" color="#fff" className="w-3 h-3 rotate-[-45deg]" />
@@ -236,10 +236,10 @@ export default function Navbar() {
                 {/* Close Button */}
                 <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="absolute top-6 right-6 md:top-8 md:right-8 z-[10000] group flex items-center gap-2 hover:scale-105 transition-transform"
+                    className="absolute top-6 right-6 md:top-8 md:right-8 z-[10000] group flex items-center gap-2 hover:scale-105 transition-transform cursor-pointer"
                 >
                     <span className="font-mono font-bold text-graphite text-xs tracking-widest opacity-60 group-hover:opacity-100">CLOSE</span>
-                    <div className="relative bg-flame text-paper font-mono font-bold text-xs px-3 py-1 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] flex items-center gap-1.5">
+                    <div className="relative bg-flame text-paper font-mono font-bold text-xs px-3 py-1 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] flex items-center gap-1.5 cursor-pointer">
                         <span>✕</span>
                     </div>
                 </button>
@@ -261,7 +261,7 @@ export default function Navbar() {
                                 setMobileMenuOpen(false);
                                 setSearchOpen(true);
                             }}
-                            className="bg-paper text-graphite font-mono font-bold text-xs px-3 py-1 rounded border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:scale-105 transition-transform flex items-center gap-1.5"
+                            className="bg-paper text-graphite font-mono font-bold text-xs px-3 py-1 rounded border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:scale-105 transition-transform flex items-center gap-1.5 cursor-pointer"
                         >
                             <span>🔍 SEARCH</span>
                             <span className="bg-graphite/10 text-olive px-1.5 py-0.5 rounded text-[10px]">⌘K</span>
@@ -277,7 +277,7 @@ export default function Navbar() {
                                     href={item.target}
                                     onClick={() => setMobileMenuOpen(false)}
                                     onMouseEnter={() => setActiveHoverIndex(idx)}
-                                    className={`group flex items-center justify-between p-3 md:p-3.5 rounded-sm border-3 border-graphite transition-all duration-300 ${
+                                    className={`group flex items-center justify-between p-3 md:p-3.5 rounded-sm border-3 border-graphite transition-all duration-300 cursor-pointer ${
                                         activeHoverIndex === idx
                                             ? "bg-flame text-paper shadow-[6px_6px_0px_0px_rgba(45,45,52,1)] -translate-y-1"
                                             : "bg-paper text-graphite hover:border-flame shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]"
@@ -334,7 +334,7 @@ export default function Navbar() {
                                 <Link
                                     href={activeItem.target}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="w-full inline-flex items-center justify-center gap-2 bg-flame text-paper font-mono font-bold px-5 py-2.5 rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase text-xs"
+                                    className="w-full inline-flex items-center justify-center gap-2 bg-flame text-paper font-mono font-bold px-5 py-2.5 rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase text-xs cursor-pointer"
                                 >
                                     <span>EXPLORE {activeItem.name.toUpperCase()}</span>
                                     <span>↗</span>
@@ -358,7 +358,7 @@ export default function Navbar() {
                         <Link
                             href="/team"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="bg-flame text-paper font-mono font-bold text-xs px-6 py-2.5 rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+                            className="bg-flame text-paper font-mono font-bold text-xs px-6 py-2.5 rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase cursor-pointer"
                         >
                             MEET THE TEAM ↗
                         </Link>
