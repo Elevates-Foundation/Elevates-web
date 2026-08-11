@@ -66,6 +66,10 @@ export interface FlagshipProject {
     description: string;
     endpoint: string;
   }>;
+  gallery?: Array<{
+    src: string;
+    caption: string;
+  }>;
 }
 
 export interface MemberShowcase {

@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Doodle from "@/components/doodle";
 import ProjectStatusChip from "@/components/status-chip";
 import { ALL_CASE_STUDIES } from "@/data/projects";
@@ -237,6 +238,44 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      {/* ─── UI SCREENSHOT GALLERY (IF AVAILABLE) ─── */}
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="mb-14" aria-labelledby="gallery-heading">
+          <div className="flex items-center justify-between mb-6 border-b-2 border-graphite/20 pb-3">
+            <h2 id="gallery-heading" className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite">
+              PRODUCTION SYSTEM INTERFACE &amp; DASHBOARDS
+            </h2>
+            <span className="font-mono text-xs font-bold text-paper bg-flame px-3 py-1 rounded-sm border border-graphite">
+              {project.gallery.length} REAL SCREENSHOTS
+            </span>
+          </div>
+
+          <div className="space-y-8">
+            {project.gallery.map((img, idx) => (
+              <figure
+                key={idx}
+                className="bg-paper border-4 border-graphite rounded-sm p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(45,45,52,1)]"
+              >
+                <div className="relative w-full aspect-[16/10] bg-graphite rounded-sm overflow-hidden border-2 border-graphite mb-3">
+                  <Image
+                    src={img.src}
+                    alt={img.caption}
+                    fill
+                    className="object-contain bg-graphite/95"
+                    sizes="(max-width: 1200px) 100vw, 1000px"
+                    priority={idx === 0}
+                  />
+                </div>
+                <figcaption className="font-mono text-xs md:text-sm text-graphite/85 font-bold flex items-start gap-2 leading-relaxed">
+                  <span className="text-flame shrink-0">📸 [0{idx + 1}]</span>
+                  <span>{img.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ─── SECTION 4: HOW IT HELD UP / WHAT ACTUALLY RUNS ─── */}
       <section className="mb-14 bg-paper border-3 border-graphite rounded-sm p-8 shadow-[6px_6px_0px_0px_rgba(45,45,52,1)]">
