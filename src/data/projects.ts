@@ -61,9 +61,10 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     builders: [
       { role: "Founder & Lead Developer", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
       { role: "Co-Founder & Backend Lead", name: "Mohammed Naseem", founderId: "mohammed-naseem" },
-      { role: "UI/UX & Frontend", name: "Adhinan K", founderId: "adhinan-k" },
-      { role: "DevOps & Infrastructure", name: "Nidhal", founderId: "nidhal" },
-      { role: "Testing & Operations", name: "Dilshad VP", founderId: "dilshad-vp" },
+      { role: "Development & Full-Stack", name: "Mashood M", founderId: "mashood-m" },
+      { role: "Development & UI", name: "Anil Das P", founderId: "anil-das-p" },
+      { role: "Development & Operations", name: "Mohammed Shahin EK", founderId: "mohammed-shahin-ek" },
+      { role: "Development & Testing", name: "Muhammed Shanif P", founderId: "muhammed-shanif-p" },
     ],
     stackAndCode: {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Vercel Edge"],
@@ -75,6 +76,36 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
         note: "Inspired by MakeMyPass. Built from scratch by ELEVATES engineers for college fests.",
       },
     },
+    gallery: [
+      {
+        src: "/projects/vibranium/digital-entry-pass.png",
+        caption: "Digital Entry Pass — Unique QR verification pass for participants (Participant ID: VIBFC70D711), powered by ELEVATES for gate entry.",
+      },
+      {
+        src: "/projects/vibranium/organizer-dashboard.png",
+        caption: "Organizer Console — Real-time overview monitoring 42 total events, 901 registrations, 468 participants, and live check-in rates.",
+      },
+      {
+        src: "/projects/vibranium/events-catalog.png",
+        caption: "Events & Competitions Catalog — Live department filters (CS, Electronics, Mechanical, Civil, Safety & Fire, S&H) with real-time seat capacity bars.",
+      },
+      {
+        src: "/projects/vibranium/staff-dashboard.png",
+        caption: "Department Staff Dashboard — Managing Computer Science events (286 participants, 15 events, 20 assigned coordinators, 37 volunteers).",
+      },
+      {
+        src: "/projects/vibranium/volunteer-scanner.png",
+        caption: "Volunteer Gate Check-in Console — Live assignment tracking for volunteer gate stewards at event entry points.",
+      },
+      {
+        src: "/projects/vibranium/roles-and-access.png",
+        caption: "Roles & Access Control — Admin management interface to invite organizers, staff, coordinators, and assign system privileges.",
+      },
+      {
+        src: "/projects/vibranium/coordinator-analytics.png",
+        caption: "Coordinator Analytics Dashboard — Real-time registration approval monitoring and participation volume tracking.",
+      },
+    ],
   },
   {
     slug: "aaroh-arts-platform",
@@ -131,16 +162,38 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       "Batch PDF roster generation for 50+ events should be offloaded to a background web worker.",
     ],
     builders: [
-      { role: "Founder & Full-Stack Lead", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
-      { role: "Design & UI Lead", name: "Muhammed Nafih P", founderId: "muhammed-nafih-p" },
-      { role: "Development", name: "Anil Das P", founderId: "anil-das-p" },
-      { role: "Events & Operations", name: "Sona Varghese", founderId: "sona-varghese" },
+      { role: "Main Dev Overall", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm" },
+      { role: "Development & Operations", name: "Mohammed Shahin EK", founderId: "mohammed-shahin-ek" },
+      { role: "Development & Operations", name: "Muhammed Shanif P", founderId: "muhammed-shanif-p" },
+      { role: "Development & Full-Stack", name: "Mashood M", founderId: "mashood-m" },
     ],
     stackAndCode: {
       technologies: ["React 18", "Vite", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase (DB & Auth)", "TanStack Query", "Zod", "jsPDF", "Recharts"],
       repoUrl: "https://github.com/elevates-club/aaroh",
       repoNote: "Open-source repository specialized for the Aaroh Arts Festival under ELEVATES Club.",
     },
+    gallery: [
+      {
+        src: "/projects/aaroh/dashboard-overview.png",
+        caption: "Admin Dashboard — System Overview, Live Activity Feed, and Participation Density breakdown across First to Fourth Year batches.",
+      },
+      {
+        src: "/projects/aaroh/user-management.png",
+        caption: "Role-Based Access Control — Managing Administrators, Year Coordinators, Event Managers, and Student roles with instant role switching.",
+      },
+      {
+        src: "/projects/aaroh/system-settings.png",
+        caption: "System Settings Console — Dynamic On-Stage (Max 5) and Off-Stage (Max 4) event registration limit controls and Auto-Approval toggles.",
+      },
+      {
+        src: "/projects/aaroh/activity-logs.png",
+        caption: "System Activity Log (Dark Mode) — Real-time security audit trail tracking user logins, event updates, and IP addresses with CSV export.",
+      },
+      {
+        src: "/projects/aaroh/coordinator-dashboard.png",
+        caption: "Year Coordinator Dashboard — Live event capacity reminders (Pencil Drawing 6/5, Cartoon 5/5, Quiz 5/5) and year registration stats.",
+      },
+    ],
   },
 ];
 
