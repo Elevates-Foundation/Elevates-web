@@ -105,7 +105,7 @@ export const FOUNDERS: Founder[] = [
     tag: "Lab Bench Resident",
     role: "Founder",
     proof: "Hardware · Lab systems & electronics",
-    // LinkedIn missing — do not ship a dead link
+    linkedin: "https://www.linkedin.com/in/mohammed-mijvad-1b8a3b376/",
     cohort: "2025-26",
   },
   {
@@ -141,7 +141,7 @@ export const FOUNDERS: Founder[] = [
     tag: "Quiet Builder",
     role: "Founder",
     proof: "Development · Builds first, talks later",
-    // LinkedIn missing — do not ship a dead link
+    linkedin: "https://www.linkedin.com/in/sinan-nooren-9329372b6/",
     cohort: "2025-26",
   },
   {
