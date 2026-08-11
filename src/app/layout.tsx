@@ -25,18 +25,19 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
-  description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
+  title: "ELEVATES — Student Tech Community in Kerala for Skilled, Quiet Builders",
+  description: "ELEVATES is a student-run tech community in Kerala that finds skilled but overlooked students, helps them build real projects, and makes sure the work gets seen.",
   keywords: [
     "ELEVATES",
-    "skilled but shy students",
+    "student tech community kerala",
+    "tech community for college students kerala",
+    "student community manjeri",
+    "student community malappuram",
+    "project based learning community kerala",
     "introverted tech students",
-    "upskilling students",
-    "showcasing student work",
-    "student tech community",
-    "making quiet talent visible",
-    "student projects",
-    "Kerala student tech community",
+    "skilled but shy students",
+    "upskilling students kerala",
+    "student projects kerala",
     "learn build grow"
   ],
   authors: [{ name: "ELEVATES Community" }],
