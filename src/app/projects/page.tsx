@@ -322,13 +322,13 @@ export default function ProjectsPage() {
               Want your project here?
             </h3>
             <p className="font-mono text-xs md:text-sm text-paper/80 leading-relaxed">
-              Join a Peer Lab, ship a platform, and get your work listed here with full name credit and verifiable proof.
+              Join ELEVATES, ship a platform, and get your work listed here with full name credit and verifiable proof.
             </p>
             <Link
-              href="/peer-labs"
+              href="/about"
               className="inline-flex items-center gap-2 bg-paper text-graphite font-mono font-bold text-xs px-6 py-3 rounded-sm border-2 border-paper/30 hover:bg-flame hover:text-paper transition-all uppercase"
             >
-              <span>EXPLORE PEER LABS</span>
+              <span>JOIN ELEVATES</span>
               <span>↗</span>
             </Link>
           </div>
