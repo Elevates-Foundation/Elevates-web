@@ -227,7 +227,7 @@ export default function Navbar() {
 
             {/* Mobile / Desktop Clean Full-Screen Overlay Menu */}
             <div
-                className={`fixed inset-0 z-[60] bg-paper transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] overflow-y-auto ${
+                className={`fixed inset-0 z-[9999] bg-paper transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] overflow-y-auto ${
                     mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
@@ -236,7 +236,7 @@ export default function Navbar() {
                 {/* Close Button */}
                 <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="absolute top-6 right-6 md:top-8 md:right-8 z-[70] group flex items-center gap-2 hover:scale-105 transition-transform"
+                    className="absolute top-6 right-6 md:top-8 md:right-8 z-[10000] group flex items-center gap-2 hover:scale-105 transition-transform"
                 >
                     <span className="font-mono font-bold text-graphite text-xs tracking-widest opacity-60 group-hover:opacity-100">CLOSE</span>
                     <div className="relative bg-flame text-paper font-mono font-bold text-xs px-3 py-1 rounded-full border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] flex items-center gap-1.5">

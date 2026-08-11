@@ -48,6 +48,7 @@ export default function Hero() {
                     inertia: true,
                     bounds: containerRef.current,
                     edgeResistance: 0.65,
+                    zIndexBoost: false,
                 });
 
                 // Float animation

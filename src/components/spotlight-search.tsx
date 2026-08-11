@@ -184,7 +184,7 @@ export default function SpotlightSearch({ isOpen, onClose }: SpotlightSearchProp
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-20 md:pt-28 px-4 bg-graphite/60 backdrop-blur-md transition-opacity">
+    <div className="fixed inset-0 z-[10001] flex items-start justify-center pt-20 md:pt-28 px-4 bg-graphite/60 backdrop-blur-md transition-opacity">
       {/* Backdrop Click */}
       <div className="absolute inset-0" onClick={onClose} />
 
