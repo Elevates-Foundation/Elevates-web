@@ -215,18 +215,37 @@ export default async function ChapterDetailPage({ params }: Props) {
           PROJECTS SHIPPED AT THIS CAMPUS
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {chapter.projects.map((proj, i) => (
-            <div key={i} className="bg-paper p-5 border-2 border-graphite rounded-sm shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
-              <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-wider block mb-1">
-                PRODUCTION SHIPPED
-              </span>
-              <h3 className="font-mono font-bold text-base text-graphite mb-2">{proj.title}</h3>
-              <p className="font-mono text-xs text-olive mb-4 leading-relaxed">{proj.description}</p>
-              <span className="font-mono text-xs font-bold text-graphite block">
-                Builder: {proj.builder}
-              </span>
-            </div>
-          ))}
+          {chapter.projects.map((proj, i) => {
+            const projectUrl = proj.url || (proj.slug ? `/projects/${proj.slug}` : "/projects");
+            return (
+              <Link
+                key={i}
+                href={projectUrl}
+                className="group bg-paper p-5 border-2 border-graphite rounded-sm shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:border-flame hover:shadow-[6px_6px_0px_0px_rgba(242,100,48,1)] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-wider block mb-1">
+                    PRODUCTION SHIPPED
+                  </span>
+                  <h3 className="font-mono font-bold text-base md:text-lg text-graphite group-hover:text-flame transition-colors mb-2">
+                    {proj.title}
+                  </h3>
+                  <p className="font-mono text-xs text-olive mb-4 leading-relaxed">
+                    {proj.description}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between border-t border-graphite/20 pt-3 mt-2">
+                  <span className="font-mono text-xs font-bold text-graphite">
+                    Builder: {proj.builder}
+                  </span>
+                  <span className="font-mono font-bold text-xs text-flame group-hover:translate-x-0.5 transition-transform">
+                    Read Case Study →
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

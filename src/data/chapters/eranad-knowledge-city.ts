@@ -46,11 +46,15 @@ export const eranadKnowledgeCityChapter: Chapter = {
   ],
   projects: [
     {
+      slug: "vibranium-event-platform",
+      url: "/projects/vibranium-event-platform",
       title: "Vibranium Event Platform",
       description: "Event management & ticketing engine handling 400,000+ requests in 24 hours.",
       builder: "ELEVATES EKC Dev Team",
     },
     {
+      slug: "aaroh-arts-platform",
+      url: "/projects/aaroh-arts-platform",
       title: "Aaroh Arts Platform",
       description: "Real-time registration and score portal for the campus arts festival.",
       builder: "ELEVATES EKC Dev Team",

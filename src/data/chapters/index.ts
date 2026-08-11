@@ -16,6 +16,7 @@ export interface ChapterEvent {
 }
 
 export interface ChapterProject {
+  slug?: string;
   title: string;
   description: string;
   url?: string;
