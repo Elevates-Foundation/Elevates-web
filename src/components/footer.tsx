@@ -62,7 +62,7 @@ export default function Footer() {
 
                 <div className="mt-12 md:mt-16 relative">
                     <p className="font-hand text-xs md:text-sm text-paper/50">
-                        &copy; {new Date().getFullYear()} ELEVATES Community // Kerala, India.
+                        &copy; {new Date().getFullYear()} ELEVATES Foundation // Kerala, India.
                     </p>
                     <Doodle type="brain" color="#f26430" className="hidden md:block w-20 h-20 absolute -right-28 -top-8 rotate-12 opacity-80" />
                 </div>
