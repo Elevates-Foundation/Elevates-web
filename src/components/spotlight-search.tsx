@@ -5,12 +5,13 @@ import { useRouter } from "next/navigation";
 import { EVENTS } from "@/data/events";
 import { PEER_LABS } from "@/data/peer-labs";
 import { CHAPTERS } from "@/data/chapters";
+import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES } from "@/data/projects";
 
-interface SearchItem {
+export interface SearchItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Peer Labs" | "Events" | "Chapters" | "Section" | "Team";
+  category: "Peer Labs" | "Events" | "Chapters" | "Section" | "Team" | "Projects";
   url: string;
   tags: string[];
 }
@@ -18,6 +19,14 @@ interface SearchItem {
 // Build full comprehensive index dynamically from datasets + site sections
 const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   // Site Main Pages & Sections
+  {
+    id: "sec-projects-all",
+    title: "Projects & Production Proof",
+    subtitle: "Built & Shipped — 400k requests handled, zero downtime, real fest software",
+    category: "Projects",
+    url: "/projects",
+    tags: ["projects", "vibranium", "aaroh", "proof", "showcase", "400k", "makemypass"],
+  },
   {
     id: "sec-team",
     title: "Meet the Team (17 Founders)",
@@ -66,6 +75,26 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
     url: "/events",
     tags: ["events", "workshops", "makeathon", "meetup", "hackathon"],
   },
+
+  // Dynamic Flagship Projects
+  ...FLAGSHIP_PROJECTS.map((proj) => ({
+    id: `proj-${proj.slug}`,
+    title: proj.title,
+    subtitle: `${proj.client} · ${proj.tagline}`,
+    category: "Projects" as const,
+    url: `/projects/${proj.slug}`,
+    tags: [proj.title, proj.client, "flagship", "case study", ...proj.stack],
+  })),
+
+  // Dynamic Member Showcase
+  ...MEMBER_SHOWCASES.map((item) => ({
+    id: `show-${item.id}`,
+    title: item.title,
+    subtitle: `Built by ${item.builder} (${item.cohort}) — ${item.description}`,
+    category: "Projects" as const,
+    url: item.repo || "/projects",
+    tags: [item.title, item.builder, "showcase", item.cohort],
+  })),
   {
     id: "sec-membership",
     title: "Membership Benefits",

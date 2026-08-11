@@ -13,12 +13,12 @@ gsap.registerPlugin(ScrollToPlugin);
 const NAV_ITEMS = [
     {
         num: "01",
-        name: "About",
-        target: "/about",
+        name: "Projects",
+        target: "/projects",
         isExternal: true,
-        desc: "The ELEVATES Story — born at EKC, built for quiet & introverted talent in Kerala.",
-        badge: "MANIFESTO",
-        tag: "Our Story",
+        desc: "Built & Shipped — Production software for real college fests with real load.",
+        badge: "PRODUCTION PROOF",
+        tag: "400k Requests",
         doodle: "crown"
     },
     {
@@ -60,6 +60,16 @@ const NAV_ITEMS = [
         badge: "EXPANSION",
         tag: "Campus Chapters",
         doodle: "arrow"
+    },
+    {
+        num: "06",
+        name: "About",
+        target: "/about",
+        isExternal: true,
+        desc: "The ELEVATES Story — born at EKC, built for quiet & introverted talent in Kerala.",
+        badge: "MANIFESTO",
+        tag: "Our Story",
+        doodle: "crown"
     },
 ];
 
