@@ -2,13 +2,13 @@ import type { MetadataRoute } from "next";
 import { EVENTS } from "@/data/events";
 import { PEER_LABS } from "@/data/peer-labs";
 import { CHAPTERS } from "@/data/chapters";
-import { FLAGSHIP_PROJECTS } from "@/data/projects";
+import { ALL_CASE_STUDIES } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.elevates.live";
   const currentDate = new Date();
 
-  const projectEntries: MetadataRoute.Sitemap = FLAGSHIP_PROJECTS.map((proj) => ({
+  const projectEntries: MetadataRoute.Sitemap = ALL_CASE_STUDIES.map((proj) => ({
     url: `${baseUrl}/projects/${proj.slug}`,
     lastModified: currentDate,
     changeFrequency: "weekly",

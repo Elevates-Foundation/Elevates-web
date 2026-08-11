@@ -3,25 +3,48 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Doodle from "@/components/doodle";
-import { FLAGSHIP_PROJECTS } from "@/data/projects";
+import ProjectStatusChip from "@/components/status-chip";
+import { ALL_CASE_STUDIES } from "@/data/projects";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return FLAGSHIP_PROJECTS.map((p) => ({
+  return ALL_CASE_STUDIES.map((p) => ({
     slug: p.slug,
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = FLAGSHIP_PROJECTS.find((p) => p.slug === slug);
+  const project = ALL_CASE_STUDIES.find((p) => p.slug === slug);
 
   if (!project) {
     return {
       title: "Project Not Found | ELEVATES",
+    };
+  }
+
+  if (slug === "roadundo") {
+    return {
+      title: "RoadUndo — Kerala Dam Levels, Pincodes & Open Data API | ELEVATES",
+      description:
+        "A free open API for Kerala: 5,057 pincodes with LSGD ward mapping, OpenStreetMap roads, live KSEB dam levels and IMD district alerts. Built and open-sourced by students at ELEVATES.",
+      keywords: [
+        "kerala open data api",
+        "kerala dam water level api",
+        "kerala pincode api",
+        "kseb dam level today",
+        "kerala lsgd ward map",
+        "idukki dam water level today",
+      ],
+      alternates: { canonical: `/projects/${project.slug}` },
+      openGraph: {
+        title: "RoadUndo — Kerala Open Data API & Disaster Board | ELEVATES",
+        description: project.summary,
+        url: `https://www.elevates.live/projects/${project.slug}`,
+      },
     };
   }
 
@@ -39,11 +62,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectCaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const project = FLAGSHIP_PROJECTS.find((p) => p.slug === slug);
+  const project = ALL_CASE_STUDIES.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
+
+  // Google Dataset schemas if project emits datasets
+  const datasetSchemas = (project.datasets || []).map((ds) => ({
+    "@type": "Dataset",
+    "name": ds.name,
+    "description": ds.description,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "creator": { "@id": "https://elevates.live/#organization" },
+    "spatialCoverage": "Kerala, India",
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": ds.endpoint,
+      },
+    ],
+  }));
 
   // JSON-LD with strict entity graph contributor links to /team#id
   const jsonLd = {
@@ -79,10 +119,10 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         "datePublished": "2025-10-09",
         "author": { "@id": "https://elevates.live/#organization" },
         "about": {
-          "@type": "SoftwareApplication",
+          "@type": project.type === "open-tool" ? "SoftwareApplication" : "SoftwareApplication",
           "@id": `https://elevates.live/projects/${project.slug}#app`,
           "name": project.title,
-          "applicationCategory": "BusinessApplication",
+          "applicationCategory": project.type === "open-tool" ? "UtilitiesApplication" : "BusinessApplication",
           "operatingSystem": "Web",
           "author": { "@id": "https://elevates.live/#organization" },
           "contributor": project.builders.map((b) => ({
@@ -90,8 +130,11 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
           })),
         },
       },
+      ...datasetSchemas,
     ],
   };
+
+  const isOpenTool = project.type === "open-tool" || project.status === "live-unmaintained";
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-5xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
@@ -111,9 +154,10 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
 
       {/* ─── HERO ─── */}
       <header className="mb-14 border-b-4 border-graphite pb-8 relative">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex flex-wrap items-center gap-3 mb-4">
+          <ProjectStatusChip status={project.status} />
           <span className="font-mono text-xs font-bold uppercase tracking-widest bg-flame text-paper px-3 py-1 rounded-sm rotate-[-1deg] border border-graphite">
-            CASE STUDY // PRODUCTION PROOF
+            {isOpenTool ? "OPEN DATA UTILITY" : "CASE STUDY // PRODUCTION PROOF"}
           </span>
           <span className="font-mono text-xs text-olive font-bold hidden sm:inline">
             📍 {project.client} · {project.date}
@@ -194,14 +238,14 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ─── SECTION 4: HOW IT HELD UP ─── */}
+      {/* ─── SECTION 4: HOW IT HELD UP / WHAT ACTUALLY RUNS ─── */}
       <section className="mb-14 bg-paper border-3 border-graphite rounded-sm p-8 shadow-[6px_6px_0px_0px_rgba(45,45,52,1)]">
         <h2 className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite mb-4">
-          4. HOW IT HELD UP
+          4. {isOpenTool ? "WHAT ACTUALLY RUNS TODAY" : "HOW IT HELD UP"}
         </h2>
 
         <p className="font-mono text-sm md:text-base text-graphite/85 leading-relaxed mb-6">
-          {project.howItHeldUp.summary}
+          {project.whatActuallyRunsToday || project.howItHeldUp.summary}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -224,16 +268,25 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ─── SECTION 5: WHAT WE WOULD DO DIFFERENTLY ─── */}
+      {/* ─── SECTION 5: WHAT STALLED / WHAT WE WOULD DO DIFFERENTLY ─── */}
       <section className="mb-14 bg-graphite/5 border-4 border-graphite rounded-sm p-8 shadow-[8px_8px_0px_0px_rgba(45,45,52,1)]">
         <div className="flex items-center gap-3 mb-4">
           <span className="font-mono text-xs font-bold text-paper bg-flame px-3 py-1 rounded-sm">
-            HONEST RETROSPECTIVE
+            {isOpenTool ? "POST-MORTEM & HONEST FINDINGS" : "HONEST RETROSPECTIVE"}
           </span>
           <h2 className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite">
-            5. WHAT WE WOULD DO DIFFERENTLY
+            5. {isOpenTool ? "WHAT STALLED & LESSONS" : "WHAT WE WOULD DO DIFFERENTLY"}
           </h2>
         </div>
+
+        {project.whatStalled && (
+          <div className="mb-6 bg-flame/10 border-l-4 border-flame p-5 rounded-r-sm font-mono text-xs md:text-sm text-graphite leading-relaxed">
+            <span className="font-bold text-flame block mb-1 uppercase tracking-wider">
+              The Cold-Start Lesson:
+            </span>
+            <p>{project.whatStalled}</p>
+          </div>
+        )}
 
         <div className="space-y-3 font-mono text-xs md:text-sm text-graphite/85 leading-relaxed">
           {project.whatWeWouldDoDifferently.map((item, i) => (
@@ -244,6 +297,32 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      {/* ─── OPEN DATA ENDPOINTS & DATASETS (IF APPLICABLE) ─── */}
+      {project.datasets && project.datasets.length > 0 && (
+        <section className="mb-14 bg-graphite text-paper border-4 border-graphite p-8 rounded-sm shadow-[8px_8px_0px_0px_rgba(242,100,48,1)]">
+          <div className="flex items-center justify-between mb-6 border-b border-paper/20 pb-3">
+            <h2 className="font-mono font-bold text-xl uppercase text-paper">
+              OPEN DATASET ENDPOINTS
+            </h2>
+            <span className="font-mono text-xs font-bold text-paper bg-flame px-3 py-1 rounded-sm">
+              FREE &amp; CORS UNRESTRICTED
+            </span>
+          </div>
+
+          <div className="space-y-4 font-mono">
+            {project.datasets.map((ds) => (
+              <div key={ds.name} className="bg-paper/10 border border-paper/20 p-4 rounded-sm">
+                <h3 className="font-bold text-flame text-sm mb-1">{ds.name}</h3>
+                <p className="text-xs text-paper/80 mb-3">{ds.description}</p>
+                <code className="bg-graphite text-flame text-xs p-2 rounded block break-all font-mono border border-paper/20">
+                  {ds.endpoint}
+                </code>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ─── SECTION 6: WHO BUILT IT ─── */}
       <section className="mb-14" aria-labelledby="builders-heading">
@@ -316,6 +395,19 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
             </div>
           )}
 
+          {project.stackAndCode.attributionsList && project.stackAndCode.attributionsList.length > 0 && (
+            <div className="pt-4 border-t border-graphite/20 bg-flame/5 p-4 rounded-sm border border-flame/30">
+              <span className="text-flame font-bold block mb-2">
+                Data Sources &amp; Public Attributions:
+              </span>
+              <ul className="list-disc list-inside space-y-1 text-graphite/85 text-xs">
+                {project.stackAndCode.attributionsList.map((attr, idx) => (
+                  <li key={idx}>{attr}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {project.stackAndCode.attribution && (
             <div className="pt-4 border-t border-graphite/20 bg-flame/5 p-4 rounded-sm border border-flame/30">
               <span className="text-flame font-bold block mb-1">
@@ -331,27 +423,61 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
 
       {/* ─── SECTION 8: CTA ─── */}
       <section className="border-t-4 border-graphite pt-10 text-center">
-        <h2 className="font-mono font-black text-2xl md:text-3xl text-graphite uppercase mb-3">
-          Running a fest and need something like this?
-        </h2>
-        <p className="font-hand text-xl md:text-2xl text-olive mb-8 max-w-2xl mx-auto leading-relaxed">
-          We have built two. We are students, we work fast, and we know what a college fest actually needs because we have run them.
-        </p>
+        {isOpenTool ? (
+          <>
+            <h2 className="font-mono font-black text-2xl md:text-3xl text-graphite uppercase mb-3">
+              The data layer works. The reporting layer needs people.
+            </h2>
+            <p className="font-hand text-xl md:text-2xl text-olive mb-8 max-w-2xl mx-auto leading-relaxed">
+              If you want to help maintain RoadUndo, or use the free open API endpoints in something you are building, the repository and endpoints are open.
+            </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/#footer"
-            className="bg-flame text-paper font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
-          >
-            TALK TO US ↗
-          </Link>
-          <Link
-            href="/chapters"
-            className="bg-paper text-graphite font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
-          >
-            BRING ELEVATES TO YOUR CAMPUS ↗
-          </Link>
-        </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={project.live || "https://roadundo.vercel.app"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-flame text-paper font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+              >
+                READ THE API DOCS ↗
+              </a>
+              {project.repo && (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-paper text-graphite font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+                >
+                  CONTRIBUTE ON GITHUB ↗
+                </a>
+              )}
+            </div>
+          </>
+        ) : (
+          <>
+            <h2 className="font-mono font-black text-2xl md:text-3xl text-graphite uppercase mb-3">
+              Running a fest and need something like this?
+            </h2>
+            <p className="font-hand text-xl md:text-2xl text-olive mb-8 max-w-2xl mx-auto leading-relaxed">
+              We have built two. We are students, we work fast, and we know what a college fest actually needs because we have run them.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/#footer"
+                className="bg-flame text-paper font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+              >
+                TALK TO US ↗
+              </Link>
+              <Link
+                href="/chapters"
+                className="bg-paper text-graphite font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+              >
+                BRING ELEVATES TO YOUR CAMPUS ↗
+              </Link>
+            </div>
+          </>
+        )}
       </section>
     </main>
   );
