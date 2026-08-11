@@ -1,21 +1,22 @@
 "use client";
 
+import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
-    { name: "CYBERSEC BASICS", type: "WORKSHOP", status: "COMPLETED" },
-    { name: "SPARK", type: "ELECTRONICS", status: "COMPLETED" },
-    { name: "STAP", type: "SKILL ASSESSMENT (Powered by SkillTrai)", status: "COMPLETED" },
-    { name: "DIGITAL MARKETING", type: "WORKSHOP", status: "COMPLETED" },
-    { name: "LAND SURVEY USING DGPS", type: "WORKSHOP", status: "COMPLETED" },
-    { name: "WEBSITE DEVELOPMENT", type: "INDUSTRY WORKSHOP", status: "COMPLETED" },
-    { name: "IOT HANDS-ON", type: "HARDWARE", status: "COMPLETED" },
-    { name: "AUTOMATIONS", type: "n8n / MAKE.COM", status: "COMPLETED" },
-    { name: "BUILD-A-THON", type: "USELESS PROJECTS", status: "COMING SOON" },
-    { name: "UI/UX DESIGN", type: "WORKSHOP", status: "COMING SOON" },
-    { name: "BUG HUNT", type: "CHALLENGE", status: "COMING SOON" },
-    { name: "ESCAPE ROOM", type: "CYBERSEC CHALLENGE", status: "COMING SOON" },
-    { name: "HACKATHON-LITE", type: "CAPSTONE", status: "COMING SOON" },
+    { name: "CYBERSEC BASICS", type: "WORKSHOP", status: "COMPLETED", slug: "cybersec-basics" },
+    { name: "SPARK", type: "ELECTRONICS", status: "COMPLETED", slug: "spark-electronics" },
+    { name: "STAP", type: "SKILL ASSESSMENT (Powered by SkillTrai)", status: "COMPLETED", slug: "stap-skill-assessment" },
+    { name: "DIGITAL MARKETING", type: "WORKSHOP", status: "COMPLETED", slug: "cybersec-basics" },
+    { name: "LAND SURVEY USING DGPS", type: "WORKSHOP", status: "COMPLETED", slug: "spark-electronics" },
+    { name: "WEBSITE DEVELOPMENT", type: "INDUSTRY WORKSHOP", status: "COMPLETED", slug: "figma-make-a-thon-onam" },
+    { name: "IOT HANDS-ON", type: "HARDWARE", status: "COMPLETED", slug: "spark-electronics" },
+    { name: "AUTOMATIONS", type: "n8n / MAKE.COM", status: "COMPLETED", slug: "n8n-automations" },
+    { name: "BUILD-A-THON", type: "USELESS PROJECTS", status: "COMING SOON", slug: "build-a-thon" },
+    { name: "UI/UX DESIGN", type: "WORKSHOP", status: "COMING SOON", slug: "figma-make-a-thon-onam" },
+    { name: "BUG HUNT", type: "CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
+    { name: "ESCAPE ROOM", type: "CYBERSEC CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
+    { name: "HACKATHON-LITE", type: "CAPSTONE", status: "COMING SOON", slug: "build-a-thon" },
 ];
 
 export default function Programs() {
@@ -30,7 +31,7 @@ export default function Programs() {
                         THE LINEUP
                     </h2>
                     <p className="font-mono text-xs md:text-lg text-olive text-left md:text-right mt-2 md:mt-0">
-                        // ACADEMIC YEAR 2025 <br />
+                        // ACADEMIC YEAR 2025 - 2026 <br />
                         // TOUR DATES
                     </p>
                 </div>
@@ -42,9 +43,10 @@ export default function Programs() {
                 <div className="w-1 md:w-2 shrink-0" />
 
                 {PROGRAMS.map((prog, i) => (
-                    <div
+                    <Link
                         key={i}
-                        className="program-card snap-center shrink-0 group relative w-[300px] h-[450px] md:w-[400px] md:h-[550px] bg-paper text-graphite p-6 flex flex-col justify-between border-4 border-transparent hover:border-flame transition-all duration-300 hover:-translate-y-2"
+                        href={`/events/${prog.slug}`}
+                        className="program-card snap-center shrink-0 group relative w-[300px] h-[450px] md:w-[400px] md:h-[550px] bg-paper text-graphite p-6 flex flex-col justify-between border-4 border-transparent hover:border-flame transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                     >
                         {/* Perforated Edge (Left) */}
                         <div className="absolute left-[-2px] top-0 bottom-0 w-4 radial-perforation bg-graphite" style={{ backgroundSize: '20px 20px', backgroundImage: 'radial-gradient(circle, transparent 30%, #fdfbf7 31%)', opacity: 0 }} />
@@ -99,7 +101,7 @@ export default function Programs() {
 
                         {/* Hover Effect: Tape */}
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-8 bg-paper/20 rotate-[-2deg] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }} />
-                    </div>
+                    </Link>
                 ))}
 
                 {/* Spacer for end padding */}

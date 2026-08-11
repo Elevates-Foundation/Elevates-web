@@ -109,29 +109,34 @@ export default function Hero() {
                 ELEVATES – Upskilling & Showcasing Skilled but Shy Students
             </h1>
 
-            {/* Central Kinetic Tape Stack (3 Strips: LEARN. BUILD. SHIP.) */}
-            <div ref={badgeRef} className="relative z-10 flex flex-col items-center justify-center -space-y-4 md:-space-y-8 mix-blend-hard-light hover:mix-blend-normal active:mix-blend-normal transition-all duration-300">
-                {/* Strip 1: LEARN (Foundation) */}
-                <div className="tape-strip bg-graphite text-paper px-6 py-2 md:px-12 md:py-3 rotate-[-3deg] shadow-lg transform hover:scale-105 active:scale-105 transition-transform duration-300 origin-bottom-left cursor-default z-30">
-                    <span className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none block">
+            {/* Central Kinetic Tape Stack (3 Strips: LEARN. BUILD. GROW.) */}
+            <div ref={badgeRef} className="relative z-10 flex flex-col items-center justify-center -space-y-2 sm:-space-y-4 md:-space-y-8 md:mix-blend-hard-light md:hover:mix-blend-normal transition-all duration-300">
+                {/* Strip 1: LEARN */}
+                <div className="tape-strip bg-graphite text-paper px-4 py-1 sm:px-8 sm:py-2 md:px-12 md:py-3 rotate-[-3deg] shadow-lg transform hover:scale-105 active:scale-105 transition-transform duration-300 origin-bottom-left cursor-default z-30">
+                    <span className="text-[clamp(2.5rem,12vw,9rem)] font-black uppercase tracking-tighter leading-none block">
                         LEARN
                     </span>
                 </div>
 
-                {/* Strip 2: BUILD (Action) */}
-                <div className="tape-strip bg-paper text-graphite px-6 py-2 md:px-12 md:py-3 rotate-[2deg] shadow-xl z-20 transform hover:scale-105 active:scale-105 transition-transform duration-300 cursor-default border-4 border-graphite">
-                    <span className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none block">
+                {/* Strip 2: BUILD */}
+                <div className="tape-strip bg-paper text-graphite px-4 py-1 sm:px-8 sm:py-2 md:px-12 md:py-3 rotate-[2deg] shadow-xl z-20 transform hover:scale-105 active:scale-105 transition-transform duration-300 cursor-default border-2 md:border-4 border-graphite">
+                    <span className="text-[clamp(2.5rem,12vw,9rem)] font-black uppercase tracking-tighter leading-none block">
                         BUILD
                     </span>
                 </div>
 
-                {/* Strip 3: GROW (Goal) */}
-                <div className="tape-strip bg-flame text-paper px-6 py-2 md:px-12 md:py-3 rotate-[-2deg] shadow-lg transform hover:scale-105 active:scale-105 transition-transform duration-300 origin-top-right cursor-default z-10">
-                    <span className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none font-[family-name:var(--font-pixel)] block">
+                {/* Strip 3: GROW */}
+                <div className="tape-strip bg-flame text-paper px-4 py-1 sm:px-8 sm:py-2 md:px-12 md:py-3 rotate-[-2deg] shadow-lg transform hover:scale-105 active:scale-105 transition-transform duration-300 origin-top-right cursor-default z-10">
+                    <span className="text-[clamp(2.5rem,12vw,9rem)] font-black uppercase tracking-tighter leading-none font-[family-name:var(--font-pixel)] block">
                         GROW
                     </span>
                 </div>
             </div>
+
+            {/* Mobile-only tagline */}
+            <p className="block md:hidden font-mono text-xs text-olive uppercase tracking-widest mt-6 text-center px-6 z-20">
+                For Quiet Talent · Kerala&apos;s Student Tech Movement
+            </p>
 
             {/* Draggable Stickers / Keywords - Hidden on small screens */}
             <div className="hidden md:block absolute top-[15%] left-[10%] sticker cursor-grab active:cursor-grabbing z-30">

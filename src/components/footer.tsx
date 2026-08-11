@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const SOCIAL_LINKS = [
-    { name: "Instagram", href: "https://www.instagram.com/elevates.club/" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/elevates-in" },
-    { name: "GitHub", href: "https://github.com/Elevates-Foundation" },
+    { name: "Instagram", href: "https://www.instagram.com/elevates.club/", isExternal: true },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/elevates-in", isExternal: true },
+    { name: "GitHub", href: "https://github.com/Elevates-Foundation", isExternal: true },
+    { name: "Chapters", href: "/chapters", isExternal: false },
+    { name: "Clusters", href: "/clusters", isExternal: false },
 ];
 
 export default function Footer() {
@@ -45,18 +48,29 @@ export default function Footer() {
                     <Doodle type="underline" color="#f26430" className="absolute -bottom-4 left-0 w-full h-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-sm md:text-lg font-mono tracking-widest text-olive uppercase w-full">
+                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm md:text-base font-mono tracking-widest text-olive uppercase w-full">
                     {SOCIAL_LINKS.map((link, i) => (
-                        <a
-                            key={i}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative group hover:text-white transition-colors flex items-center justify-center py-2"
-                        >
-                            {link.name}
-                            <Doodle type="scribble" color="#414066" className="absolute w-[120%] h-full opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
-                        </a>
+                        link.isExternal ? (
+                            <a
+                                key={i}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative group hover:text-white transition-colors flex items-center justify-center py-2"
+                            >
+                                {link.name} ↗
+                                <Doodle type="scribble" color="#414066" className="absolute w-[120%] h-full opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+                            </a>
+                        ) : (
+                            <Link
+                                key={i}
+                                href={link.href}
+                                className="relative group hover:text-white transition-colors flex items-center justify-center py-2"
+                            >
+                                {link.name}
+                                <Doodle type="scribble" color="#414066" className="absolute w-[120%] h-full opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+                            </Link>
+                        )
                     ))}
                 </div>
 
