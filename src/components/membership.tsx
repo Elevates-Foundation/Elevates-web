@@ -9,17 +9,17 @@ import Doodle from "@/components/doodle";
 gsap.registerPlugin(ScrollTrigger);
 
 const BENEFITS = [
-    { title: "CONFIDENCE", desc: "Transition from quiet learner to shippable builder." },
-    { title: "REAL PROJECTS", desc: "Build shippable products with hands-on support." },
-    { title: "VISIBILITY", desc: "Showcase your work so you no longer stay invisible." },
-    { title: "CAREER & NETWORK", desc: "Mentorship, startup connections & placement prep." }
+    { title: "SKILLS", desc: "Learn in-demand tech stacks." },
+    { title: "PORTFOLIO", desc: "Build real, shippable projects." },
+    { title: "GITHUB", desc: "Open-source contributions." },
+    { title: "CAREER", desc: "Placement & Startup ready." }
 ];
 
 const CRITERIA = [
-    "Skilled but Shy / Introverted",
-    "Quiet Talent Ready to Build",
-    "Cross-Department Mindset",
-    "Zero Gatekeeping & Safe Environment"
+    "Curiosity & Hunger",
+    "Willingness to Learn",
+    "Cross-Dept Mindset",
+    "Beginner Friendly"
 ];
 
 export default function Membership() {

@@ -142,7 +142,7 @@ export default function Hero() {
 
             <div className="hidden md:block absolute bottom-[20%] right-[10%] sticker cursor-grab active:cursor-grabbing z-30">
                 <div className="bg-flame text-paper font-mono text-sm md:text-xl px-6 py-3 rotate-[10deg] shadow-lg border border-graphite hover:scale-110 transition-transform skew-x-[-10deg]">
-                    GET SEEN!
+                    SHIP IT!
                 </div>
             </div>
 
@@ -152,7 +152,7 @@ export default function Hero() {
 
             <div className="hidden md:block absolute bottom-[15%] left-[20%] sticker cursor-grab active:cursor-grabbing z-30">
                 <div className="font-[family-name:var(--font-pixel)] text-6xl md:text-8xl text-graphite opacity-80 rotate-[-15deg] hover:text-flame transition-colors">
-                    UNSEEN NO MORE
+                    BREAK
                 </div>
             </div>
 
@@ -164,7 +164,7 @@ export default function Hero() {
 
                     <p className="font-mono text-xs uppercase tracking-widest text-olive mb-3 border-b border-olive/20 pb-1">Manifesto 001</p>
                     <p className="font-medium text-graphite text-sm leading-relaxed font-hand">
-                        ELEVATES is a student-driven community built for skilled but shy or introverted students. We upskill them, give them real projects and support, and showcase their work so quiet talent no longer stays invisible.
+                        We are the untamed, the builders, the midnight coders. We don't just study the future—we ship it.
                     </p>
 
                     {/* Decorative Doodle */}
