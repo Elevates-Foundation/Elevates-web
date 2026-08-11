@@ -2,39 +2,37 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import Doodle from "@/components/doodle";
-import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES } from "@/data/projects";
+import ProjectStatusChip from "@/components/status-chip";
+import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES, ALSO_BUILT_ARCHIVE } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects — Software Built by Students in Kerala | ELEVATES",
+  title: "Projects & Production Proof — Software Built & Shipped | ELEVATES",
   description:
-    "Event platforms and software tools built by ELEVATES students for real college fests in Kerala. Real clients, real deadlines, real load. Every project credited by name.",
+    "Production software built by ELEVATES for real college fests. Handling 400,000+ requests under extreme load with zero downtime. Proof beats certificates.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Projects — Software Built by Students in Kerala | ELEVATES",
+    title: "Projects & Production Proof — ELEVATES",
     description:
-      "Production platforms built by ELEVATES students. 400,000 requests handled, zero downtime, real impact.",
+      "Production software built for real college fests with real load. Vibranium Event Platform, Aaroh Arts Platform, RoadUndo Open Data API.",
     url: "https://www.elevates.live/projects",
   },
 };
 
-export default function ProjectsIndexPage() {
+export default function ProjectsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "ELEVATES Student Projects & Case Studies",
+    "name": "ELEVATES Projects & Production Proof",
+    "description":
+      "Production software built and shipped by ELEVATES for real college fests and open public utilities.",
     "url": "https://www.elevates.live/projects",
-    "description": "Production event platforms and member projects built by ELEVATES students in Kerala.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ELEVATES Foundation",
-      "url": "https://www.elevates.live",
-    },
-    "hasPart": FLAGSHIP_PROJECTS.map((p) => ({
+    "hasPart": FLAGSHIP_PROJECTS.map((proj) => ({
       "@type": "SoftwareApplication",
-      "name": p.title,
-      "url": `https://www.elevates.live/projects/${p.slug}`,
+      "name": proj.title,
+      "description": proj.summary,
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
+      "url": `https://www.elevates.live/projects/${proj.slug}`,
     })),
   };
 
@@ -46,24 +44,24 @@ export default function ProjectsIndexPage() {
       />
 
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="mb-10 font-mono text-xs text-olive flex items-center gap-2">
+      <nav aria-label="Breadcrumb" className="mb-8 font-mono text-xs text-olive flex items-center gap-2">
         <Link href="/" className="hover:underline">Home</Link>
         <span>/</span>
         <span className="text-graphite font-bold">Projects</span>
       </nav>
 
       {/* ─── BLOCK 1: HERO ─── */}
-      <header className="mb-12 max-w-4xl relative">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest bg-flame text-paper px-3 py-1 rounded-sm rotate-[-1deg] border border-graphite">
+      <header className="mb-14 relative max-w-4xl">
+        <div className="flex flex-wrap items-center gap-3 mb-4 font-mono text-xs font-bold uppercase">
+          <span className="bg-flame text-paper px-3 py-1 rounded-sm rotate-[-1deg] border border-graphite shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
             ELEVATES // PRODUCTION PROOF
           </span>
-          <span className="font-mono text-xs text-olive font-bold hidden sm:inline">
+          <span className="text-olive tracking-wider">
             // EVIDENCE OVER CLAIMS
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tight text-graphite mb-5 leading-none">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tight text-graphite mb-4 leading-none">
           BUILT AND <span className="text-flame">SHIPPED</span>
         </h1>
 
@@ -74,51 +72,51 @@ export default function ProjectsIndexPage() {
         <Doodle
           type="scribble"
           color="#f26430"
-          className="hidden md:block absolute right-0 top-2 w-28 h-28 rotate-12 opacity-30 pointer-events-none"
+          className="hidden md:block absolute right-0 top-4 w-32 h-32 opacity-25 pointer-events-none"
         />
       </header>
 
-      {/* ─── BLOCK 2: STAT STRIP (STATIC) ─── */}
-      <section className="mb-16 bg-graphite text-paper rounded-sm border-4 border-graphite p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(242,100,48,1)]" aria-label="Project Statistics">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-paper/20">
-          <div className="pt-2 md:pt-0">
-            <span className="text-flame text-4xl sm:text-5xl font-black block leading-none mb-1">
+      {/* ─── BLOCK 2: STAT STRIP ─── */}
+      <section className="mb-16 bg-graphite text-paper rounded-sm border-4 border-graphite p-8 shadow-[8px_8px_0px_0px_rgba(242,100,48,1)]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono divide-y md:divide-y-0 md:divide-x divide-paper/20">
+          <div className="p-2 md:pr-6">
+            <span className="text-flame text-4xl md:text-5xl font-black block mb-1">
               400,000
             </span>
-            <span className="text-xs uppercase tracking-wider text-paper/80 font-bold">
-              requests in 24 hours
+            <span className="text-xs text-paper/80 font-bold uppercase tracking-wider block">
+              REQUESTS IN 24 HOURS
             </span>
           </div>
 
-          <div className="pt-6 md:pt-0 md:pl-8">
-            <span className="text-flame text-4xl sm:text-5xl font-black block leading-none mb-1">
+          <div className="pt-4 md:pt-2 md:px-6">
+            <span className="text-flame text-4xl md:text-5xl font-black block mb-1">
               5
             </span>
-            <span className="text-xs uppercase tracking-wider text-paper/80 font-bold">
-              days to build it
+            <span className="text-xs text-paper/80 font-bold uppercase tracking-wider block">
+              DAYS TO BUILD IT
             </span>
           </div>
 
-          <div className="pt-6 md:pt-0 md:pl-8">
-            <span className="text-flame text-4xl sm:text-5xl font-black block leading-none mb-1">
+          <div className="pt-4 md:pt-2 md:pl-6">
+            <span className="text-flame text-4xl md:text-5xl font-black block mb-1">
               2
             </span>
-            <span className="text-xs uppercase tracking-wider text-paper/80 font-bold">
-              production platforms live for college fests
+            <span className="text-xs text-paper/80 font-bold uppercase tracking-wider block">
+              PRODUCTION PLATFORMS LIVE FOR COLLEGE FESTS
             </span>
           </div>
         </div>
       </section>
 
-      {/* ─── BLOCK 3: FLAGSHIP CASE STUDIES ─── */}
-      <section className="mb-16" aria-labelledby="flagship-heading">
+      {/* ─── BLOCK 3: FLAGSHIP PROJECTS ─── */}
+      <section className="mb-20" aria-labelledby="flagship-heading">
         <div className="flex flex-wrap items-end justify-between mb-8 border-b-2 border-graphite/20 pb-3 gap-2">
           <div>
-            <h2 id="flagship-heading" className="text-2xl md:text-3xl font-black uppercase text-graphite">
+            <h2 id="flagship-heading" className="text-2xl md:text-4xl font-black uppercase text-graphite">
               BUILT BY ELEVATES
             </h2>
             <p className="font-mono text-xs text-olive mt-0.5">
-              Production software built for real clients under real deadlines.
+              Production software and open data utilities built under real constraints and real load.
             </p>
           </div>
           <span className="font-mono text-xs font-bold text-paper bg-flame px-3 py-1 rounded-sm border border-graphite shrink-0">
@@ -138,10 +136,11 @@ export default function ProjectsIndexPage() {
 
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div className="space-y-3 max-w-3xl">
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
                     <span className="font-mono font-bold text-xs text-paper bg-graphite px-2.5 py-0.5 rounded-sm">
                       0{idx + 1}
                     </span>
+                    <ProjectStatusChip status={proj.status} />
                     <span className="font-mono text-xs font-bold text-olive uppercase tracking-wider">
                       📍 {proj.client} · {proj.date}
                     </span>
@@ -185,7 +184,7 @@ export default function ProjectsIndexPage() {
       </section>
 
       {/* ─── BLOCK 4: MEMBER SHOWCASE ─── */}
-      <section className="mb-16" aria-labelledby="showcase-heading">
+      <section className="mb-20" aria-labelledby="showcase-heading">
         <div className="flex flex-wrap items-end justify-between mb-8 border-b-2 border-graphite/20 pb-3 gap-2">
           <div>
             <h2 id="showcase-heading" className="text-2xl md:text-3xl font-black uppercase text-graphite">
@@ -211,16 +210,19 @@ export default function ProjectsIndexPage() {
                   <span className="font-mono text-[10px] font-bold text-paper bg-olive px-2 py-0.5 rounded-sm">
                     {item.cohort}
                   </span>
-                  {item.repo && (
-                    <a
-                      href={item.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-xs text-flame font-bold hover:underline"
-                    >
-                      GitHub ↗
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {item.status && <ProjectStatusChip status={item.status} />}
+                    {item.repo && (
+                      <a
+                        href={item.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-flame font-bold hover:underline"
+                      >
+                        GitHub ↗
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <h3 className="font-mono font-bold text-lg text-graphite mb-1">
@@ -246,7 +248,49 @@ export default function ProjectsIndexPage() {
         </div>
       </section>
 
-      {/* ─── BLOCK 5: DUAL CTA ─── */}
+      {/* ─── BLOCK 5: ALSO BUILT ARCHIVE ─── */}
+      <section className="mb-20 border-t-2 border-graphite/20 pt-10" aria-labelledby="archive-heading">
+        <div className="flex flex-wrap items-end justify-between mb-6 gap-2">
+          <div>
+            <h2 id="archive-heading" className="text-xl md:text-2xl font-black uppercase text-graphite">
+              ALSO BUILT // TRANSPARENT RECORD
+            </h2>
+            <p className="font-mono text-xs text-olive mt-0.5 max-w-2xl">
+              Projects we started and stopped. Kept here because what did not work is usually more useful than what did.
+            </p>
+          </div>
+          <span className="font-mono text-xs font-bold text-paper bg-olive px-3 py-1 rounded-sm shrink-0">
+            HONEST POST-MORTEMS
+          </span>
+        </div>
+
+        <div className="bg-paper border-2 border-graphite rounded-sm divide-y divide-graphite/20 font-mono text-xs shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
+          {ALSO_BUILT_ARCHIVE.map((item) => (
+            <div key={item.name} className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-flame/5 transition-colors">
+              <div className="flex items-center gap-3">
+                <span className="font-bold text-graphite text-sm">{item.name}</span>
+                <span className="text-olive">{item.year}</span>
+                <ProjectStatusChip status={item.status} />
+              </div>
+              <p className="text-graphite/80 text-xs max-w-xl">{item.reason}</p>
+              <div className="shrink-0 flex items-center gap-3">
+                {item.slug && (
+                  <Link href={`/projects/${item.slug}`} className="text-flame font-bold hover:underline">
+                    Read Post-Mortem →
+                  </Link>
+                )}
+                {item.repo && (
+                  <a href={item.repo} target="_blank" rel="noopener noreferrer" className="text-olive font-bold hover:underline">
+                    Repo ↗
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── BLOCK 6: DUAL CTA ─── */}
       <section className="bg-graphite text-paper rounded-sm border-4 border-graphite p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(242,100,48,1)] relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 divide-y md:divide-y-0 md:divide-x divide-paper/20">
           {/* Client CTA */}
@@ -278,13 +322,13 @@ export default function ProjectsIndexPage() {
               Want your project here?
             </h3>
             <p className="font-mono text-xs md:text-sm text-paper/80 leading-relaxed">
-              Build real shippable software with peer mentorship. Your name, your work, published and credited forever.
+              Join a Peer Lab, ship a platform, and get your work listed here with full name credit and verifiable proof.
             </p>
             <Link
-              href="/chapters"
+              href="/peer-labs"
               className="inline-flex items-center gap-2 bg-paper text-graphite font-mono font-bold text-xs px-6 py-3 rounded-sm border-2 border-paper/30 hover:bg-flame hover:text-paper transition-all uppercase"
             >
-              <span>JOIN ELEVATES</span>
+              <span>EXPLORE PEER LABS</span>
               <span>↗</span>
             </Link>
           </div>
