@@ -2,10 +2,18 @@ import type { MetadataRoute } from "next";
 import { EVENTS } from "@/data/events";
 import { PEER_LABS } from "@/data/peer-labs";
 import { CHAPTERS } from "@/data/chapters";
+import { FLAGSHIP_PROJECTS } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.elevates.live";
   const currentDate = new Date();
+
+  const projectEntries: MetadataRoute.Sitemap = FLAGSHIP_PROJECTS.map((proj) => ({
+    url: `${baseUrl}/projects/${proj.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
 
   const eventEntries: MetadataRoute.Sitemap = EVENTS.map((event) => ({
     url: `${baseUrl}/events/${event.slug}`,
@@ -40,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: `${baseUrl}/projects`,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/events`,
       lastModified: currentDate,
       changeFrequency: "daily",
@@ -69,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     },
+    ...projectEntries,
     ...eventEntries,
     ...peerLabEntries,
     ...chapterEntries,
