@@ -1,3 +1,5 @@
+import { FlagshipProject, MemberShowcase } from "@/types/project";
+
 export const CELESTIA_CASE_STUDY: FlagshipProject = {
   slug: "celestia",
   title: "Celestia — CSE Association Website",
