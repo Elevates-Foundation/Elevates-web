@@ -165,6 +165,37 @@ export default function ProjectsPage() {
                       </span>
                     ))}
                   </div>
+
+                  {/* Team & Junior Builder Credits */}
+                  {proj.contributors && proj.contributors.length > 0 ? (
+                    <div className="pt-3 border-t border-graphite/15 font-mono text-xs text-graphite flex flex-wrap gap-2 items-center">
+                      <span className="font-bold text-olive uppercase tracking-wider text-[11px]">
+                        Code Authors:
+                      </span>
+                      {proj.contributors.map((c) => (
+                        <span
+                          key={c.name}
+                          className="bg-paper border border-graphite/40 px-2 py-0.5 rounded-sm text-[11px] font-bold text-graphite shadow-[1px_1px_0px_0px_rgba(45,45,52,1)]"
+                        >
+                          {c.name} <span className="text-olive font-normal">({c.detail})</span>
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="pt-3 border-t border-graphite/15 font-mono text-xs text-graphite flex flex-wrap gap-2 items-center">
+                      <span className="font-bold text-olive uppercase tracking-wider text-[11px]">
+                        Build Team:
+                      </span>
+                      {proj.builders.map((b) => (
+                        <span
+                          key={b.name}
+                          className="bg-paper border border-graphite/40 px-2 py-0.5 rounded-sm text-[11px] font-bold text-graphite shadow-[1px_1px_0px_0px_rgba(45,45,52,1)]"
+                        >
+                          {b.name} <span className="text-flame font-normal">({b.role})</span>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* CTA Link */}

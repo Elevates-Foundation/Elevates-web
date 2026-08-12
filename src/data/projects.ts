@@ -1,4 +1,84 @@
-import { FlagshipProject, MemberShowcase } from "@/types/project";
+export const CELESTIA_CASE_STUDY: FlagshipProject = {
+  slug: "celestia",
+  title: "Celestia — CSE Association Website",
+  client: "Celestia, CSE Association — Eranad Knowledge City Technical Campus",
+  date: "March 25, 2026",
+  type: "flagship",
+  status: "live-incomplete",
+  tagline: "A department website, rebuilt in one hour.",
+  summary: "We were running the event. The guest we had invited was arriving at two o'clock. We had two hours, five juniors, and a specification written on the way to campus. We finished in one hour, launched live on stage via Python gesture recognition.",
+  metrics: [
+    { value: "1 hour", label: "Build & deploy time to production" },
+    { value: "2 hours", label: "Deadline given before guest arrival" },
+    { value: "5", label: "Non-founder junior builders (3rd & 1st year)" },
+  ],
+  stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Python", "OpenCV", "MediaPipe"],
+  repo: null,
+  live: "https://celestia-web-lti6.vercel.app",
+  cover: "/team/elevates-founders.jpeg",
+  situation: {
+    title: "The One-Hour Challenge",
+    paragraphs: [
+      "On 25 March 2026 the Computer Science department at Eranad Knowledge City was relaunching its association as Celestia. ELEVATES coordinated the entire relaunch event, and we had invited the chief guest: Moosa Mehar MP, Co-Founder and CEO of TinkerHub Foundation. He was arriving at 2:00 PM.",
+      "The association's website was three years old and needed a complete overhaul.",
+      "With two hours left, two of us called the HOD from the back of a bike and asked for permission to rebuild it before the guest arrived. Then we named five students, none of whom had built anything for the department before, and three of us walked into their classrooms and pulled them out of their sessions.",
+    ],
+    highlight: "We invited TinkerHub's CEO, coordinated the event, and rebuilt the department website in 60 minutes.",
+  },
+  numbers: [
+    { value: "1 hour", label: "Time taken to specify, code, and deploy to Vercel" },
+    { value: "5", label: "Junior student builders (3rd year & 1st year)" },
+    { value: "0", label: "Founding members who wrote code on the day" },
+  ],
+  whatWeBuilt: [
+    "Full 4-route website (Home, Teams, Gallery, Contact) built with React 18, Vite, and Tailwind CSS.",
+    "GSAP ScrollTrigger & Lenis smooth scrolling integration for pinned horizontal identity cards.",
+    "Python gesture-detection launch mechanism using OpenCV and MediaPipe: Chief Guest raised his hand on stage to trigger the live website launch.",
+    "Spec-driven rapid AI build pipeline executed in 60 minutes with Claude & Cursor.",
+  ],
+  howItHeldUp: {
+    summary: "Shipped in 1 hour and deployed live on Vercel before the chief guest arrived. Launched on stage with 100% gesture recognition accuracy on the first attempt.",
+    metrics: [
+      { value: "100%", label: "First-attempt gesture launch accuracy on stage" },
+      { value: "60 mins", label: "Total time from phone call to Vercel deploy" },
+    ],
+    details: [
+      "Five non-founder junior students executed the specification while 7 founding members managed event operations.",
+      "Chief Guest Moosa Mehar MP (Co-Founder & CEO of TinkerHub) personally tested the gesture launch and congratulated the student developer.",
+    ],
+  },
+  whatWeWouldDoDifferently: [
+    "Never deploy mock placeholder data to production without a pre-deploy read-through out loud.",
+    "Restore dropped real faculty testimonials from the previous association site.",
+    "Transfer Vercel deployment project ownership to an official institutional account.",
+  ],
+  builders: [
+    { role: "Called the HOD from the bike, directed the build", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm", did: "Called the HOD from the bike, directed the build" },
+    { role: "Wrote the build specification", name: "Naseem Shan", founderId: "naseem-shan", did: "Wrote the build specification" },
+    { role: "On the bike when the call was made", name: "Mohammed Nafih P", founderId: "muhammed-nafih-p", did: "On the bike when the call was made" },
+    { role: "Held the team together until the others arrived", name: "Adhinan K", founderId: "adhinan-k", did: "Held the team together until the others arrived" },
+    { role: "Walked into the classrooms and fetched the builders", name: "Mohammed Shahin EK", founderId: "mohammed-shahin-ek", did: "Walked into the classrooms and fetched the builders" },
+    { role: "Walked into the classrooms and fetched the builders", name: "Mashood M", founderId: "mashood-m", did: "Walked into the classrooms and fetched the builders" },
+    { role: "Walked into the classrooms and fetched the builders", name: "Arshak", founderId: "arshak", did: "Walked into the classrooms and fetched the builders" },
+  ],
+  contributors: [
+    { name: "Faseen", detail: "3rd year, CSE — Frontend Build" },
+    { name: "Shibin", detail: "3rd year, CSE — Frontend Build" },
+    { name: "Zakariya", detail: "3rd year, CSE — Frontend Build" },
+    { name: "Danish", detail: "1st year, T2 — Frontend Build" },
+    { name: "Abhijith CJ", detail: "3rd year, AI & DS — Build & Gesture Launch Developer", did: "Built the gesture-controlled launch" },
+  ],
+  faculty: [
+    { name: "Jasira KT", detail: "ELEVATES Faculty Head, CSE" },
+    { name: "Anu K Soman", detail: "HOD, CSE" },
+    { name: "Anas Bin Malik", detail: "Assistant Professor, Computer Science and Engineering" },
+  ],
+  stackAndCode: {
+    technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Python", "OpenCV", "MediaPipe"],
+    repoUrl: null,
+    repoNote: "Production site deployed directly to Vercel preview under CSE Association Eranad Knowledge City.",
+  },
+};
 
 export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   {
@@ -195,6 +275,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       },
     ],
   },
+  CELESTIA_CASE_STUDY,
 ];
 
 export const ROADUNDO_CASE_STUDY: FlagshipProject = {
@@ -293,88 +374,6 @@ export const ROADUNDO_CASE_STUDY: FlagshipProject = {
       endpoint: "https://roadundo.vercel.app/api/v1/alerts",
     },
   ],
-};
-
-export const CELESTIA_CASE_STUDY: FlagshipProject = {
-  slug: "celestia",
-  title: "Celestia — CSE Association Website",
-  client: "Celestia, CSE Association — Eranad Knowledge City Technical Campus",
-  date: "March 25, 2026",
-  type: "flagship",
-  status: "live-incomplete",
-  tagline: "A department website, rebuilt in one hour.",
-  summary: "We were running the event. The guest we had invited was arriving at two o'clock. We had two hours, five juniors, and a specification written on the way to campus. We finished in one hour, launched live on stage via Python gesture recognition.",
-  metrics: [
-    { value: "1 hour", label: "Build & deploy time to production" },
-    { value: "2 hours", label: "Deadline given before guest arrival" },
-    { value: "5", label: "Non-founder junior builders (3rd & 1st year)" },
-  ],
-  stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Python", "OpenCV", "MediaPipe"],
-  repo: null,
-  live: "https://celestia-web-lti6.vercel.app",
-  cover: "/team/elevates-founders.jpeg",
-  situation: {
-    title: "The One-Hour Challenge",
-    paragraphs: [
-      "On 25 March 2026 the Computer Science department at Eranad Knowledge City was relaunching its association as Celestia. ELEVATES coordinated the entire relaunch event, and we had invited the chief guest: Moosa Mehar MP, Co-Founder and CEO of TinkerHub Foundation. He was arriving at 2:00 PM.",
-      "The association's website was three years old and needed a complete overhaul.",
-      "With two hours left, two of us called the HOD from the back of a bike and asked for permission to rebuild it before the guest arrived. Then we named five students, none of whom had built anything for the department before, and three of us walked into their classrooms and pulled them out of their sessions.",
-    ],
-    highlight: "We invited TinkerHub's CEO, coordinated the event, and rebuilt the department website in 60 minutes.",
-  },
-  numbers: [
-    { value: "1 hour", label: "Time taken to specify, code, and deploy to Vercel" },
-    { value: "5", label: "Junior student builders (3rd year & 1st year)" },
-    { value: "0", label: "Founding members who wrote code on the day" },
-  ],
-  whatWeBuilt: [
-    "Full 4-route website (Home, Teams, Gallery, Contact) built with React 18, Vite, and Tailwind CSS.",
-    "GSAP ScrollTrigger & Lenis smooth scrolling integration for pinned horizontal identity cards.",
-    "Python gesture-detection launch mechanism using OpenCV and MediaPipe: Chief Guest raised his hand on stage to trigger the live website launch.",
-    "Spec-driven rapid AI build pipeline executed in 60 minutes with Claude & Cursor.",
-  ],
-  howItHeldUp: {
-    summary: "Shipped in 1 hour and deployed live on Vercel before the chief guest arrived. Launched on stage with 100% gesture recognition accuracy on the first attempt.",
-    metrics: [
-      { value: "100%", label: "First-attempt gesture launch accuracy on stage" },
-      { value: "60 mins", label: "Total time from phone call to Vercel deploy" },
-    ],
-    details: [
-      "Five non-founder junior students executed the specification while 7 founding members managed event operations.",
-      "Chief Guest Moosa Mehar MP (Co-Founder & CEO of TinkerHub) personally tested the gesture launch and congratulated the student developer.",
-    ],
-  },
-  whatWeWouldDoDifferently: [
-    "Never deploy mock placeholder data to production without a pre-deploy read-through out loud.",
-    "Restore dropped real faculty testimonials from the previous association site.",
-    "Transfer Vercel deployment project ownership to an official institutional account.",
-  ],
-  builders: [
-    { role: "Called the HOD from the bike, directed the build", name: "Sarhan Qadir KVM", founderId: "sarhan-qadir-kvm", did: "Called the HOD from the bike, directed the build" },
-    { role: "Wrote the build specification", name: "Naseem Shan", founderId: "naseem-shan", did: "Wrote the build specification" },
-    { role: "On the bike when the call was made", name: "Mohammed Nafih P", founderId: "muhammed-nafih-p", did: "On the bike when the call was made" },
-    { role: "Held the team together until the others arrived", name: "Adhinan K", founderId: "adhinan-k", did: "Held the team together until the others arrived" },
-    { role: "Walked into the classrooms and fetched the builders", name: "Mohammed Shahin EK", founderId: "mohammed-shahin-ek", did: "Walked into the classrooms and fetched the builders" },
-    { role: "Walked into the classrooms and fetched the builders", name: "Mashood M", founderId: "mashood-m", did: "Walked into the classrooms and fetched the builders" },
-    { role: "Walked into the classrooms and fetched the builders", name: "Arshak", founderId: "arshak", did: "Walked into the classrooms and fetched the builders" },
-  ],
-  contributors: [
-    { name: "Faseen", detail: "3rd year, CSE" },
-    { name: "Shibin", detail: "3rd year, CSE" },
-    { name: "Zakariya", detail: "3rd year, CSE" },
-    { name: "Danish", detail: "1st year, T2" },
-    { name: "Abhijith CJ", detail: "3rd year, AI & DS", did: "Built the gesture-controlled launch" },
-  ],
-  faculty: [
-    { name: "Jasira KT", detail: "ELEVATES Faculty Head, CSE" },
-    { name: "Anu K Soman", detail: "HOD, CSE" },
-    { name: "Anas Bin Malik", detail: "Assistant Professor, Computer Science and Engineering" },
-  ],
-  stackAndCode: {
-    technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Python", "OpenCV", "MediaPipe"],
-    repoUrl: null,
-    repoNote: "Production site deployed directly to Vercel preview under CSE Association Eranad Knowledge City.",
-  },
 };
 
 export const ALL_CASE_STUDIES: FlagshipProject[] = [
