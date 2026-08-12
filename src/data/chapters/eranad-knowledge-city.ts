@@ -43,6 +43,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       headcount: 30,
       description: "5-day rapid dev sprint building the full fest event management system.",
     },
+    {
+      title: "Celestia CSE Relaunch & 1-Hour Build",
+      date: "March 25, 2026",
+      headcount: 250,
+      description: "Coordinated CSE department relaunch event with Chief Guest Moosa Mehar MP (Co-Founder & CEO, TinkerHub). Rebuilt association website live on stage in 60 minutes.",
+    },
   ],
   projects: [
     {
@@ -58,6 +64,13 @@ export const eranadKnowledgeCityChapter: Chapter = {
       title: "Aaroh Arts Platform",
       description: "Real-time registration and score portal for the campus arts festival.",
       builder: "ELEVATES EKC Dev Team",
+    },
+    {
+      slug: "celestia",
+      url: "/projects/celestia",
+      title: "Celestia — CSE Association Website",
+      description: "Full CSE department website rebuilt in 1 hour by 5 junior builders and launched live via gesture recognition.",
+      builder: "5 Junior Student Builders",
     },
   ],
   stats: {
