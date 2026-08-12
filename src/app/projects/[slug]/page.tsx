@@ -91,7 +91,8 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
   }
 
   // Google Dataset schemas if project emits datasets
-  const datasetSchemas = (project.datasets || []).map((ds) => ({
+  const datasetSchemas = project.datasets
+    ? project.datasets.map((ds) => ({
     "@type": "Dataset",
     "name": ds.name,
     "description": ds.description,
@@ -105,7 +106,8 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         "contentUrl": ds.endpoint,
       },
     ],
-  }));
+  }))
+: [];
 
   // JSON-LD with strict entity graph contributor links to /team#id
   const jsonLd = {
