@@ -1,5 +1,6 @@
 export type ProjectStatus =
   | "live"
+  | "live-incomplete"
   | "live-unmaintained"
   | "paused"
   | "archived"
@@ -14,6 +15,7 @@ export interface ProjectBuilder {
   role: string;
   name: string;
   founderId: string;
+  did?: string;
 }
 
 export interface FlagshipProject {
@@ -69,6 +71,15 @@ export interface FlagshipProject {
   gallery?: Array<{
     src: string;
     caption: string;
+  }>;
+  faculty?: Array<{
+    name: string;
+    detail: string;
+  }>;
+  contributors?: Array<{
+    name: string;
+    detail: string;
+    did?: string;
   }>;
 }
 

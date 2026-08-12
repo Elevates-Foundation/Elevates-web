@@ -16,6 +16,12 @@ const STATUS_CONFIG: Record<
     textClass: "text-paper",
     borderClass: "border-graphite",
   },
+  "live-incomplete": {
+    label: "LIVE · INCOMPLETE",
+    bgClass: "bg-amber-500",
+    textClass: "text-paper",
+    borderClass: "border-graphite",
+  },
   "live-unmaintained": {
     label: "LIVE · UNMAINTAINED",
     bgClass: "bg-amber-500",
