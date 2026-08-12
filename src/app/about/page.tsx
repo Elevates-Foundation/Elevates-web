@@ -213,11 +213,10 @@ export default function AboutPage() {
           ].map(([step, desc], i) => (
             <div
               key={i}
-              className={`flex gap-4 md:gap-6 p-5 rounded-sm border-2 transition-all ${
-                step === "SHOWCASE"
+              className={`flex gap-4 md:gap-6 p-5 rounded-sm border-2 transition-all ${step === "SHOWCASE"
                   ? "border-flame bg-flame/5 shadow-[4px_4px_0px_0px_rgba(242,100,48,1)]"
                   : "border-graphite/20 bg-paper"
-              }`}
+                }`}
             >
               <span className={`font-mono font-black text-xs shrink-0 w-20 pt-0.5 ${step === "SHOWCASE" ? "text-flame" : "text-olive"}`}>
                 {String(i + 1).padStart(2, "0")} {step}

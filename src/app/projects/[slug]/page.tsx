@@ -27,6 +27,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "celestia") {
+    return {
+      title: "Celestia — A College Department Website Rebuilt in One Hour | ELEVATES",
+      description:
+        "We were running the event. The guest we had invited was arriving at two o'clock. We had two hours, five juniors, and a specification written on the way to campus. We finished in one hour.",
+      keywords: [
+        "college department website design kerala",
+        "cse association website",
+        "college association website template",
+        "student built college website",
+        "ai coding agent build brief",
+      ],
+      alternates: { canonical: `/projects/${project.slug}` },
+      openGraph: {
+        title: "Celestia — CSE Association Website Rebuilt in 1 Hour | ELEVATES",
+        description: project.summary,
+        url: `https://www.elevates.live/projects/${project.slug}`,
+      },
+    };
+  }
+
   if (slug === "roadundo") {
     return {
       title: "RoadUndo — Kerala Dam Levels, Pincodes & Open Data API | ELEVATES",
@@ -363,37 +384,131 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         </section>
       )}
 
-      {/* ─── SECTION 6: WHO BUILT IT ─── */}
+      {/* ─── SECTION 5: WHO BUILT IT / WHO MADE IT POSSIBLE ─── */}
       <section className="mb-14" aria-labelledby="builders-heading">
         <div className="flex items-center justify-between mb-6 border-b-2 border-graphite/20 pb-3">
           <h2 id="builders-heading" className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite">
-            6. WHO BUILT IT
+            5. WHO BUILT IT
           </h2>
           <span className="font-mono text-xs font-bold text-paper bg-graphite px-3 py-1 rounded-sm">
-            NAMED CONTRIBUTORS
+            PRODUCTION TEAM
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {project.builders.map((b) => (
-            <div
-              key={b.name}
-              className="bg-paper p-5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:border-flame transition-all"
-            >
-              <h3 className="font-mono font-bold text-base text-graphite mb-0.5">
-                <Link
-                  href={`/team#${b.founderId}`}
-                  className="hover:text-flame hover:underline"
-                >
-                  {b.name} ↗
-                </Link>
-              </h3>
-              <span className="font-mono text-xs font-bold text-flame block">
-                {b.role}
-              </span>
+        {/* If project has distinct code authors (contributors), render WHO WROTE IT first */}
+        {project.contributors && project.contributors.length > 0 ? (
+          <div className="space-y-8">
+            {/* Block 1: Code Authors */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-mono font-bold text-sm uppercase text-olive tracking-wider">
+                  WHO WROTE IT
+                </h3>
+                <span className="font-mono text-xs font-bold text-paper bg-flame px-2.5 py-0.5 rounded-sm">
+                  {project.contributors.length} BUILDERS
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {project.contributors.map((c) => (
+                  <div
+                    key={c.name}
+                    className="bg-paper p-5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]"
+                  >
+                    <h4 className="font-mono font-bold text-base text-graphite mb-0.5">
+                      {c.name}
+                    </h4>
+                    <span className="font-mono text-xs text-olive font-bold block">
+                      {c.detail}
+                    </span>
+                    {c.did && (
+                      <span className="font-mono text-xs text-flame font-bold block mt-1.5 pt-1.5 border-t border-graphite/10">
+                        ✦ {c.did}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+
+            {/* Block 2: Operations / Made It Possible */}
+            <div className="pt-6 border-t-2 border-graphite/20">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-mono font-bold text-sm uppercase text-olive tracking-wider">
+                  WHO MADE IT POSSIBLE
+                </h3>
+                <span className="font-mono text-xs font-bold text-graphite bg-paper border border-graphite px-2.5 py-0.5 rounded-sm">
+                  0 LINES OF CODE
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {project.builders.map((b) => (
+                  <div
+                    key={b.name}
+                    className="bg-paper p-5 rounded-sm border-2 border-graphite/80 shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:border-flame transition-all"
+                  >
+                    <h4 className="font-mono font-bold text-base text-graphite mb-0.5">
+                      <Link
+                        href={`/team#${b.founderId}`}
+                        className="hover:text-flame hover:underline"
+                      >
+                        {b.name} ↗
+                      </Link>
+                    </h4>
+                    <span className="font-mono text-xs font-bold text-flame block">
+                      {b.did || b.role}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          /* Standard Flagship Project Builders */
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {project.builders.map((b) => (
+              <div
+                key={b.name}
+                className="bg-paper p-5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:border-flame transition-all"
+              >
+                <h3 className="font-mono font-bold text-base text-graphite mb-0.5">
+                  <Link
+                    href={`/team#${b.founderId}`}
+                    className="hover:text-flame hover:underline"
+                  >
+                    {b.name} ↗
+                  </Link>
+                </h3>
+                <span className="font-mono text-xs font-bold text-flame block">
+                  {b.did || b.role}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Faculty Authorization & Support */}
+        {project.faculty && project.faculty.length > 0 && (
+          <div className="mt-8 pt-6 border-t-2 border-graphite/20">
+            <h3 className="font-mono font-bold text-sm uppercase text-olive mb-4 tracking-wider">
+              FACULTY AUTHORIZATION &amp; SUPPORT
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {project.faculty.map((f) => (
+                <div
+                  key={f.name}
+                  className="bg-flame/5 p-4 rounded-sm border-2 border-flame/40 shadow-[3px_3px_0px_0px_rgba(242,100,48,0.4)]"
+                >
+                  <h4 className="font-mono font-bold text-sm text-graphite mb-0.5">
+                    {f.name}
+                  </h4>
+                  <span className="font-mono text-xs text-flame font-bold block">
+                    {f.detail}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* ─── SECTION 7: STACK AND CODE ─── */}
@@ -403,21 +518,23 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         </h2>
 
         <div className="space-y-4 font-mono text-xs md:text-sm">
-          <div>
-            <span className="text-olive font-bold block mb-2">Technologies Used:</span>
-            <div className="flex flex-wrap gap-2">
-              {project.stackAndCode.technologies.map((t) => (
-                <span
-                  key={t}
-                  className="bg-graphite text-paper px-3 py-1 rounded-sm text-xs font-bold"
-                >
-                  {t}
-                </span>
-              ))}
+          {project.stackAndCode?.technologies && (
+            <div>
+              <span className="text-olive font-bold block mb-2">Technologies Used:</span>
+              <div className="flex flex-wrap gap-2">
+                {project.stackAndCode.technologies.map((t) => (
+                  <span
+                    key={t}
+                    className="bg-graphite text-paper px-3 py-1 rounded-sm text-xs font-bold"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          {project.stackAndCode.repoUrl && (
+          {project.stackAndCode?.repoUrl && (
             <div className="pt-2">
               <span className="text-olive font-bold block mb-1">Source Code Repository:</span>
               <a
@@ -462,7 +579,35 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
 
       {/* ─── SECTION 8: CTA ─── */}
       <section className="border-t-4 border-graphite pt-10 text-center">
-        {isOpenTool ? (
+        {project.slug === "celestia" ? (
+          <>
+            <h2 className="font-mono font-black text-2xl md:text-3xl text-graphite uppercase mb-3 max-w-2xl mx-auto leading-tight">
+              Your department has a website that has not been touched since 2022.
+            </h2>
+            <p className="font-hand text-2xl md:text-3xl text-flame mb-8 max-w-2xl mx-auto leading-relaxed font-bold">
+              We do this.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/#footer"
+                className="bg-flame text-paper font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+              >
+                TALK TO US ↗
+              </Link>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-paper text-graphite font-mono font-bold text-sm px-8 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+                >
+                  SEE THE SITE ↗
+                </a>
+              )}
+            </div>
+          </>
+        ) : isOpenTool ? (
           <>
             <h2 className="font-mono font-black text-2xl md:text-3xl text-graphite uppercase mb-3">
               The data layer works. The reporting layer needs people.
