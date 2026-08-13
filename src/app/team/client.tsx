@@ -341,13 +341,6 @@ export default function TeamClient({ founders, advisors }: Props) {
               ) : (
                 <span className="font-mono text-xs text-olive font-bold">ELEVATES FOUNDATION HQ</span>
               )}
-
-              <button
-                onClick={() => setSelectedFounder(null)}
-                className="bg-paper text-graphite font-mono font-bold px-4 py-2.5 rounded-sm border-2 border-graphite hover:bg-graphite/10 transition-colors uppercase text-xs"
-              >
-                CLOSE ✕
-              </button>
             </div>
           </div>
         </div>

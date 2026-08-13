@@ -4,20 +4,21 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
+    { name: "CYBER RAID CTF", type: "CAPTURE THE FLAG", status: "COMPLETED", slug: "cyber-raid-ctf" },
+    { name: "VIBRANIUM QR HUNT", type: "TECH CHALLENGE", status: "COMPLETED", slug: "vibranium-qr-treasure-hunt" },
+    { name: "FIRST SPARK", type: "ELECTRONICS", status: "COMPLETED", slug: "first-spark-electronics" },
+    { name: "STAP", type: "SKILL ASSESSMENT (SkillTrai)", status: "COMPLETED", slug: "stap-skill-assessment" },
     { name: "CYBERSEC BASICS", type: "WORKSHOP", status: "COMPLETED", slug: "cybersec-basics" },
-    { name: "SPARK", type: "ELECTRONICS", status: "COMPLETED", slug: "spark-electronics" },
-    { name: "STAP", type: "SKILL ASSESSMENT (Powered by SkillTrai)", status: "COMPLETED", slug: "stap-skill-assessment" },
-    { name: "DIGITAL MARKETING", type: "WORKSHOP", status: "COMPLETED", slug: "cybersec-basics" },
-    { name: "LAND SURVEY USING DGPS", type: "WORKSHOP", status: "COMPLETED", slug: "spark-electronics" },
-    { name: "WEBSITE DEVELOPMENT", type: "INDUSTRY WORKSHOP", status: "COMPLETED", slug: "figma-make-a-thon-onam" },
-    { name: "IOT HANDS-ON", type: "HARDWARE", status: "COMPLETED", slug: "spark-electronics" },
-    { name: "AUTOMATIONS", type: "n8n / MAKE.COM", status: "COMPLETED", slug: "n8n-automations" },
     { name: "BUILD-A-THON", type: "USELESS PROJECTS", status: "COMING SOON", slug: "build-a-thon" },
     { name: "UI/UX DESIGN", type: "WORKSHOP", status: "COMING SOON", slug: "figma-make-a-thon-onam" },
     { name: "BUG HUNT", type: "CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
     { name: "ESCAPE ROOM", type: "CYBERSEC CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
     { name: "HACKATHON-LITE", type: "CAPSTONE", status: "COMING SOON", slug: "build-a-thon" },
 ];
+
+import { EVENTS } from "@/data/events";
+
+const validEventSlugs = new Set(EVENTS.map((e) => e.slug));
 
 export default function Programs() {
     return (
@@ -42,10 +43,12 @@ export default function Programs() {
                 {/* Spacer for initial padding */}
                 <div className="w-1 md:w-2 shrink-0" />
 
-                {PROGRAMS.map((prog, i) => (
+                {PROGRAMS.map((prog, i) => {
+                    const href = validEventSlugs.has(prog.slug) ? `/events/${prog.slug}` : "/events";
+                    return (
                     <Link
                         key={i}
-                        href={`/events/${prog.slug}`}
+                        href={href}
                         className="program-card snap-center shrink-0 group relative w-[300px] h-[450px] md:w-[400px] md:h-[550px] bg-paper text-graphite p-6 flex flex-col justify-between border-4 border-transparent hover:border-flame transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                     >
                         {/* Perforated Edge (Left) */}
@@ -102,7 +105,8 @@ export default function Programs() {
                         {/* Hover Effect: Tape */}
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-8 bg-paper/20 rotate-[-2deg] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }} />
                     </Link>
-                ))}
+                    );
+                })}
 
                 {/* Spacer for end padding */}
                 <div className="w-4 md:w-10 shrink-0" />
