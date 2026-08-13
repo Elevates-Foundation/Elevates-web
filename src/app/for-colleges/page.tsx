@@ -5,7 +5,7 @@ import benefitsData from "@/data/for-colleges/benefits.json";
 import faqsData from "@/data/for-colleges/faqs.json";
 import timelineData from "@/data/for-colleges/first-90-days.json";
 import universityLookupsData from "@/data/for-colleges/university-lookups.json";
-import ForCollegesClient from "./client";
+import ForCollegesClient from "@/app/for-colleges/client";
 
 export const metadata: Metadata = {
   title: "Bring ELEVATES to Your College — Chapter Partnerships in Kerala | ELEVATES",
