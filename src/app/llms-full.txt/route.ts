@@ -16,7 +16,7 @@ Every community is designed around the student who applies, volunteers, speaks, 
 4. COLLAB: Peer-to-peer open source teamwork.
 5. SHOWCASE: Every project is published, credited, and visible to industry leaders and recruiters.
 
-## The 17 Founding Members (Batch 2025-26)
+## The 18 Founding Members (Batch 2025-26)
 1. Sarhan Qadir KVM — Founder & Full-stack Lead
 2. Naseem Shan — Founder & Backend Systems Lead
 3. Muhammed Nafih P — Founder & Design Lead
@@ -34,6 +34,7 @@ Every community is designed around the student who applies, volunteers, speaks, 
 15. Sinan Nooren — Founder & Development
 16. Muhammed Fiyas — Founder & Environment Lead
 17. Adil P T — Founder & Development
+18. Abdul Haadi — Founder & Python Developer
 
 ## Faculty Leadership
 - Jasira KT — Faculty Head, CSE, Eranad Knowledge City

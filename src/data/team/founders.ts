@@ -162,4 +162,13 @@ export const FOUNDERS: Founder[] = [
     linkedin: "https://www.linkedin.com/in/adil-pt-2a6553267/",
     cohort: "2025-26",
   },
+  {
+    id: "abdul-haadi",
+    name: "Abdul Haadi",
+    tag: "Front Bencher",
+    role: "Founder",
+    proof: "Python · Development & Backend",
+    linkedin: "https://www.linkedin.com/in/abdul-haadi/",
+    cohort: "2025-26",
+  },
 ];

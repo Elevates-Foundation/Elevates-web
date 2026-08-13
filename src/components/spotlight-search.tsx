@@ -29,11 +29,11 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   },
   {
     id: "sec-team",
-    title: "Meet the Team (17 Founders)",
-    subtitle: "Foundation HQ core, 17 founding members, and faculty advisors",
+    title: "Meet the Team (18 Founders)",
+    subtitle: "Foundation HQ core, 18 founding members, and faculty advisors",
     category: "Team",
     url: "/team",
-    tags: ["team", "founders", "sarhan", "naseem", "advisors", "back benchers"],
+    tags: ["team", "founders", "sarhan", "naseem", "haadi", "advisors", "back benchers", "front benchers"],
   },
   {
     id: "sec-about",

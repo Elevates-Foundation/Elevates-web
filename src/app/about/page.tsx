@@ -331,10 +331,10 @@ export default function AboutPage() {
             FOUNDING TEAM // THE PEOPLE BEHIND ELEVATES
           </span>
           <h2 className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite mb-2">
-            MEET THE 17 FOUNDERS &amp; ADVISORS
+            MEET THE 18 FOUNDERS &amp; ADVISORS
           </h2>
           <p className="font-mono text-xs md:text-sm text-olive max-w-xl">
-            17 back benchers, main class bunkers, and quiet builders who stopped waiting for permission — plus our CSE faculty leadership.
+            18 back benchers, front benchers, main class bunkers, and quiet builders who stopped waiting for permission — plus our CSE faculty leadership.
           </p>
         </div>
         <Link

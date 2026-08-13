@@ -8,11 +8,11 @@ import { ADVISORS } from "@/data/team/advisors";
 export const metadata: Metadata = {
   title: "Meet the Team | ELEVATES Kerala",
   description:
-    "Meet the 17 founders and faculty advisors behind ELEVATES Kerala.",
+    "Meet the 18 founders and faculty advisors behind ELEVATES Kerala.",
   alternates: { canonical: "/team" },
   openGraph: {
     title: "Meet the Team | ELEVATES Kerala",
-    description: "The 17 founding members and faculty behind ELEVATES Kerala.",
+    description: "The 18 founding members and faculty behind ELEVATES Kerala.",
     url: "https://www.elevates.live/team",
   },
 };
@@ -58,7 +58,7 @@ export default function TeamPage() {
           MEET THE <span className="text-flame">TEAM</span>
         </h1>
         <p className="font-hand text-xl md:text-2xl text-olive max-w-3xl leading-relaxed">
-          17 back benchers and quiet builders who stopped waiting for permission and built the thing themselves. Founded September 2025.
+          18 back benchers, front benchers, and quiet builders who stopped waiting for permission and built the thing themselves. Founded September 2025.
         </p>
         <Doodle
           type="crown"
@@ -72,7 +72,7 @@ export default function TeamPage() {
         <div className="relative border-4 border-graphite shadow-[8px_8px_0px_0px_rgba(45,45,52,1)] overflow-hidden">
           <img
             src="/team/elevates-founders.jpeg"
-            alt="The 17 founding members of ELEVATES at Eranad Knowledge City, September 2025"
+            alt="The 18 founding members of ELEVATES at Eranad Knowledge City, September 2025"
             className="w-full object-cover"
             style={{ height: "520px", objectPosition: "center 80%" }}
           />
@@ -80,7 +80,7 @@ export default function TeamPage() {
           <div className="absolute bottom-0 left-0 right-0 bg-graphite/80 backdrop-blur-sm px-6 py-4 flex flex-wrap items-center justify-between gap-2">
             <div>
               <p className="font-mono font-black text-xs uppercase tracking-widest text-flame">
-                THE 17
+                THE 18
               </p>
               <p className="font-mono text-[11px] text-paper/70 mt-0.5">
                 Eranad Knowledge City · Manjeri · September 2025
@@ -96,14 +96,14 @@ export default function TeamPage() {
         <div className="absolute -top-2 -right-2 w-12 h-5 bg-flame rotate-[2deg] z-10" />
       </div>
 
-      {/* 17 Founding Members */}
+      {/* 18 Founding Members */}
       <section className="mb-14">
         <div className="flex items-center justify-between mb-6 border-b-2 border-graphite/20 pb-3">
           <h2 className="text-xl md:text-2xl font-black uppercase text-graphite">
             THE FOUNDING MEMBERS
           </h2>
           <span className="font-mono text-xs font-bold text-paper bg-graphite px-3 py-1 rounded-sm">
-            17 FOUNDERS
+            18 FOUNDERS
           </span>
         </div>
 
