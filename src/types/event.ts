@@ -39,4 +39,6 @@ export interface EventItem {
   coverImage: string;
   registrationUrl?: string;
   featured?: boolean;
+  peerLabSlug?: string;
+  peerLabTitle?: string;
 }

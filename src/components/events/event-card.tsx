@@ -38,10 +38,10 @@ export default function EventCard({ event }: EventCardProps) {
       </div>
 
       {/* Date & Location Footer */}
-      <div className="pt-4 border-t-2 border-dashed border-graphite/20 flex flex-col gap-3">
+      <div className="pt-4 border-t-2 border-dashed border-graphite/20 flex flex-col gap-3 mt-auto">
         <div className="flex justify-between items-center font-mono text-xs text-olive">
-          <span>📍 {event.venue}</span>
-          <span className="font-bold">{event.startDate}</span>
+          <span className="truncate max-w-[180px]">📍 {event.venue}</span>
+          <span className="font-bold shrink-0">{event.startDate}</span>
         </div>
 
         <div className="flex justify-between items-center">
@@ -62,6 +62,6 @@ export default function EventCard({ event }: EventCardProps) {
         color="#f26430"
         className="absolute bottom-4 right-4 w-20 h-20 opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"
       />
-    </div>
+    </div >
   );
 }

@@ -91,14 +91,14 @@ export default async function EventDetailPage({ params }: PageProps) {
   };
 
   return (
-    <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+    <main className="min-h-screen bg-paper text-graphite pt-32 md:pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
       />
 
       {/* Breadcrumb Navigation Bar */}
-      <nav aria-label="Breadcrumb" className="mb-8 font-mono text-xs text-olive flex items-center gap-2">
+      <nav aria-label="Breadcrumb" className="mb-6 font-mono text-xs text-olive flex items-center gap-2">
         <Link href="/" className="hover:underline">Home</Link>
         <span>/</span>
         <Link href="/events" className="hover:underline">Events</Link>
@@ -118,23 +118,27 @@ export default async function EventDetailPage({ params }: PageProps) {
           <div className="lg:col-span-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r-2 border-graphite/20 pb-8 lg:pb-0 lg:pr-10">
             <div>
               {/* Event Cover Image Card */}
-              <div className="relative mb-6 rounded-sm overflow-hidden border-3 border-graphite shadow-md">
+              <div className="relative mb-4 rounded-sm overflow-hidden border-3 border-graphite shadow-md bg-graphite/5 flex items-center justify-center">
                 <img
                   src={event.coverImage}
                   alt={event.title}
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full max-h-[500px] object-contain rounded-sm"
                 />
-                <Link
-                  href="/peer-labs/operation-java"
-                  className="absolute bottom-0 left-0 right-0 bg-flame hover:bg-flame/90 text-paper p-3 font-mono text-xs md:text-sm font-bold flex justify-between items-center transition-colors"
-                >
-                  <span>Part of 'Operation Java' Peer Lab</span>
-                  <span>↗</span>
-                </Link>
               </div>
 
+              {/* Dynamic Peer Lab Link (Only if linked) */}
+              {event.peerLabSlug && (
+                <Link
+                  href={`/peer-labs/${event.peerLabSlug}`}
+                  className="mb-6 bg-flame hover:bg-graphite text-paper p-3 font-mono text-xs md:text-sm font-bold flex justify-between items-center transition-colors rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]"
+                >
+                  <span>{event.peerLabTitle || "View Connected Peer Lab Series"}</span>
+                  <span>↗</span>
+                </Link>
+              )}
+
               {/* Title & Tagline */}
-              <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tight text-graphite mb-2">
+              <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tight text-graphite mb-2">
                 {event.title}
               </h1>
 
@@ -274,46 +278,48 @@ export default async function EventDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-b-4 border-graphite my-12" />
-
       {/* UPCOMING & RELATED LABS Section */}
-      <section>
-        <h2 className="text-2xl md:text-3xl font-black uppercase text-graphite mb-8">
-          UPCOMING & RELATED LABS
-        </h2>
+      {relatedEvents.length > 0 && (
+        <>
+          <div className="border-b-4 border-graphite my-12" />
+          <section>
+            <h2 className="text-2xl md:text-3xl font-black uppercase text-graphite mb-8">
+              UPCOMING & RELATED LABS
+            </h2>
 
-        <div className="space-y-4">
-          {relatedEvents.map((rel) => (
-            <Link
-              key={rel.id}
-              href={`/events/${rel.slug}`}
-              className="group bg-paper p-5 border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:shadow-[6px_6px_0px_0px_rgba(242,100,48,1)] transition-all flex items-center justify-between flex-wrap gap-4 rounded-sm"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-flame/10 rounded-sm border border-flame flex items-center justify-center font-mono font-bold text-flame text-xs">
-                  {rel.category.charAt(0)}
-                </div>
-                <div>
-                  <h3 className="font-mono font-bold text-base text-graphite group-hover:text-flame transition-colors">
-                    {rel.title}
-                  </h3>
-                  <span className="font-mono text-xs text-olive">
-                    📍 {rel.venue} • {rel.startDate}
-                  </span>
-                </div>
-              </div>
+            <div className="space-y-4">
+              {relatedEvents.map((rel) => (
+                <Link
+                  key={rel.id}
+                  href={`/events/${rel.slug}`}
+                  className="group bg-paper p-5 border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:shadow-[6px_6px_0px_0px_rgba(242,100,48,1)] transition-all flex items-center justify-between flex-wrap gap-4 rounded-sm"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-flame/10 rounded-sm border border-flame flex items-center justify-center font-mono font-bold text-flame text-xs">
+                      {rel.category.charAt(0)}
+                    </div>
+                    <div>
+                      <h3 className="font-mono font-bold text-base text-graphite group-hover:text-flame transition-colors">
+                        {rel.title}
+                      </h3>
+                      <span className="font-mono text-xs text-olive">
+                        📍 {rel.venue} • {rel.startDate}
+                      </span>
+                    </div>
+                  </div>
 
-              <div className="flex items-center gap-4">
-                <EventBadge type={rel.format} />
-                <span className="font-mono text-sm font-bold text-flame group-hover:translate-x-1 transition-transform">
-                  ↗
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+                  <div className="flex items-center gap-4">
+                    <EventBadge type={rel.format} />
+                    <span className="font-mono text-sm font-bold text-flame group-hover:translate-x-1 transition-transform">
+                      ↗
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </main>
   );
 }
