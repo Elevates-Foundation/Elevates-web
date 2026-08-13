@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.elevates.live";
   const currentDate = new Date();
 
+  // Dynamic Projects (Aaroh, Vibranium, Celestia, Roadundo, etc.)
   const projectEntries: MetadataRoute.Sitemap = ALL_CASE_STUDIES.map((proj) => ({
     url: `${baseUrl}/projects/${proj.slug}`,
     lastModified: currentDate,
@@ -15,13 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Dynamic Events (Cyber Raid CTF, Vibranium QR Hunt, First Spark, STAP, Cybersec Workshop, etc.)
   const eventEntries: MetadataRoute.Sitemap = EVENTS.map((event) => ({
     url: `${baseUrl}/events/${event.slug}`,
     lastModified: currentDate,
     changeFrequency: "weekly",
-    priority: 0.8,
+    priority: 0.85,
   }));
 
+  // Dynamic Peer Labs (Cybersecurity Lab, etc.)
   const peerLabEntries: MetadataRoute.Sitemap = PEER_LABS.map((lab) => ({
     url: `${baseUrl}/peer-labs/${lab.slug}`,
     lastModified: currentDate,
@@ -29,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // Dynamic Chapters (Eranad Knowledge City, etc.)
   const chapterEntries: MetadataRoute.Sitemap = CHAPTERS.map((ch) => ({
     url: `${baseUrl}/chapters/${ch.slug}`,
     lastModified: currentDate,
@@ -36,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // Main Core Pages Only
   return [
     {
       url: baseUrl,
@@ -82,24 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/for-colleges`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/code-of-conduct`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
     },
     ...projectEntries,
     ...eventEntries,
