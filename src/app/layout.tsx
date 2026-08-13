@@ -25,8 +25,11 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "ELEVATES — Student Tech Community in Kerala for Skilled, Quiet Builders",
-  description: "ELEVATES is a student-run tech community in Kerala that finds skilled but overlooked students, helps them build real projects, and makes sure the work gets seen.",
+  title: {
+    default: "ELEVATES — Student Tech Community in Kerala",
+    template: "%s | ELEVATES Kerala",
+  },
+  description: "ELEVATES is a student-run tech community in Kerala finding skilled, quiet builders to build and ship real-world projects.",
   keywords: [
     "ELEVATES",
     "student tech community kerala",
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
+    title: "ELEVATES — Student Tech Community in Kerala",
     description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
     url: "https://www.elevates.live",
     siteName: "ELEVATES",
@@ -59,13 +62,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
+        alt: "ELEVATES | Student Tech Community in Kerala",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
+    title: "ELEVATES — Student Tech Community in Kerala",
     description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
     images: ["/og-image.png"],
   },
@@ -211,16 +214,11 @@ const jsonLd = {
       "name": "ELEVATES Programs & Workshops",
       "description": "List of active, completed, and upcoming technical programs by ELEVATES.",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "CYBERSEC BASICS - Workshop" },
-        { "@type": "ListItem", "position": 2, "name": "SPARK - Electronics Workshop" },
-        { "@type": "ListItem", "position": 3, "name": "STAP - Skill Assessment" },
-        { "@type": "ListItem", "position": 4, "name": "DIGITAL MARKETING - Workshop" },
-        { "@type": "ListItem", "position": 5, "name": "LAND SURVEY USING DGPS - Workshop" },
-        { "@type": "ListItem", "position": 6, "name": "WEBSITE DEVELOPMENT - Industry Workshop" },
-        { "@type": "ListItem", "position": 7, "name": "IOT HANDS-ON - Hardware Workshop" },
-        { "@type": "ListItem", "position": 8, "name": "AUTOMATIONS - n8n / Make.com Workshop" },
-        { "@type": "ListItem", "position": 9, "name": "BUILD-A-THON - Useless Projects Hackathon" },
-        { "@type": "ListItem", "position": 10, "name": "ESCAPE ROOM - Cybersecurity Challenge" }
+        { "@type": "ListItem", "position": 1, "name": "CYBER RAID CTF - Capture The Flag Challenge" },
+        { "@type": "ListItem", "position": 2, "name": "VIBRANIUM 5.0 - QR Treasure Hunt" },
+        { "@type": "ListItem", "position": 3, "name": "FIRST SPARK - Basics of Electronics Workshop" },
+        { "@type": "ListItem", "position": 4, "name": "STAP - Skill Taste Assessment Program by Skilltrai" },
+        { "@type": "ListItem", "position": 5, "name": "CYBERSECURITY WORKSHOP - 3-Phase Kali Linux & Terminal Defense" }
       ]
     }
   ]

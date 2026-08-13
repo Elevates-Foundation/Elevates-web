@@ -4,12 +4,12 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 export const metadata: Metadata = {
-  title: "About ELEVATES — A Student Tech Community in Kerala for Skilled, Quiet Builders",
+  title: "About Us | ELEVATES Kerala",
   description:
     "We started because a chapter application window was closed. ELEVATES is a student-run tech community in Kerala that finds skilled but overlooked students, helps them build real projects, and makes sure the work gets seen.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About ELEVATES — A Student Tech Community in Kerala for Skilled, Quiet Builders",
+    title: "About Us | ELEVATES Kerala",
     description:
       "We started because a chapter application window was closed. ELEVATES finds skilled but silent students, helps them build real projects, and makes sure the work gets seen.",
     url: "https://www.elevates.live/about",

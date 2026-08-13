@@ -6,12 +6,12 @@ import ProjectStatusChip from "@/components/status-chip";
 import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES, ALSO_BUILT_ARCHIVE } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects & Production Proof — Software Built & Shipped | ELEVATES",
+  title: "Projects & Production Proof | ELEVATES Kerala",
   description:
     "Production software built by ELEVATES for real college fests. Handling 400,000+ requests under extreme load with zero downtime. Proof beats certificates.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Projects & Production Proof — ELEVATES",
+    title: "Projects & Production Proof | ELEVATES Kerala",
     description:
       "Production software built for real college fests with real load. Vibranium Event Platform, Aaroh Arts Platform, RoadUndo Open Data API.",
     url: "https://www.elevates.live/projects",
