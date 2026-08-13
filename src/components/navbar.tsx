@@ -75,6 +75,10 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
     const pathname = usePathname();
+    if (pathname === "/elevates-for-colleges-pdf" || pathname?.endsWith("-pdf")) {
+        return null;
+    }
+
     const isHomePage = pathname === "/";
 
     const [scrolled, setScrolled] = useState(false);

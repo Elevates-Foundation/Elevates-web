@@ -109,3 +109,19 @@ html.lenis body {
 .animate-marquee-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Print Overrides to prevent blank PDF previews */
+@media print {
+  html, body {
+    background-color: #f8fff4 !important;
+    color: #2d2d34 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    position: static !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+}

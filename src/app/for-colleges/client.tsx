@@ -128,7 +128,7 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
           </a>
 
           <a
-            href="/elevates-for-colleges.pdf"
+            href="/elevates-for-colleges-pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-paper text-graphite font-mono font-bold px-6 py-3.5 rounded-sm border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:bg-graphite hover:text-paper hover:translate-y-0.5 hover:shadow-none transition-all uppercase text-sm inline-block"
