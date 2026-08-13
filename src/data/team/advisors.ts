@@ -4,6 +4,7 @@ export interface Advisor {
   department: string;
   college: string;
   campusSlug?: string;
+  image: string;
 }
 
 export const ADVISORS: Advisor[] = [
@@ -13,6 +14,7 @@ export const ADVISORS: Advisor[] = [
     department: "Computer Science & Engineering",
     college: "Eranad Knowledge City, Manjeri",
     campusSlug: "eranad-knowledge-city",
+    image: "/images/advisors/jasira-kt.jpeg",
   },
   {
     name: "Anu K Soman",
@@ -20,5 +22,6 @@ export const ADVISORS: Advisor[] = [
     department: "Computer Science & Engineering",
     college: "Eranad Knowledge City, Manjeri",
     campusSlug: "eranad-knowledge-city",
+    image: "/images/advisors/anu-ks.png",
   },
 ];

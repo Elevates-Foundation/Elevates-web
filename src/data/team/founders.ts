@@ -6,6 +6,7 @@ export interface Founder {
   proof: string;
   linkedin?: string; // canonical — no tracking params
   cohort: "2025-26";
+  image: string;
 }
 
 export const FOUNDERS: Founder[] = [
@@ -17,6 +18,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Full-stack · Built elevates.live",
     linkedin: "https://www.linkedin.com/in/sqadirkvm/",
     cohort: "2025-26",
+    image: "/images/founders/sarhan-qadir.jpeg",
   },
   {
     id: "naseem-shan",
@@ -26,6 +28,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Backend · Systems & Infrastructure",
     linkedin: "https://www.linkedin.com/in/naseem-shan-b5039a255/",
     cohort: "2025-26",
+    image: "/images/founders/naseem-shan.jpeg",
   },
   {
     id: "muhammed-nafih-p",
@@ -35,6 +38,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Design · Aaroh brand and UI",
     linkedin: "https://www.linkedin.com/in/muhammed-nafih-8777a2282/",
     cohort: "2025-26",
+    image: "/images/founders/nafih.jpeg",
   },
   {
     id: "anil-das-p",
@@ -44,6 +48,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Development · Ships right before deadline",
     linkedin: "https://www.linkedin.com/in/anildasp/",
     cohort: "2025-26",
+    image: "/images/founders/anil-das.jpeg",
   },
   {
     id: "nadheem-roshan",
@@ -53,6 +58,7 @@ export const FOUNDERS: Founder[] = [
     proof: "IoT · Hardware & Embedded Systems",
     linkedin: "https://www.linkedin.com/in/nadheem-roshan-aa417427a/",
     cohort: "2025-26",
+    image: "/images/founders/nadheem.jpg",
   },
   {
     id: "muhammed-shanif-p",
@@ -62,6 +68,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Embedded · Vibranium RFID check-in",
     linkedin: "https://www.linkedin.com/in/muhammed-shanif-p-52865a27a/",
     cohort: "2025-26",
+    image: "/images/founders/shanif.jpeg",
   },
   {
     id: "adhinan-k",
@@ -71,6 +78,7 @@ export const FOUNDERS: Founder[] = [
     proof: "DevOps · Linux & server infrastructure",
     linkedin: "https://www.linkedin.com/in/adhinan-k-48b65927a/",
     cohort: "2025-26",
+    image: "/images/founders/adhinan.png",
   },
   {
     id: "mashood-m",
@@ -80,6 +88,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Development · Multiple ambitious WIPs",
     linkedin: "https://www.linkedin.com/in/mashood-m-5516b71a7/",
     cohort: "2025-26",
+    image: "/images/founders/mashood.jpeg",
   },
   {
     id: "mohammed-shahin-ek",
@@ -89,6 +98,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Backend · 400k requests, zero downtime",
     linkedin: "https://www.linkedin.com/in/shahinek/",
     cohort: "2025-26",
+    image: "/images/founders/shahin-ek.jpeg",
   },
   {
     id: "shifna-kp",
@@ -98,6 +108,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Ops · Campus launch, 120 seats in 2 hours",
     linkedin: "https://www.linkedin.com/in/shifnarisan/",
     cohort: "2025-26",
+    image: "/images/founders/shifna.jpeg",
   },
   {
     id: "mohammed-mijvad",
@@ -107,6 +118,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Hardware · Lab systems & electronics",
     linkedin: "https://www.linkedin.com/in/mohammed-mijvad-1b8a3b376/",
     cohort: "2025-26",
+    image: "/images/founders/mijvad.jpeg",
   },
   {
     id: "sona-varghese",
@@ -116,6 +128,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Events · Ran the first public showcase",
     linkedin: "https://www.linkedin.com/in/sona-varughese-97509b408/",
     cohort: "2025-26",
+    image: "/images/founders/sona.jpg",
   },
   {
     id: "ashith-mk",
@@ -125,6 +138,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Security · Ran the cybersecurity workshop",
     linkedin: "https://www.linkedin.com/in/ashith-mk-723599355/",
     cohort: "2025-26",
+    image: "/images/founders/ashith.jpeg",
   },
   {
     id: "arshak-perumballi",
@@ -134,6 +148,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Comms · Every deck that got us in a room",
     linkedin: "https://www.linkedin.com/in/arshak-perumballi-14973b1b6/",
     cohort: "2025-26",
+    image: "/images/founders/arshak.png",
   },
   {
     id: "sinan-nooren",
@@ -143,6 +158,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Development · Builds first, talks later",
     linkedin: "https://www.linkedin.com/in/sinan-nooren-9329372b6/",
     cohort: "2025-26",
+    image: "/images/founders/sinan-nooren.png",
   },
   {
     id: "muhammed-fiyas-n",
@@ -152,6 +168,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Development · Environment debugging specialist",
     linkedin: "https://www.linkedin.com/in/muhammed-fiyas-n/",
     cohort: "2025-26",
+    image: "/images/founders/fiyas.png",
   },
   {
     id: "adil-pt",
@@ -161,6 +178,7 @@ export const FOUNDERS: Founder[] = [
     proof: "Dev · Quietly ships from the last row",
     linkedin: "https://www.linkedin.com/in/adil-pt-2a6553267/",
     cohort: "2025-26",
+    image: "/images/founders/adil.jpeg",
   },
   {
     id: "abdul-haadi",
@@ -170,5 +188,6 @@ export const FOUNDERS: Founder[] = [
     proof: "Python · Development & Backend",
     linkedin: "https://www.linkedin.com/in/abdul-haadi/",
     cohort: "2025-26",
+    image: "/images/founders/haadi.jpeg",
   },
 ];
