@@ -86,8 +86,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/for-colleges`,
       lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/code-of-conduct`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
     ...projectEntries,
     ...eventEntries,

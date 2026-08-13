@@ -8,7 +8,7 @@ export const eranadKnowledgeCityChapter: Chapter = {
   district: "Malappuram",
   foundedDate: "September 2025",
   lead: {
-    name: "EKC Student Lead",
+    name: "Adhinan K",
     role: "Campus Chapter Lead",
   },
   facultyCoordinator: {
