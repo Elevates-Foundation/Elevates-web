@@ -66,14 +66,14 @@ export default async function PeerLabDetailPage({ params }: PageProps) {
   };
 
   return (
-    <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+    <main className="min-h-screen bg-paper text-graphite pt-32 md:pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
       />
 
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="mb-8 font-mono text-xs text-olive flex items-center gap-2">
+      <nav aria-label="Breadcrumb" className="mb-6 font-mono text-xs text-olive flex items-center gap-2">
         <Link href="/" className="hover:underline">Home</Link>
         <span>/</span>
         <Link href="/peer-labs" className="hover:underline">Peer Labs</Link>
@@ -82,7 +82,7 @@ export default async function PeerLabDetailPage({ params }: PageProps) {
       </nav>
 
       {/* 1. ELEVATES Full-Width Hero Section */}
-      <section className="bg-paper border-4 border-graphite rounded-sm p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(45,45,52,1)] mb-12 relative overflow-hidden">
+      <section className="bg-paper border-4 border-graphite rounded-sm p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(45,45,52,1)] mb-12 relative">
         {/* Tape Graphic */}
         <div className="absolute -top-4 left-10 w-32 h-8 bg-flame/80 rotate-[-2deg] opacity-80" />
 
@@ -111,7 +111,7 @@ export default async function PeerLabDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-7xl font-black italic uppercase tracking-tight text-graphite mb-4">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tight text-graphite mb-4">
           {lab.title}
         </h1>
 
