@@ -17,12 +17,14 @@ export function GET() {
 - Learning Clusters: https://www.elevates.live/clusters
 - Events & Workshops: https://www.elevates.live/events
 - Peer Labs Cohorts: https://www.elevates.live/peer-labs
+- Projects: https://www.elevates.live/projects
+
 
 ## Key Accomplishments
 - Built complete Event Management System for Vibranium TechFest handling 400,000+ requests in 24h with 0 downtime.
 - Built Aaroh Arts Fest ticketing platform.
 - 120-seat Campus Launch Event filled in 1-2 hours.
-- 13 programmes shipped across cybersecurity, IoT, web, and automation.
+- 13 programmes shipped across cybersecurity, IoT, web, civil and automation.
 
 ## Full Context Feed
 - Detailed Context: https://www.elevates.live/llms-full.txt
