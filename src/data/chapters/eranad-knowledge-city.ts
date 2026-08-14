@@ -98,6 +98,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Hands-on UI/UX, Bootstrap 5 responsive layout, and GitHub Pages live deployment workshop led by Danish (S2 Cyber).",
     },
     {
+      title: "Land Survey Using DGPS Workshop",
+      date: "January 19, 2026",
+      headcount: 30,
+      description: "Live outdoor differential GPS surveying & geospatial technology workshop led by Favad (S8 Civil) for first-year students.",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,

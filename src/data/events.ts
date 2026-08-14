@@ -2,6 +2,36 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "dgps-land-survey-favad",
+    slug: "dgps-land-survey-favad",
+    title: "LAND SURVEY USING DGPS — WORKSHOP",
+    tagline: "Modern Land Surveying & Differential GPS Technology in Action",
+    description: "Practical outdoor hands-on surveying workshop on DGPS (Differential GPS) technology, geospatial data, and precision field mapping.",
+    fullDescription: "Land Survey Using DGPS – Workshop is here!\n\nGet introduced to modern land surveying techniques using DGPS (Differential GPS) and understand how real-world surveying is done 📍🛰️\n\n✨ What you’ll learn:\n• Basics of land surveying\n• Introduction to DGPS technology\n• Applications of DGPS in civil & land surveys\n• Practical insights into modern surveying methods\n• Real-world use cases and career relevance\n\n🧑‍🏫 Technical & concept-oriented learning conducted live on the field.\n\n🎯 Exclusive cohort for First Year students.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Jan 19, 2026",
+    endDate: "Jan 19, 2026",
+    startTime: "10:00 AM",
+    endTime: "1:00 PM",
+    isoStartDate: "2026-01-19T10:00:00+05:30",
+    isoEndDate: "2026-01-19T13:00:00+05:30",
+    venue: "EKC Volleyball Court (Outdoor Field), EKCTC",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Dept of Civil Engineering" }
+    ],
+    hosts: [
+      { name: "Favad", role: "Surveying & Civil Lead (S8 Civil)" }
+    ],
+    topics: ["DGPS Surveying", "Differential GPS", "Civil Engineering", "Geospatial Mapping", "Field Surveying"],
+    attendeesCount: 30,
+    coverImage: "/images/events/dgps-survey-favad.jpeg",
+    featured: true
+  },
+  {
     id: "modern-web-design-danish",
     slug: "modern-web-design-danish",
     title: "MODERN WEB DESIGN WORKSHOP",
