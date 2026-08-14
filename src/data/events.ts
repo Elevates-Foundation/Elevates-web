@@ -33,6 +33,38 @@ export const EVENTS: EventItem[] = [
     locationName: ""
   },
   {
+    id: "buzzer-to-buzzer",
+    slug: "buzzer-to-buzzer",
+    title: "BUZZER TO BUZZER — TECH QUIZ",
+    tagline: "Only the Fastest Mind Wins · High-Stakes Tech Quiz Battle",
+    description: "High-stakes head-to-head buzzer quiz battle testing reflexes, logic, and core engineering knowledge during VIBRANIUM 5.0 TechFest.",
+    fullDescription: "High-stakes quiz battles where only the fastest mind wins. Hit the buzzer before anyone else, test your reflexes, logic, and core technical knowledge in head-to-head showdowns to claim victory and certificates.\n\nHosted as part of the VIBRANIUM 5.0 TechFest powered by ELEVATES, presented by the Department of Cyber Security and Mechanical Engineering in collaboration with IEDC EKCTC.",
+    format: "Campus Exclusive",
+    category: "Challenge",
+    status: "Completed",
+    startDate: "Oct 09, 2025",
+    endDate: "Oct 09, 2025",
+    startTime: "10:00 AM",
+    endTime: "3:30 PM",
+    isoStartDate: "2025-10-09T10:00:00+05:30",
+    isoEndDate: "2025-10-09T15:30:00+05:30",
+    venue: "Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "IEDC EKCTC" },
+      { name: "Dept of Cyber Security" },
+      { name: "Dept of Mechanical Engineering" }
+    ],
+    hosts: [
+      { name: "Mohammed Mijvad", role: "Event Co-ordinator" }
+    ],
+    topics: ["Tech Trivia", "Buzzer Battle", "Rapid Logic", "Cybersecurity", "Engineering Fundamentals"],
+    attendeesCount: 36,
+    coverImage: "/images/events/buzzer-to-buzzer.jpeg",
+    featured: false
+  },
+  {
     id: "vibranium-qr-treasure-hunt",
     slug: "vibranium-qr-treasure-hunt",
     title: "VIBRANIUM 5.0 — QR TREASURE HUNT",

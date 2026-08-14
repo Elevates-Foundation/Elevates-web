@@ -56,6 +56,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Campus-wide cryptic QR scavenger hunt and rapid platform deployment powering all fest event registrations.",
     },
     {
+      title: "Buzzer to Buzzer — Tech Quiz Battle",
+      date: "October 09, 2025",
+      headcount: 36,
+      description: "High-stakes rapid-fire tech quiz battle coordinated by Mohammed Mijvad during Vibranium 5.0 in collaboration with Cyber Security & Mechanical Engineering Depts.",
+    },
+    {
       title: "Cyber Raid — Capture The Flag (CTF)",
       date: "October 09, 2025",
       headcount: 45,
