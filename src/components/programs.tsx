@@ -4,6 +4,7 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
+    { name: "DIGITAL MARKETING", type: "WORKSHOP (Kalkus)", status: "COMPLETED", slug: "digital-marketing-kalkus" },
     { name: "CYBER RAID CTF", type: "CAPTURE THE FLAG", status: "COMPLETED", slug: "cyber-raid-ctf" },
     { name: "VIBE CODING", type: "SPEED CHALLENGE", status: "COMPLETED", slug: "vibranium-vibe-coding" },
     { name: "AI BATTLE ARENA", type: "LLM CHESS EXHIBITION", status: "COMPLETED", slug: "vibranium-ai-battle" },

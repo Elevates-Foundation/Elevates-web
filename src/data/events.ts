@@ -2,6 +2,38 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "digital-marketing-kalkus",
+    slug: "digital-marketing-kalkus",
+    title: "DIGITAL MARKETING WORKSHOP — BY KALKUS.STUDIO",
+    tagline: "Brand Growth, Social Media Strategy, SEO & Ad Analytics",
+    description: "A practical beginner-friendly workshop by Kalkus Studio covering digital brand growth, SEO/SEM mechanics, content strategy, and ad analytics.",
+    fullDescription: "A beginner-friendly and practical hands-on workshop designed to introduce students to the fast-growing world of Digital Marketing — perfect for anyone looking to build high-demand skills across industries.\n\nLed by Salim Salhaan (Co-Founder & Design Head) and Muhammed Anas (Co-Founder & Technical Head) from Kalkus Studio, covering:\n• Fundamentals of Digital Marketing & Brand Growth\n• Social media strategy & viral reach mechanics\n• Basics of SEO, SEM & content strategy\n• Understanding ad campaigns, conversion funnels & performance analytics\n• Hands-on laptop activity and real-world case studies.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Dec 10, 2025",
+    endDate: "Dec 10, 2025",
+    startTime: "10:00 AM",
+    endTime: "1:00 PM",
+    isoStartDate: "2025-12-10T10:00:00+05:30",
+    isoEndDate: "2025-12-10T13:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Kalkus Studio" },
+      { name: "IEDC EKCTC" }
+    ],
+    hosts: [
+      { name: "Salim Salhaan", role: "Co-Founder & Design Head, Kalkus Studio" },
+      { name: "Muhammed Anas", role: "Co-Founder & Technical Head, Kalkus Studio" }
+    ],
+    topics: ["Digital Marketing", "Social Media Strategy", "SEO & SEM", "Content Strategy", "Ad Analytics"],
+    attendeesCount: 52,
+    coverImage: "/images/events/digital-marketing-kalkus.jpeg",
+    featured: true
+  },
+  {
     id: "cyber-raid-ctf",
     slug: "cyber-raid-ctf",
     title: "CYBER RAID — CAPTURE THE FLAG",

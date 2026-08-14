@@ -80,6 +80,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Competitive cybersecurity CTF battle with a ₹1,500 prize pool led by Adhinan K in collaboration with IEDC.",
     },
     {
+      title: "Digital Marketing Workshop — Kalkus Studio",
+      date: "December 10, 2025",
+      headcount: 52,
+      description: "Hands-on brand strategy, SEO/SEM mechanics, and ad analytics workshop led by Salim Salhaan and Muhammed Anas.",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,
