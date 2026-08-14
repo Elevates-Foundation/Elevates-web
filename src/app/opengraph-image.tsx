@@ -207,13 +207,14 @@ export default async function OGImage() {
                         {/* Domain */}
                         <div
                             style={{
-                                color: "#758173",
+                                color: "#f26430",
                                 fontSize: "14px",
+                                fontWeight: 700,
                                 letterSpacing: "0.08em",
                                 display: "flex",
                             }}
                         >
-                            elevates.vercel.app
+                            www.elevates.live
                         </div>
                     </div>
                 </div>
