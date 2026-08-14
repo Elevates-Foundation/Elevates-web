@@ -18,18 +18,17 @@ export const EVENTS: EventItem[] = [
     isoStartDate: "2025-12-10T10:00:00+05:30",
     isoEndDate: "2025-12-10T13:00:00+05:30",
     venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
-    locationName: "Cherukulam, Manjeri, Malappuram",
+    locationName: "",
     organizer: [
       { name: "ELEVATES" },
       { name: "Kalkus Studio" },
-      { name: "IEDC EKCTC" }
     ],
     hosts: [
       { name: "Salim Salhaan", role: "Co-Founder & Design Head, Kalkus Studio" },
       { name: "Muhammed Anas", role: "Co-Founder & Technical Head, Kalkus Studio" }
     ],
     topics: ["Digital Marketing", "Social Media Strategy", "SEO & SEM", "Content Strategy", "Ad Analytics"],
-    attendeesCount: 52,
+    attendeesCount: 71,
     coverImage: "/images/events/digital-marketing-kalkus.jpeg",
     featured: true
   },

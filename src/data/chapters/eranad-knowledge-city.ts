@@ -82,7 +82,7 @@ export const eranadKnowledgeCityChapter: Chapter = {
     {
       title: "Digital Marketing Workshop — Kalkus Studio",
       date: "December 10, 2025",
-      headcount: 52,
+      headcount: 71,
       description: "Hands-on brand strategy, SEO/SEM mechanics, and ad analytics workshop led by Salim Salhaan and Muhammed Anas.",
     },
     {
