@@ -104,6 +104,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Live outdoor differential GPS surveying & geospatial technology workshop led by Favad (S8 Civil) for first-year students.",
     },
     {
+      title: "Basics of IoT Workshop — Embedded & Cloud",
+      date: "February 19, 2026",
+      headcount: 25,
+      description: "Hands-on sensor interfacing, microcontroller hardware logic, and cloud dashboard deployment led by Naval K Raj (S2 Cyber).",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,

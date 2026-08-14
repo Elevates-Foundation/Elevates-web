@@ -4,6 +4,7 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
+    { name: "BASICS OF IOT", type: "EMBEDDED & SENSORS", status: "COMPLETED", slug: "basics-of-iot-naval" },
     { name: "DGPS LAND SURVEY", type: "GEOSPATIAL & CIVIL", status: "COMPLETED", slug: "dgps-land-survey-favad" },
     { name: "WEB DESIGN", type: "WORKSHOP & BOOTSTRAP", status: "COMPLETED", slug: "modern-web-design-danish" },
     { name: "NO-CODE AI (N8N)", type: "WORKSHOP & AGENTS", status: "COMPLETED", slug: "no-code-ai-anshiq" },

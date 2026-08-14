@@ -2,6 +2,36 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "basics-of-iot-naval",
+    slug: "basics-of-iot-naval",
+    title: "BASICS OF IOT WORKSHOP",
+    tagline: "Step Into the World of IoT · Sensors, Microcontrollers & Cloud Dashboards",
+    description: "Full-day hands-on workshop on smart sensors, microcontroller interfacing, MQTT protocols, and real-time cloud data monitoring.",
+    fullDescription: "🚀 Basics of IoT Workshop is here!\n\nA beginner-friendly, hands-on workshop designed to introduce students to the fundamentals of the Internet of Things (IoT) and how smart devices communicate, collect data, and automate real-world processes.\n\nThis session focuses on building a strong foundation in connected systems, embedded technologies, and practical IoT applications that are widely used in industries, startups, and smart environments.\n\n🔹 What you’ll learn:\n• What is IoT and how it works\n• Understanding smart devices and connected systems\n• Basics of sensors and actuators\n• Introduction to microcontrollers (Arduino / ESP-based boards)\n• How devices communicate over the internet\n• IoT architecture and data flow\n• Real-world IoT applications (Smart homes, healthcare monitoring, smart agriculture, industrial automation)\n• Communication protocols (WiFi, Bluetooth, MQTT basics)\n• Cloud integration basics & real-time monitoring concepts\n\n🛠️ Hands-On IoT Session:\n• Setting up a basic IoT project\n• Interfacing sensors with microcontrollers\n• Reading and processing sensor data\n• Sending data to a cloud/dashboard\n• Building a simple smart automation prototype\n\n⚙️ Additional Technical Concepts:\n• Introduction to embedded systems\n• Basics of circuit connections and hardware safety\n• Power management concepts & hardware troubleshooting\n• Career opportunities in IoT and Embedded Systems\n• How IoT integrates with AI, Cybersecurity & Web Applications\n\n💻 Note: Laptop is mandatory for the hands-on session to get maximum practical exposure from the workshop.\n\nWhether you are completely new to IoT or curious about how smart systems work behind the scenes, this workshop will give you a strong practical foundation to explore IoT projects, research, startups, and future career opportunities.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Feb 19, 2026",
+    endDate: "Feb 19, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-02-19T10:00:00+05:30",
+    isoEndDate: "2026-02-19T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "IEDC EKCTC" }
+    ],
+    hosts: [
+      { name: "Naval K Raj", role: "Embedded & IoT Lead (S2 Cyber)" }
+    ],
+    topics: ["Internet of Things (IoT)", "Embedded Systems", "Sensors & Actuators", "Microcontrollers", "MQTT & Cloud Dashboards", "Hardware Prototyping"],
+    attendeesCount: 25,
+    coverImage: "/images/events/basics-of-iot-naval.jpeg",
+    featured: true
+  },
+  {
     id: "dgps-land-survey-favad",
     slug: "dgps-land-survey-favad",
     title: "LAND SURVEY USING DGPS — WORKSHOP",
@@ -306,7 +336,7 @@ export const EVENTS: EventItem[] = [
       { name: "Sahad Nisham K", role: "Electronics Lead (S5 ECE)" }
     ],
     topics: ["Voltage & Current", "Passive Components", "Semiconductors", "Diodes & Transistors", "Circuit Design"],
-    attendeesCount: 48,
+    attendeesCount: 32,
     coverImage: "/images/events/spark-sahad-nisham.jpeg",
   },
   {
