@@ -92,6 +92,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Full-day n8n automation and autonomous AI agents workshop led by Anshiq in collaboration with CSBS Dept.",
     },
     {
+      title: "Modern Web Design Workshop — Lab 4",
+      date: "January 12, 2026",
+      headcount: 46,
+      description: "Hands-on UI/UX, Bootstrap 5 responsive layout, and GitHub Pages live deployment workshop led by Danish (S2 Cyber).",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,

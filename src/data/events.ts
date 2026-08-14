@@ -2,6 +2,35 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "modern-web-design-danish",
+    slug: "modern-web-design-danish",
+    title: "MODERN WEB DESIGN WORKSHOP",
+    tagline: "Web Fundamentals, UI/UX, Bootstrap 5 & GitHub Pages Deployment",
+    description: "Full-day hands-on workshop covering web fundamentals, responsive Bootstrap 5 design, and live portfolio deployment on GitHub Pages.",
+    fullDescription: "A beginner-friendly, hands-on workshop designed to introduce students to modern web development and design, helping them understand how websites are built, designed, deployed, and maintained in real-world scenarios.\n\nThis session focuses on building a strong foundation in web technologies, UI/UX thinking, and practical deployment skills that are essential for academics, personal branding, freelancing, and startup projects.\n\n🔹 What you’ll learn:\n• What a website is and how it works\n• Understanding domains, hosting, and browsers\n• How modern websites function on the internet\n• Core UI/UX design principles\n• Designing user-friendly and visually appealing interfaces\n• Web development fundamentals (HTML, CSS, JavaScript)\n• Responsive web design using Bootstrap 5\n• Making websites mobile-friendly and device-responsive\n\n🛠️ Hands-On Website Building:\n• Creating a personal portfolio website\n• Using professional, industry-style templates\n• Structuring sections like About, Skills, Projects, and Contact\n• Free website hosting using GitHub Pages\n• Deploying your website live on the internet\n• Connecting a custom domain to your website & DNS linking\n\n⚙️ Additional Technical Concepts:\n• Basic SEO techniques\n• Sitemap creation and search engine visibility\n• Introduction to Git & GitHub (commands & version control)\n\n💻 Note: Students are encouraged to bring their laptops for hands-on activities to get the maximum practical benefit from the workshop.\n\nWhether you are completely new to web development or want to build your first professional website, this workshop will give you a solid foundation to apply these skills in academics, personal portfolios, freelancing, startups, and future career opportunities.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Jan 12, 2026",
+    endDate: "Jan 12, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-01-12T10:00:00+05:30",
+    isoEndDate: "2026-01-12T16:00:00+05:30",
+    venue: "Lab 4, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" }
+    ],
+    hosts: [
+      { name: "Danish", role: "Web Design Lead (S2 Cyber)" }
+    ],
+    topics: ["Web Design", "UI/UX Design", "HTML & CSS", "Bootstrap 5", "GitHub Pages", "Git & GitHub"],
+    attendeesCount: 46,
+    coverImage: "/images/events/modern-web-design-danish.jpeg",
+    featured: true
+  },
+  {
     id: "no-code-ai-anshiq",
     slug: "no-code-ai-anshiq",
     title: "NO-CODE AI & AUTOMATION WORKSHOP",
