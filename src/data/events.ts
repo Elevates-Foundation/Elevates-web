@@ -96,6 +96,37 @@ export const EVENTS: EventItem[] = [
     featured: false
   },
   {
+    id: "vibranium-ai-battle",
+    slug: "vibranium-ai-battle",
+    title: "VIBRANIUM 5.0 — AI BATTLE ARENA",
+    tagline: "Where Powerful LLMs Collide · Live AI Chess Duels",
+    description: "Interactive AI showcase stall where LLM models (DeepSeek, GPT-OSS, Mistral, Gemini) battle in digital chess duels.",
+    fullDescription: "Witness the future of intelligence at the AI Battle Arena! An interactive exhibition stall and demonstration session where powerful AI minds collide in thrilling digital chess duels. Watch DeepSeek Chat V3.1, GPT-OSS-20B, Mistral Small 3.2, and Gemini 2.5 Pro duel in real-time, showcasing algorithmic reasoning, strategic evaluation, and game-tree decision making.\n\nHosted as part of VIBRANIUM 5.0 by the Department of Computer Science and Business Systems (CSBS) in collaboration with IEDC EKC and powered by ELEVATES.",
+    format: "Campus Exclusive",
+    category: "Showcase",
+    status: "Completed",
+    startDate: "Oct 09, 2025",
+    endDate: "Oct 09, 2025",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2025-10-09T10:00:00+05:30",
+    isoEndDate: "2025-10-09T16:00:00+05:30",
+    venue: "Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "IEDC EKCTC" },
+      { name: "Dept of Computer Science & Business Systems (CSBS)" }
+    ],
+    hosts: [
+      { name: "Mashood M", role: "Event Co-ordinator & AI Lead" }
+    ],
+    topics: ["Artificial Intelligence", "LLM Reasoning", "AI Chess Battle", "Autonomous Agents", "DeepSeek vs Gemini"],
+    attendeesCount: 35,
+    coverImage: "/images/events/ai-battle-vibranium.jpeg",
+    featured: false
+  },
+  {
     id: "vibranium-qr-treasure-hunt",
     slug: "vibranium-qr-treasure-hunt",
     title: "VIBRANIUM 5.0 — QR TREASURE HUNT",

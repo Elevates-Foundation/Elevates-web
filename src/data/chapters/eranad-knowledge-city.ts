@@ -62,6 +62,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Two-hour vibe coding workshop & speed challenge coordinated by Sarhan Qadir KVM in collaboration with CSE Dept.",
     },
     {
+      title: "Vibranium 5.0 — AI Battle Arena",
+      date: "October 09, 2025",
+      headcount: 35,
+      description: "Live LLM chess duels and AI exhibition stall coordinated by Mashood M in collaboration with CSBS Dept.",
+    },
+    {
       title: "Buzzer to Buzzer — Tech Quiz Battle",
       date: "October 09, 2025",
       headcount: 36,

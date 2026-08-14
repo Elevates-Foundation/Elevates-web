@@ -6,6 +6,7 @@ import Doodle from "@/components/doodle";
 const PROGRAMS = [
     { name: "CYBER RAID CTF", type: "CAPTURE THE FLAG", status: "COMPLETED", slug: "cyber-raid-ctf" },
     { name: "VIBE CODING", type: "SPEED CHALLENGE", status: "COMPLETED", slug: "vibranium-vibe-coding" },
+    { name: "AI BATTLE ARENA", type: "LLM CHESS EXHIBITION", status: "COMPLETED", slug: "vibranium-ai-battle" },
     { name: "BUZZER TO BUZZER", type: "TECH QUIZ BATTLE", status: "COMPLETED", slug: "buzzer-to-buzzer" },
     { name: "VIBRANIUM QR HUNT", type: "TECH CHALLENGE", status: "COMPLETED", slug: "vibranium-qr-treasure-hunt" },
     { name: "FIRST SPARK", type: "ELECTRONICS", status: "COMPLETED", slug: "first-spark-electronics" },
