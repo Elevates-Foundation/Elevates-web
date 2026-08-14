@@ -65,6 +65,37 @@ export const EVENTS: EventItem[] = [
     featured: false
   },
   {
+    id: "vibranium-vibe-coding",
+    slug: "vibranium-vibe-coding",
+    title: "VIBRANIUM 5.0 — VIBE CODING",
+    tagline: "Code & Conquer · ₹250 Prize Pool by ELEVATES",
+    description: "Two-hour dynamic vibe coding workshop and speed programming challenge with a ₹250 prize pool during VIBRANIUM 5.0 TechFest.",
+    fullDescription: "Ready to dominate the code floor? ELEVATES presents VIBRANIUM 5.0 Vibe Coding! Structured as a 1st-hour basic vibe coding session followed by an intense 2nd-hour live coding challenge. Show off your skills, solve real programming problems, and prove you have the best vibe when it comes to programming.\n\nBrought to you by the Department of Computer Science Engineering at Eranad Knowledge City Technical Campus (EKCTC), with support from IEDC EKC and powered by ELEVATES.",
+    format: "Campus Exclusive",
+    category: "Challenge",
+    status: "Completed",
+    startDate: "Oct 09, 2025",
+    endDate: "Oct 09, 2025",
+    startTime: "10:00 AM",
+    endTime: "12:00 PM",
+    isoStartDate: "2025-10-09T10:00:00+05:30",
+    isoEndDate: "2025-10-09T12:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "IEDC EKCTC" },
+      { name: "Dept of Computer Science Engineering" }
+    ],
+    hosts: [
+      { name: "Sarhan Qadir KVM", role: "Event Co-ordinator & Facilitator" }
+    ],
+    topics: ["Vibe Coding", "AI-Assisted Coding", "Rapid Prototyping", "Speed Coding", "Problem Solving"],
+    attendeesCount: 35,
+    coverImage: "/images/events/vibe-coding-vibranium.jpeg",
+    featured: false
+  },
+  {
     id: "vibranium-qr-treasure-hunt",
     slug: "vibranium-qr-treasure-hunt",
     title: "VIBRANIUM 5.0 — QR TREASURE HUNT",

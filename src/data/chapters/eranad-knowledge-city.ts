@@ -56,6 +56,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Campus-wide cryptic QR scavenger hunt and rapid platform deployment powering all fest event registrations.",
     },
     {
+      title: "Vibranium 5.0 — Vibe Coding Challenge",
+      date: "October 09, 2025",
+      headcount: 35,
+      description: "Two-hour vibe coding workshop & speed challenge coordinated by Sarhan Qadir KVM in collaboration with CSE Dept.",
+    },
+    {
       title: "Buzzer to Buzzer — Tech Quiz Battle",
       date: "October 09, 2025",
       headcount: 36,
