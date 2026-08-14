@@ -2,12 +2,43 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "no-code-ai-anshiq",
+    slug: "no-code-ai-anshiq",
+    title: "NO-CODE AI & AUTOMATION WORKSHOP",
+    tagline: "Build Powerful AI Automations & Agents with n8n Without Writing Code",
+    description: "Full-day hands-on workshop on n8n, AI workflow chaining, webhook triggers, and autonomous agent building without code.",
+    fullDescription: "A beginner-friendly and practical workshop designed to introduce students to AI Automation and no-code workflows, helping them understand how modern automation systems and AI agents are built and used in real-world scenarios.\n\n🔹 What you’ll learn:\n• What is AI Automation\n• LLMs → AI Workflows → AI Agents\n• Traditional Automation — reliable backbone\n• Dynamic AI Automation — flexible backbone\n• Where AI Agents fit in automation systems\n\n🛠️ Practical Foundation:\n• n8n fundamentals (nodes, canvas, linear & non-linear workflows)\n• JSON basics for automation\n• APIs — sending data\n• Webhooks — receiving data\n\n⚙️ Live Workflow Builds:\n• Student Data Collector — triggers & data flow\n• Auto Email System — variables & email automation\n• AI Auto-Summary Bot — AI integration\n• Daily Report Automation — full system design\n\n🔹 Additional Concepts:\n• Prompting AI models\n• Test-Driven Development\n• Hosting n8n (Free vs Hostinger)\n\n💻 Note: Participants are requested to bring their laptops for hands-on activities.\n\nWhether you are new to automation or curious about AI-powered workflows, this workshop will provide a strong foundation to apply these skills in academics, projects, startups, and future career opportunities.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Jan 07, 2026",
+    endDate: "Jan 07, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-01-07T10:00:00+05:30",
+    isoEndDate: "2026-01-07T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Dept of CSBS" },
+      { name: "IEDC EKCTC" }
+    ],
+    hosts: [
+      { name: "Anshiq", role: "AI & Automation Lead (S4 CSBS)" }
+    ],
+    topics: ["n8n Automation", "AI Agents", "LLM Workflows", "Webhooks & APIs", "Workflow Automation"],
+    attendeesCount: 72,
+    coverImage: "/images/events/no-code-ai-anshiq.jpeg",
+    featured: true
+  },
+  {
     id: "digital-marketing-kalkus",
     slug: "digital-marketing-kalkus",
     title: "DIGITAL MARKETING WORKSHOP",
     tagline: "By Kalkus Studio · Brand Growth, Social Media Strategy, SEO & Ad Analytics",
     description: "A practical beginner-friendly workshop by Kalkus Studio covering digital brand growth, SEO/SEM mechanics, content strategy, and ad analytics.",
-    fullDescription: "A beginner-friendly and practical hands-on workshop designed to introduce students to the fast-growing world of Digital Marketing — perfect for anyone looking to build high-demand skills across industries.\n\nLed by Salim Salhaan (Co-Founder & Design Head) and Muhammed Anas (Co-Founder & Technical Head) from Kalkus Studio, covering:\n• Fundamentals of Digital Marketing & Brand Growth\n• Social media strategy & viral reach mechanics\n• Basics of SEO, SEM & content strategy\n• Understanding ad campaigns, conversion funnels & performance analytics\n• Hands-on laptop activity and real-world case studies.",
+    fullDescription: "A beginner-friendly and practical workshop designed to introduce students to the fast-growing world of Digital Marketing — perfect for anyone looking to build skills that are in high demand across all industries.\n\n🔹 What you’ll learn:\n• Fundamentals of Digital Marketing\n• How brands use social media to grow\n• Basics of SEO, SEM & content strategy\n• Understanding ad campaigns and analytics\n• Real-world examples and hands-on insights\n\n💻 Note: Maximum participants are requested to bring their laptops for the hands-on activities.\n\nWhether you’re completely new to digital marketing or looking to strengthen your understanding, this workshop will give you a solid foundation to start your journey into the digital world and help you apply these skills in academics, projects, or even freelance work.",
     format: "Campus Exclusive",
     category: "Workshop",
     status: "Completed",
@@ -18,10 +49,11 @@ export const EVENTS: EventItem[] = [
     isoStartDate: "2025-12-10T10:00:00+05:30",
     isoEndDate: "2025-12-10T13:00:00+05:30",
     venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
-    locationName: "",
+    locationName: "Cherukulam, Manjeri, Malappuram",
     organizer: [
       { name: "ELEVATES" },
       { name: "Kalkus Studio" },
+      { name: "IEDC EKCTC" }
     ],
     hosts: [
       { name: "Salim Salhaan", role: "Co-Founder & Design Head, Kalkus Studio" },

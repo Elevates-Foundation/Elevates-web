@@ -86,6 +86,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Hands-on brand strategy, SEO/SEM mechanics, and ad analytics workshop led by Salim Salhaan and Muhammed Anas.",
     },
     {
+      title: "No-Code AI & Automation Workshop (n8n)",
+      date: "January 07, 2026",
+      headcount: 72,
+      description: "Full-day n8n automation and autonomous AI agents workshop led by Anshiq in collaboration with CSBS Dept.",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,
