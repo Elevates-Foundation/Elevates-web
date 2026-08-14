@@ -138,11 +138,11 @@ export default async function EventDetailPage({ params }: PageProps) {
               )}
 
               {/* Title & Tagline */}
-              <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tight text-graphite mb-2">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-graphite leading-[1.15] mb-2">
                 {event.title}
               </h1>
 
-              <p className="font-hand text-lg text-olive mb-6">
+              <p className="font-mono text-xs md:text-sm text-graphite/70 mb-6 font-medium">
                 {event.tagline}
               </p>
 

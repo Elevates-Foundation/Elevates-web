@@ -4,8 +4,8 @@ export const EVENTS: EventItem[] = [
   {
     id: "digital-marketing-kalkus",
     slug: "digital-marketing-kalkus",
-    title: "DIGITAL MARKETING WORKSHOP — BY KALKUS.STUDIO",
-    tagline: "Brand Growth, Social Media Strategy, SEO & Ad Analytics",
+    title: "DIGITAL MARKETING WORKSHOP",
+    tagline: "By Kalkus Studio · Brand Growth, Social Media Strategy, SEO & Ad Analytics",
     description: "A practical beginner-friendly workshop by Kalkus Studio covering digital brand growth, SEO/SEM mechanics, content strategy, and ad analytics.",
     fullDescription: "A beginner-friendly and practical hands-on workshop designed to introduce students to the fast-growing world of Digital Marketing — perfect for anyone looking to build high-demand skills across industries.\n\nLed by Salim Salhaan (Co-Founder & Design Head) and Muhammed Anas (Co-Founder & Technical Head) from Kalkus Studio, covering:\n• Fundamentals of Digital Marketing & Brand Growth\n• Social media strategy & viral reach mechanics\n• Basics of SEO, SEM & content strategy\n• Understanding ad campaigns, conversion funnels & performance analytics\n• Hands-on laptop activity and real-world case studies.",
     format: "Campus Exclusive",
