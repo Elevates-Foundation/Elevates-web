@@ -2,6 +2,36 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "elevates-campus-launch-ekctc",
+    slug: "elevates-campus-launch-ekctc",
+    title: "ELEVATES CAMPUS LAUNCH",
+    tagline: "Official Chapter Opening & Leadership Handover · Chief Guest Shibili Rahman KP",
+    description: "Official ELEVATES Campus Chapter Launch and leadership handover ceremony at EKCTC, featuring Chief Guest Shibili Rahman KP (Founder & Chairman, RAC Global).",
+    fullDescription: "We are thrilled to announce the Elevates Campus Launch Event at Eranad Knowledge City Technical Campus!\n\n📅 March 04, 2026\n⏰ 10:00 AM\n📍 Seminar Hall, EKCTC\n\nWe are honored to welcome Shibili Rahman KP, Founder & Chairman of RAC Global, as our Chief Guest for this special occasion.\n\nThis is not just a launch.\nThis is the beginning of a new era of innovation, leadership, and student-driven impact.\n\nOfficial campus chapter opening and leadership handover ceremony coordinated by Team Elevates.\n\nBe there. Witness the start.\nLet’s Elevate Together. 🔥",
+    format: "Campus Exclusive",
+    category: "Meetup",
+    status: "Completed",
+    startDate: "Mar 04, 2026",
+    endDate: "Mar 04, 2026",
+    startTime: "10:00 AM",
+    endTime: "1:00 PM",
+    isoStartDate: "2026-03-04T10:00:00+05:30",
+    isoEndDate: "2026-03-04T13:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" }
+    ],
+    hosts: [
+      { name: "Shibili Rahman K P", role: "Chief Guest · Founder & Chairman, RAC Global" },
+      { name: "Team Elevates", role: "Campus Chapter Lead" }
+    ],
+    topics: ["Campus Launch", "Chapter Opening", "Student Leadership", "RAC Global", "Innovation & Impact", "Community Handover"],
+    attendeesCount: 121,
+    coverImage: "/images/events/campus-launch-ekctc.jpeg",
+    featured: true
+  },
+  {
     id: "basics-of-iot-naval",
     slug: "basics-of-iot-naval",
     title: "BASICS OF IOT WORKSHOP",

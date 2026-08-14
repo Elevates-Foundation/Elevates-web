@@ -1,5 +1,5 @@
 export type EventFormat = "Open to All" | "Campus Exclusive" | "Invite Only" | "Pre-Invite";
-export type EventCategory = "Workshop" | "Peer Labs" | "Hackathon" | "Meetup" | "Learning Program" | "Challenge";
+export type EventCategory = "Workshop" | "Peer Labs" | "Hackathon" | "Meetup" | "Learning Program" | "Challenge" | "Showcase";
 export type EventStatus = "Upcoming" | "Open" | "Registrations Closed" | "Completed";
 
 export interface EventHost {

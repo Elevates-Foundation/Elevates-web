@@ -110,6 +110,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Hands-on sensor interfacing, microcontroller hardware logic, and cloud dashboard deployment led by Naval K Raj (S2 Cyber).",
     },
     {
+      title: "ELEVATES Campus Launch & Chapter Opening",
+      date: "March 04, 2026",
+      headcount: 121,
+      description: "Official campus chapter launch and leadership handover ceremony with Chief Guest Shibili Rahman KP (Founder & Chairman, RAC Global).",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,
