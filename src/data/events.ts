@@ -2,6 +2,36 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "career-catalyst-baiju",
+    slug: "career-catalyst-baiju",
+    title: "CAREER CATALYST — WORKSHOP",
+    tagline: "Want to Get Hired? Start Here · Employability, Resumes & Mock Interviews",
+    description: "Full-day interactive employability and placement preparation workshop led by Prof. Baiju B S (Placement Head, MEA Engineering College).",
+    fullDescription: "🚀 Career Catalyst – Interactive Employability & Placement Workshop\n\nStep into today’s competitive job market with an exclusive hands-on workshop designed to help you become placement-ready.\n\n📅 Date: 15 July 2026 (Wednesday)\n⏰ Time: 10:00 AM – 4:00 PM\n📍 Venue: Seminar Hall, EKCTC\n\n🎙️ Speaker:\nProf. Baiju B S\nPRO & Placement Head, MEA Engineering College\nPartner Coordinator – MIELES Project, University of Barcelona, Spain 🇪🇸\n\n✨ What you’ll experience:\n• Resume Building & ATS Optimization\n• Interactive Mock Interviews\n• Recruiter & Corporate Hiring Insights\n• Current Tech Job Market Trends\n• Career Guidance & Placement Strategies\n\n📌 Requirements:\n• Active LinkedIn Account 🔗\n• Updated Profile / Draft Resume\n\n⚠️ Limited registrations only.",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Jul 15, 2026",
+    endDate: "Jul 15, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-07-15T10:00:00+05:30",
+    isoEndDate: "2026-07-15T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "Cherukulam, Manjeri, Malappuram",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "IEDC EKCTC" }
+    ],
+    hosts: [
+      { name: "Prof. Baiju B S", role: "Placement Head (MEA) · Partner Coord., MIELES (Univ. of Barcelona)" }
+    ],
+    topics: ["Career Catalyst", "Employability", "Placement Strategies", "Resume Optimization", "Mock Interviews", "LinkedIn Branding"],
+    attendeesCount: 65,
+    coverImage: "/images/events/career-catalyst-baiju.jpeg",
+    featured: true
+  },
+  {
     id: "vibe-coding-brototype",
     slug: "vibe-coding-brototype",
     title: "VIBE CODING WORKSHOP",

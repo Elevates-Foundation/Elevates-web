@@ -133,6 +133,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       headcount: 70,
       description: "Hands-on AI-assisted coding & rapid prototyping workshop led by Jobin Selvanose and Umar Muqthar from Brototype.",
     },
+    {
+      title: "Career Catalyst — Employability & Placement Workshop",
+      date: "July 15, 2026",
+      headcount: 65,
+      description: "Hands-on placement readiness, resume optimization & mock interview session conducted by Prof. Baiju B S (Placement Head, MEA).",
+    },
   ],
   projects: [
     {
