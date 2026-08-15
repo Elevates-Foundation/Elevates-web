@@ -2,6 +2,37 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "cse-association-revamp-mehar",
+    slug: "cse-association-revamp-mehar",
+    title: "REVAMP OF CSE ASSOCIATION",
+    tagline: "Official Association Relaunch · Chief Guest Mehar M P (Co-Founder, TinkerHub)",
+    description: "Official relaunch and revamp of the Computer Science Engineering Association at EKCTC with Chief Guest Mehar M P (Co-Founder, TinkerHub).",
+    fullDescription: "Revamp of CSE Association – 2026\n\nWe are delighted to announce the official Revamp of the CSE Association, marking a new chapter of innovation, collaboration, and excellence.\n\n📅 Date: 25th March 2026\n⏰ Time: 2:00 PM – 4:00 PM\n📍 Venue: Seminar Hall, EKCTC\n\nWe are honored to welcome Mr. Mehar M P, Co-Founder of TinkerHub, as our Chief Guest, who will share valuable insights and inspire the next generation of tech innovators.\n\nJoin us as we redefine the future of the CSE community and embark on an exciting journey ahead. 🚀",
+    format: "Campus Exclusive",
+    category: "Meetup",
+    status: "Completed",
+    startDate: "Mar 25, 2026",
+    endDate: "Mar 25, 2026",
+    startTime: "2:00 PM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-03-25T14:00:00+05:30",
+    isoEndDate: "2026-03-25T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Dept of CSE" },
+
+    ],
+    hosts: [
+      { name: "Mehar M P", role: "Chief Guest · Co-Founder, TinkerHub" }
+    ],
+    topics: ["CSE Association", "Celestia", "TinkerHub", "Tech Leadership", "Community Relaunch", "Open Source & Building"],
+    attendeesCount: 80,
+    coverImage: "/images/events/cse-association-revamp-mehar.jpeg",
+    featured: true
+  },
+  {
     id: "aids-association-inauguration",
     slug: "aids-association-inauguration",
     title: "AI & DS ASSOCIATION INAUGURATION",
