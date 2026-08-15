@@ -2,6 +2,37 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "vibe-coding-brototype",
+    slug: "vibe-coding-brototype",
+    title: "VIBE CODING WORKSHOP",
+    tagline: "Build, Create & Innovate · AI-Assisted Rapid Development with Brototype",
+    description: "Full-day hands-on Vibe Coding workshop conducted by Brototype and powered by ELEVATES, featuring rapid prototyping with AI tools, Git/GitHub, and Firebase.",
+    fullDescription: "Elevates - Vibe Coding Workshop Conducted by Brototype ⚡\n\nBuild, Create & Innovate with modern AI-driven developer workflows!\n\n📅 Date: 26th March 2026 (Thursday)\n⏰ Time: 10:00 AM – 4:00 PM\n📍 Venue: Seminar Hall, Eranad Knowledge City (EKC) Technical Campus\n\n🎙️ Speakers & Mentors:\n• Jobin Selvanose — Lead Software Engineer & Content Creator, Brototype\n• Umar Muqthar — Head of Placements at Brototype\n\nOrganized by: ELEVATES\nPartnered by: Brototype\n\n🔹 What you’ll learn:\n• Fundamentals of Vibe Coding & AI-assisted development\n• Accelerating full-stack prototyping with LLM coding agents\n• Version control best practices with Git & GitHub\n• Real-time backend setup & rapid deployment using Firebase\n• Building and shipping functional web applications in hours\n\n💻 Important Instructions & Requirements:\nTo ensure a productive hands-on experience, all participants must adhere to the following:\n• Individual Hardware: Every student must bring their own laptop. Laptop sharing is strictly prohibited due to the nature of the technical sessions.\n• Mandatory Software Installation: Please ensure the following are installed and configured on your system before arriving at the venue:\n  1. Antigravity / AI Coding IDE\n  2. Git\n  3. GitHub Account\n  4. Firebase CLI & Account",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Mar 26, 2026",
+    endDate: "Mar 26, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-03-26T10:00:00+05:30",
+    isoEndDate: "2026-03-26T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Brototype" },
+    ],
+    hosts: [
+      { name: "Jobin Selvanose", role: "Lead Software Engineer & Content Creator, Brototype" },
+      { name: "Umar Muqthar", role: "Head of Placements, Brototype" }
+    ],
+    topics: ["Vibe Coding", "AI-Assisted Coding", "Antigravity", "Git & GitHub", "Firebase Deployment", "Rapid Prototyping"],
+    attendeesCount: 70,
+    coverImage: "/images/events/vibe-coding-brototype.jpeg",
+    featured: true
+  },
+  {
     id: "cse-association-revamp-mehar",
     slug: "cse-association-revamp-mehar",
     title: "REVAMP OF CSE ASSOCIATION",
@@ -21,15 +52,13 @@ export const EVENTS: EventItem[] = [
     locationName: "",
     organizer: [
       { name: "ELEVATES" },
-      { name: "Celestia (CSE)" },
       { name: "Dept of CSE" },
-      { name: "IEDC EKCTC" }
     ],
     hosts: [
       { name: "Mehar M P", role: "Chief Guest · Co-Founder, TinkerHub" }
     ],
     topics: ["CSE Association", "Celestia", "TinkerHub", "Tech Leadership", "Community Relaunch", "Open Source & Building"],
-    attendeesCount: 250,
+    attendeesCount: 80,
     coverImage: "/images/events/cse-association-revamp-mehar.jpeg",
     featured: true
   },

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
+    { name: "VIBE CODING (BROTOTYPE)", type: "WORKSHOP & AI DEV", status: "COMPLETED", slug: "vibe-coding-brototype" },
     { name: "CSE REVAMP", type: "ASSOCIATION & TINKERHUB", status: "COMPLETED", slug: "cse-association-revamp-mehar" },
     { name: "AI & DS INAUGURATION", type: "ASSOCIATION & ELYST AI", status: "COMPLETED", slug: "aids-association-inauguration" },
     { name: "CAMPUS LAUNCH", type: "CHAPTER OPENING", status: "COMPLETED", slug: "elevates-campus-launch-ekctc" },
@@ -22,7 +23,6 @@ const PROGRAMS = [
     { name: "CYBERSEC BASICS", type: "WORKSHOP", status: "COMPLETED", slug: "cybersec-basics" },
     { name: "BUILD-A-THON", type: "USELESS PROJECTS", status: "COMING SOON", slug: "build-a-thon" },
     { name: "UI/UX DESIGN", type: "WORKSHOP", status: "COMING SOON", slug: "figma-make-a-thon-onam" },
-    { name: "BUG HUNT", type: "CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
     { name: "ESCAPE ROOM", type: "CYBERSEC CHALLENGE", status: "COMING SOON", slug: "cybersec-escape-room" },
     { name: "HACKATHON-LITE", type: "CAPSTONE", status: "COMING SOON", slug: "build-a-thon" },
 ];
