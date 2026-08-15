@@ -7,6 +7,7 @@ import { EVENTS } from "@/data/events";
 const validEventSlugs = new Set(EVENTS.map((e) => e.slug));
 
 const PROGRAMS = [
+    { name: "DECODE LINKEDIN", type: "WORKSHOP & BRANDING", status: "COMPLETED", slug: "decode-linkedin-shiju-mishal" },
     { name: "CAREER CATALYST", type: "WORKSHOP & PLACEMENTS", status: "COMPLETED", slug: "career-catalyst-baiju" },
     { name: "VIBE CODING (BROTOTYPE)", type: "WORKSHOP & AI DEV", status: "COMPLETED", slug: "vibe-coding-brototype" },
     { name: "CSE REVAMP", type: "ASSOCIATION & TINKERHUB", status: "COMPLETED", slug: "cse-association-revamp-mehar" },

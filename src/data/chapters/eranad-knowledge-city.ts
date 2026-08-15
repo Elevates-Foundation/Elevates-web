@@ -139,6 +139,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       headcount: 65,
       description: "Hands-on placement readiness, resume optimization & mock interview session conducted by Prof. Baiju B S (Placement Head, MEA).",
     },
+    {
+      title: "Let's Decode LinkedIn — The LinkedIn Way",
+      date: "July 22, 2026",
+      headcount: 80,
+      description: "Personal branding, ATS profile optimization, and recruiter networking workshop led by Shiju Roy and Mishal V P.",
+    },
   ],
   projects: [
     {

@@ -2,6 +2,36 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "decode-linkedin-shiju-mishal",
+    slug: "decode-linkedin-shiju-mishal",
+    title: "LET'S DECODE LINKEDIN",
+    tagline: "The LinkedIn Way · Professional Branding, Networking & Internships",
+    description: "Full-day interactive workshop on unlocking the full potential of LinkedIn for personal branding, recruiter networking, and high-impact internship search.",
+    fullDescription: "Elevates - LETS DECODE LINKEDIN (The LinkedIn Way) 🚀\n\n📅 Date: 22nd July 2026 (Wednesday)\n🕙 Time: 10:00 AM – 4:00 PM\n📍 Venue: Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)\n\n🎙️ Speakers:\n• Shiju Roy — LinkedIn Coach\n• Mishal V P — Business Strategist\n\nJoin us for \"Let's Decode LinkedIn – The LinkedIn Way\", an interactive session designed to help students unlock the true potential of LinkedIn. Learn how to build a professional online presence, network effectively, and leverage LinkedIn to discover internships, career opportunities, and industry connections.\n\n🔹 What you'll learn:\n• Creating a professional and ATS-friendly LinkedIn profile\n• Building a strong personal brand & voice\n• Networking with recruiters and industry professionals\n• Finding internships and job opportunities through LinkedIn\n• Optimizing your profile algorithms to increase visibility & reach\n• Practical tips, strategies, and real-world insights from industry experts\n\n💻 Note:\nParticipants are encouraged to bring notebook and pen to follow along with the live demonstrations and optimize their LinkedIn profiles during the session.\n\nWhether you're just getting started or looking to enhance your professional presence, this session will equip you with the knowledge and practical skills to make LinkedIn work for your academic and career growth. 🚀",
+    format: "Campus Exclusive",
+    category: "Workshop",
+    status: "Completed",
+    startDate: "Jul 22, 2026",
+    endDate: "Jul 22, 2026",
+    startTime: "10:00 AM",
+    endTime: "4:00 PM",
+    isoStartDate: "2026-07-22T10:00:00+05:30",
+    isoEndDate: "2026-07-22T16:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" },
+    ],
+    hosts: [
+      { name: "Shiju Roy", role: "LinkedIn Coach" },
+      { name: "Mishal V P", role: "Business Strategist" }
+    ],
+    topics: ["LinkedIn Optimization", "Personal Branding", "Networking Strategies", "Internship Search", "ATS Profile Building", "Career Growth"],
+    attendeesCount: 80,
+    coverImage: "/images/events/decode-linkedin-shiju-mishal.jpeg",
+    featured: true
+  },
+  {
     id: "career-catalyst-baiju",
     slug: "career-catalyst-baiju",
     title: "CAREER CATALYST — WORKSHOP",
