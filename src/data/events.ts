@@ -2,6 +2,37 @@ import { EventItem } from "@/types/event";
 
 export const EVENTS: EventItem[] = [
   {
+    id: "aids-association-inauguration",
+    slug: "aids-association-inauguration",
+    title: "AI & DS ASSOCIATION INAUGURATION",
+    tagline: "Inauguration & Industry Keynote · Guests from Elyst AI",
+    description: "Inauguration ceremony of the AI & Data Science Association at EKCTC, featuring keynote sessions by Elyst AI Co-Founders Fathima Shirin P (CEO) and Nihal Anas (CAIO).",
+    fullDescription: "✨ A new chapter begins.\n\nThe Department of AI & DS proudly presents the Inauguration of the AI & DS Association, marking the beginning of innovation, collaboration, and future-ready learning.\n\n📅 12 March 2026\n⏰ 10:00 AM\n📍 Seminar Hall, EKCTC\n\nWe are honored to have inspiring guests from Elyst AI joining us for this special occasion:\n🎤 Fathima Shirin P — CEO & Co-Founder, Elyst AI\n🎤 Nihal Anas — Chief AI Officer & Co-Founder, Elyst AI\n\nJoin us as we inaugurate a platform dedicated to innovation, technology, and the future of Artificial Intelligence and Data Science. 🚀",
+    format: "Campus Exclusive",
+    category: "Meetup",
+    status: "Completed",
+    startDate: "Mar 12, 2026",
+    endDate: "Mar 12, 2026",
+    startTime: "10:00 AM",
+    endTime: "1:00 PM",
+    isoStartDate: "2026-03-12T10:00:00+05:30",
+    isoEndDate: "2026-03-12T13:00:00+05:30",
+    venue: "Seminar Hall, Eranad Knowledge City Technical Campus (EKCTC)",
+    locationName: "",
+    organizer: [
+      { name: "ELEVATES" },
+      { name: "Dept of AI & DS" },
+    ],
+    hosts: [
+      { name: "Fathima Shirin P", role: "CEO & Co-Founder, Elyst AI" },
+      { name: "Nihal Anas", role: "Chief AI Officer & Co-Founder, Elyst AI" }
+    ],
+    topics: ["Artificial Intelligence", "Data Science", "Elyst AI", "AI Startups", "Association Inauguration", "Industry Keynote"],
+    attendeesCount: 68,
+    coverImage: "/images/events/aids-association-inauguration.jpeg",
+    featured: true
+  },
+  {
     id: "elevates-campus-launch-ekctc",
     slug: "elevates-campus-launch-ekctc",
     title: "ELEVATES CAMPUS LAUNCH",

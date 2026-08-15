@@ -116,6 +116,12 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Official campus chapter launch and leadership handover ceremony with Chief Guest Shibili Rahman KP (Founder & Chairman, RAC Global).",
     },
     {
+      title: "AI & DS Association Inauguration",
+      date: "March 12, 2026",
+      headcount: 68,
+      description: "Inaugural chapter ceremony and industry AI keynote sessions with Elyst AI Co-Founders Fathima Shirin P (CEO) and Nihal Anas (CAIO).",
+    },
+    {
       title: "Celestia CSE Relaunch & 1-Hour Build",
       date: "March 25, 2026",
       headcount: 250,

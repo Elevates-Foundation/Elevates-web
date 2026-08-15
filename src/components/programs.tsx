@@ -4,6 +4,7 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const PROGRAMS = [
+    { name: "AI & DS INAUGURATION", type: "ASSOCIATION & ELYST AI", status: "COMPLETED", slug: "aids-association-inauguration" },
     { name: "CAMPUS LAUNCH", type: "CHAPTER OPENING", status: "COMPLETED", slug: "elevates-campus-launch-ekctc" },
     { name: "BASICS OF IOT", type: "EMBEDDED & SENSORS", status: "COMPLETED", slug: "basics-of-iot-naval" },
     { name: "DGPS LAND SURVEY", type: "GEOSPATIAL & CIVIL", status: "COMPLETED", slug: "dgps-land-survey-favad" },
