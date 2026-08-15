@@ -128,7 +128,7 @@ export const eranadKnowledgeCityChapter: Chapter = {
       description: "Coordinated CSE department relaunch event with Chief Guest Moosa Mehar MP (Co-Founder & CEO, TinkerHub). Rebuilt association website live on stage in 60 minutes.",
     },
     {
-      title: "Vibe Coding Workshop — Brototype",
+      title: "Vibe Coding Workshop",
       date: "March 26, 2026",
       headcount: 70,
       description: "Hands-on AI-assisted coding & rapid prototyping workshop led by Jobin Selvanose and Umar Muqthar from Brototype.",
