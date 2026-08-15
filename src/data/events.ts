@@ -21,14 +21,15 @@ export const EVENTS: EventItem[] = [
     locationName: "",
     organizer: [
       { name: "ELEVATES" },
+      { name: "Celestia (CSE)" },
       { name: "Dept of CSE" },
-
+      { name: "IEDC EKCTC" }
     ],
     hosts: [
       { name: "Mehar M P", role: "Chief Guest · Co-Founder, TinkerHub" }
     ],
     topics: ["CSE Association", "Celestia", "TinkerHub", "Tech Leadership", "Community Relaunch", "Open Source & Building"],
-    attendeesCount: 80,
+    attendeesCount: 250,
     coverImage: "/images/events/cse-association-revamp-mehar.jpeg",
     featured: true
   },
