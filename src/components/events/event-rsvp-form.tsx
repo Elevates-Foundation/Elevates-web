@@ -90,11 +90,14 @@ export default function EventRsvpForm({ eventSlug, eventTitle }: Props) {
         className="w-full border-2 border-graphite rounded-md px-3 py-2 font-mono text-sm bg-paper"
       />
       <input
+        type="tel"
+        inputMode="tel"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        placeholder="Phone (optional)"
+        placeholder="Phone number (+91 ...)"
         className="w-full border-2 border-graphite rounded-md px-3 py-2 font-mono text-sm bg-paper"
       />
+
       <input
         value={college}
         onChange={(e) => setCollege(e.target.value)}
