@@ -1,0 +1,37 @@
+[
+  {
+    "category": "KTU Activity Points",
+    "target": "Group III — Advanced Achievements",
+    "problem": "Students must earn 120 activity points (2024 Scheme) or 100 points (2019 Scheme) for degree completion. Group III requires patents, publications, startups, national hackathon wins, or approved innovation projects — the hardest group for B.Tech students to complete.",
+    "solution": "ELEVATES project clusters produce deployed production software, open-source repositories, and competition entries that land directly in Group III.",
+    "document": "Named, dated, certificate-backed activity records formatted for immediate entry into the KTU university portal."
+  },
+  {
+    "category": "NAAC Accreditation",
+    "target": "Criterion 5 (Metric 5.1.3 & 5.3.3)",
+    "problem": "Requires verifiable annual records of ICT/computing skill development programs and technical fest activities organized for students.",
+    "solution": "ELEVATES hands-on workshops and technical event operations generate complete attendance logs, feedback metrics, and event reports.",
+    "document": "IQAC-ready annual activity summary reports formatted to NAAC AQAR standards."
+  },
+  {
+    "category": "NAAC Accreditation",
+    "target": "Criterion 3 (Research, Innovations & Extension)",
+    "problem": "Assesses institutional innovation ecosystem strength and external collaborations.",
+    "solution": "Formal institutional partnership with ELEVATES Foundation serves as active evidence of external industry/community collaboration.",
+    "document": "MOU documentation + year-wise collaborative program evidence."
+  },
+  {
+    "category": "NBA Accreditation",
+    "target": "Professional Society & Chapter Activities",
+    "problem": "NBA Self Assessment Report (SAR) requires evidence of active professional society chapters, engineering events, paper contests, and design competitions.",
+    "solution": "An active ELEVATES chapter with student office bearers and 3-year rolling event data satisfies NBA professional society requirements.",
+    "document": "Rolling 3-year event portfolio, student leadership rosters, and competition contest records."
+  },
+  {
+    "category": "KSUM IEDC KPIs",
+    "target": "Annual Report & Innovation Metrics",
+    "problem": "IEDC Nodal Officers must submit annual reports to Kerala Startup Mission (KSUM) proving workshop counts, student engagement, and startup creation.",
+    "solution": "ELEVATES supplies a complete 13-programme calendar that delivers required participation numbers, workshop counts, and prototype outputs.",
+    "document": "KSUM-aligned event completion certificates and participant analytics."
+  }
+]

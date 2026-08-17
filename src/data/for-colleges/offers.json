@@ -1,0 +1,38 @@
+[
+  {
+    "id": "workshop",
+    "level": "01",
+    "title": "Single Workshop",
+    "subtitle": "Zero Franchise Fee • High Impact",
+    "desc": "A hands-on technical or design workshop delivered by ELEVATES mentors on your campus. We handle the curriculum, tools, and technical delivery.",
+    "commitment": "Access to a lab/seminar hall for 3-4 hours.",
+    "idealFor": "Testing student interest without long-term commitment."
+  },
+  {
+    "id": "event-ops",
+    "level": "02",
+    "title": "Full Event Operations",
+    "subtitle": "We Plan It. We Run It. We Bring the Guest.",
+    "desc": "Complete end-to-end management for association relaunches, technical fests, or department days. Includes chief guest invitation, stage ops, and live building demos.",
+    "commitment": "Auditorium reservation + guest TA/hospitality via department/association fund.",
+    "idealFor": "Department HODs needing a seamless, high-visibility event."
+  },
+  {
+    "id": "iedc-trade",
+    "level": "03",
+    "title": "IEDC Programme Calendar",
+    "subtitle": "You Have the Mandate. We Have the Calendar.",
+    "desc": "Co-host our 13-programme technical calendar under your IEDC banner. Fulfill KSUM KPIs, generate annual report proof, and build innovation outcomes using standard IEDC activity funds.",
+    "commitment": "IEDC Nodal Officer partnership + venue + IEDC workshop allocation.",
+    "idealFor": "IEDC Nodal Officers seeking active programming across Engineering, Arts & Science, and Polytechnic campuses."
+  },
+  {
+    "id": "full-chapter",
+    "level": "04",
+    "title": "Full Campus Chapter",
+    "subtitle": "Permanent Innovation Ecosystem",
+    "desc": "Establish ELEVATES Chapter #02 on your campus. Includes structured 25-student cohorts per term, learning clusters, faculty coordinator oversight, and HQ playbook.",
+    "commitment": "Faculty Coordinator + dedicated space + MOU + basic student project support fund.",
+    "idealFor": "Principals & Directors wanting long-term accreditation proof."
+  }
+]

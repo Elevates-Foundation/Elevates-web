@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fff4;
+  /* Mint Cream */
+  --foreground: #2d2d34;
+  /* Graphite */
+  --color-paper: #f8fff4;
+  --color-flame: #f26430;
+  /* Tiger Flame */
+  --color-indigo: #414066;
+  /* Twilight Indigo */
+  --color-olive: #758173;
+  /* Dusty Olive */
+  --color-graphite: #2d2d34;
+  --color-neon-green: #f26430;
+  /* Remap old var to Flame for backward compat initially */
+  --color-hot-pink: #414066;
+  /* Remap old var to Indigo for backward compat initially */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--color-paper);
+  --color-flame: var(--color-flame);
+  --color-indigo: var(--color-indigo);
+  --color-olive: var(--color-olive);
+  --color-graphite: var(--color-graphite);
+
+  /* Aliases to keep existing components working while we refactor */
+  --color-neon-green: var(--color-flame);
+  --color-hot-pink: var(--color-indigo);
+  --font-sans: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-hand: var(--font-kalam), cursive;
+}
+
+/* Wobbly Border Utilities */
+.wobbly-box {
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /></filter></svg>#wobble');
+}
+
+.hand-drawn-border {
+  border-radius: 2% 96% 1% 94% / 93% 5% 91% 8%;
+}
+
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Grain Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Marquee Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  animation: marquee-scroll 10s linear infinite;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Print Overrides to prevent blank PDF previews */
+@media print {
+  html, body {
+    background-color: #f8fff4 !important;
+    color: #2d2d34 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    position: static !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+}

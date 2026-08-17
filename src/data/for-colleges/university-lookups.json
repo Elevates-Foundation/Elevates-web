@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ktu",
+    "university": "APJ Abdul Kalam Technological University (KTU)",
+    "coverage": "Engineering, Design, BBA, and BCA Colleges",
+    "leverTitle": "Mandatory Activity Points (120 Points / 3 Credits)",
+    "description": "Under the 2024 Scheme, B.Tech students must earn 120 activity points (3 credits, min 40 per group). 2019 Scheme requires 100 points (2 credits). Both are mandatory for degree award.",
+    "group1": "Group I (Co-curricular): Chapter membership & participation records.",
+    "group2": "Group II (Professional Dev): 13 technical workshops, hackathons, and sessions.",
+    "group3": "Group III (Advanced Achievements): Hardest group to fill (startups, patents, shipped projects). ELEVATES project clusters are specifically engineered to fill Group III.",
+    "adminValue": "Semester-wise activity records handed over formatted for direct upload to the KTU portal."
+  },
+  {
+    "id": "fyugp",
+    "university": "Calicut, MG, Kerala & Kannur Universities (FYUGP 2024 Scheme)",
+    "coverage": "Four-Year Undergraduate Programmes across Arts & Science Colleges",
+    "leverTitle": "Skill Enhancement, Value Addition, Mandatory Internship & Research Project Credits",
+    "description": "2024 admissions onward introduced credit-bearing Skill Enhancement Courses (SEC), Value Addition Courses (VAC), mandatory internships, and research projects that departments must deliver and grade.",
+    "group1": "Skill Enhancement (SEC): Hands-on software development, web tools, AI workflows, and digital design.",
+    "group2": "Mandatory Internship: Student project clusters producing verifiable public software artefacts.",
+    "group3": "Research Project: Documented technical case studies, open-source repositories, and fest platform engines.",
+    "adminValue": "Provides departments with ready-made, project-backed documentation for credit-bearing course evaluation."
+  },
+  {
+    "id": "cbcss",
+    "university": "Calicut, MG, Kerala & Kannur Universities (Older CBCSS Batches)",
+    "coverage": "3-Year B.Sc, B.Com, B.A. Batches",
+    "leverTitle": "Audit Courses (16 Credits) & Extra-Credit Activity Endorsements",
+    "description": "Four mandatory audit courses (4 credits each across Semesters 1-4) plus extra-credit activity endorsements printed directly on the final grade card.",
+    "group1": "Audit Course Compliance: SWAYAM/MOOC aligned structured skilling pathways.",
+    "group2": "Extra-Credit Endorsements: Verified student activity records for grade card inclusion.",
+    "group3": "Departmental Reports: Dated participation logs for annual IQAC documentation.",
+    "adminValue": "Fills non-CGPA mandatory credit requirements without adding faculty teaching hours."
+  },
+  {
+    "id": "autonomous",
+    "university": "Autonomous Colleges (Statewide)",
+    "coverage": "Self-Governing Institutions with Independent Academic Councils",
+    "leverTitle": "Custom Value-Added Courses & Fast-Track Academic Approval",
+    "description": "Autonomous colleges can approve custom value-added certificate courses and industry co-designed modules in a single Academic Council meeting.",
+    "group1": "Value-Added Courses (VAC): Co-branded technical certification tracks.",
+    "group2": "Industry Collaboration: Formal foundation partnership satisfying autonomous NAAC Crit 3.",
+    "group3": "Fast Execution: Rapid onboarding without university-level bureaucratic delay.",
+    "adminValue": "The fastest path to custom credit approval anywhere in Kerala."
+  },
+  {
+    "id": "polytechnic",
+    "university": "Polytechnic Colleges (Department of Technical Education - DTE)",
+    "coverage": "Diploma in Engineering & Technology Institutions",
+    "leverTitle": "Diploma Skill Enhancements & IEDC Innovation Projects",
+    "description": "DTE diploma curriculum emphasizes practical hardware, software, and industrial skill development alongside active campus IEDCs.",
+    "group1": "Practical Hardware & Software: Hands-on IoT, web, and micro-controller build sprints.",
+    "group2": "IEDC Output: Prototype creation for DTE innovation expos and KSUM annual reports.",
+    "group3": "Industry Readiness: Shipped student portfolios for immediate placement advantage.",
+    "adminValue": "Translates diploma learning into working software and hardware prototypes."
+  },
+  {
+    "id": "universal",
+    "university": "Universal NAAC & KSUM IEDC Framework (All Institutions)",
+    "coverage": "Applies to Every Institution Type Regardless of Affiliation",
+    "leverTitle": "NAAC Criterion 5, Criterion 3 & KSUM IEDC Annual Report Metrics",
+    "description": "The baseline institutional argument that applies universally across Engineering, Arts & Science, Commerce, Management, Polytechnic, and Medical campuses.",
+    "group1": "NAAC 5.1.3: ICT & computing skill enhancement program documentation.",
+    "group2": "NAAC 5.3.3: Technical and academic fest operations reports.",
+    "group3": "NAAC Crit 3 & IEDC KPIs: External collaborative foundation partnership + KSUM startup proof.",
+    "adminValue": "Universal AQAR evidence generated automatically from normal community activities."
+  }
+]

@@ -1,0 +1,112 @@
+import { osGet } from "@/lib/os-client";
+import { CHAPTERS, getChapterBySlug, type Chapter } from "@/data/chapters";
+
+type OsChapterList = {
+  chapters: Array<{
+    id: string;
+    name: string;
+    slug: string;
+    college: string;
+    city?: string;
+    district?: string;
+    logoUrl?: string;
+    memberCount?: number;
+    eventCount?: number;
+    projectCount?: number;
+    foundedAt?: string;
+  }>;
+};
+
+export async function fetchChapters(): Promise<Chapter[]> {
+  const live = await osGet<OsChapterList>("/chapters", ["chapters"]);
+  if (!live?.chapters?.length) return CHAPTERS;
+
+  return live.chapters.map((c) => {
+    const staticChapter = getChapterBySlug(c.slug);
+    if (staticChapter) {
+      return {
+        ...staticChapter,
+        name: c.name,
+        college: c.college,
+        district: c.district ?? staticChapter.district,
+        stats: {
+          ...staticChapter.stats,
+          eventsCount: c.eventCount ?? staticChapter.stats.eventsCount,
+          studentsImpacted:
+            c.memberCount ?? staticChapter.stats.studentsImpacted,
+        },
+      };
+    }
+    return {
+      slug: c.slug,
+      chapterNumber: "—",
+      name: c.name,
+      college: c.college,
+      district: c.district ?? c.city ?? "",
+      foundedDate: c.foundedAt ?? "",
+      lead: { name: "TBA", role: "Campus Lead" },
+      team: [],
+      events: [],
+      projects: [],
+      stats: {
+        eventsCount: c.eventCount ?? 0,
+        studentsImpacted: c.memberCount ?? 0,
+      },
+    } satisfies Chapter;
+  });
+}
+
+export async function fetchChapterBySlug(
+  slug: string,
+): Promise<Chapter | undefined> {
+  const live = await osGet<{
+    slug: string;
+    name: string;
+    college: string;
+    district?: string;
+    city?: string;
+    notes?: string;
+    memberCount?: number;
+    eventCount?: number;
+    roster?: Array<{ fullName: string; title: string; roleKey: string }>;
+  }>(`/chapters/${slug}`, ["chapters", `chapter:${slug}`]);
+
+  const fallback = getChapterBySlug(slug);
+  if (!live) return fallback;
+  if (!fallback) {
+    return {
+      slug: live.slug,
+      chapterNumber: "—",
+      name: live.name,
+      college: live.college,
+      district: live.district ?? live.city ?? "",
+      foundedDate: "",
+      lead: {
+        name: live.roster?.[0]?.fullName ?? "TBA",
+        role: live.roster?.[0]?.title ?? "Campus Lead",
+      },
+      team:
+        live.roster?.map((r) => ({
+          name: r.fullName,
+          role: r.title,
+        })) ?? [],
+      events: [],
+      projects: [],
+      stats: {
+        eventsCount: live.eventCount ?? 0,
+        studentsImpacted: live.memberCount ?? 0,
+      },
+    };
+  }
+  return {
+    ...fallback,
+    name: live.name,
+    college: live.college,
+    district: live.district ?? fallback.district,
+    team:
+      live.roster?.map((r) => ({
+        name: r.fullName,
+        role: r.title,
+      })) ?? fallback.team,
+  };
+}

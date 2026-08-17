@@ -1,0 +1,32 @@
+[
+  {
+    "period": "Week 1",
+    "title": "Faculty & Space Setup",
+    "desc": "Faculty coordinator named. Venue/lab access confirmed. Official college chapter landing page published on elevates.live."
+  },
+  {
+    "period": "Week 2",
+    "title": "Open Student Call",
+    "desc": "Open campus announcement made. Student applications collected online via ELEVATES portal."
+  },
+  {
+    "period": "Week 3",
+    "title": "Cohort Selection",
+    "desc": "First cohort of 25 students selected across departments based on curiosity and commitment. Class representatives identified."
+  },
+  {
+    "period": "Week 4",
+    "title": "Campus Launch Event",
+    "desc": "Joint campus launch event conducted with ELEVATES Foundation team and invited chief guest."
+  },
+  {
+    "period": "Month 2",
+    "title": "Learning Clusters Active",
+    "desc": "Two active project clusters launched (e.g. Web & AI). First hands-on technical workshop delivered."
+  },
+  {
+    "period": "Month 3",
+    "title": "First Project & KTU Audit",
+    "desc": "First production project shipped and deployed with student credits. Certified activity records consolidated for office upload to KTU portal."
+  }
+]
