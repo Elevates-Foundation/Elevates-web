@@ -8,14 +8,17 @@ import Features from "@/components/features";
 import Membership from "@/components/membership";
 import FutureScope from "@/components/future-scope";
 import Footer from "@/components/footer";
+import { fetchEvents } from "@/lib/data/events";
 
-export default function Home() {
+export default async function Home() {
+  const liveEvents = await fetchEvents();
+
   return (
     <main className="min-h-screen bg-paper overflow-x-hidden selection:bg-flame selection:text-paper">
       <Loader />
       <Hero />
       <div id="about"><About /></div>
-      <div id="programs"><Programs /></div>
+      <div id="programs"><Programs initialEvents={liveEvents} /></div>
       <div id="workflow"><Workflow /></div>
       <div id="domains"><Domains /></div>
       <Membership />

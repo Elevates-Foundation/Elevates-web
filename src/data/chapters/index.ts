@@ -54,9 +54,15 @@ export const CHAPTERS: Chapter[] = [
 ];
 
 export function getChapterBySlug(slug: string): Chapter | undefined {
-  return CHAPTERS.find((c) => c.slug === slug);
+  const s = slug.toLowerCase();
+  return CHAPTERS.find(
+    (c) =>
+      c.slug === s ||
+      ((s === "ekc" || s === "ekctc" || s === "eranad-knowledge-city") &&
+        (c.slug === "ekc" || c.slug === "eranad-knowledge-city"))
+  );
 }
 
 export function getAllChapterSlugs(): string[] {
-  return CHAPTERS.map((c) => c.slug);
+  return ["eranad-knowledge-city", "ekc", "ekctc"];
 }
