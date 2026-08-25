@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/chapters/ekc",
+        destination: "/chapters/eranad-knowledge-city",
+      },
+      {
+        source: "/chapters/ekctc",
+        destination: "/chapters/eranad-knowledge-city",
+      },
+      {
+        source: "/chapter/:slug",
+        destination: "/chapters/:slug",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

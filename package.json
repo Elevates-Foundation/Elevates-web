@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:supabase": "node scripts/sync-supabase-from-web.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
