@@ -128,7 +128,7 @@ export default async function FounderDetailPage({ params }: Props) {
 
             <div className="mb-5">
               <span className="font-mono text-[11px] font-bold text-graphite bg-olive/10 border border-graphite/30 px-2.5 py-1 rounded-sm inline-block">
-                Campus Moniker: &ldquo;{founder.tag}&rdquo;
+                Moniker: &ldquo;{founder.tag}&rdquo;
               </span>
             </div>
 
