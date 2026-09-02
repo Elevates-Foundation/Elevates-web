@@ -11,14 +11,114 @@ export interface SearchItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Peer Labs" | "Events" | "Chapters" | "Section" | "Team" | "Projects";
+  category: "Peer Labs" | "Events" | "Chapters" | "Section" | "Team" | "Projects" | "Blog" | "Guide";
   url: string;
   tags: string[];
 }
 
 // Build full comprehensive index dynamically from datasets + site sections
 const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
-  // Site Main Pages & Sections
+  // ─── Core Architecture & Info Pages ───
+  {
+    id: "sec-what-is-elevates",
+    title: "What is ELEVATES?",
+    subtitle: "Direct-answer definition, 4-tier model, and comparison with TinkerHub/IEDC",
+    category: "Guide",
+    url: "/what-is-elevates",
+    tags: ["what is elevates", "definition", "overview", "800 students", "quiet talent", "kerala"],
+  },
+  {
+    id: "sec-ecosystem",
+    title: "Ecosystem Architecture",
+    subtitle: "4-tier structural model: Chapters → Campuses → Clusters → Members",
+    category: "Guide",
+    url: "/ecosystem",
+    tags: ["ecosystem", "architecture", "structure", "tiers", "chapters", "clusters"],
+  },
+  {
+    id: "sec-elevates-os",
+    title: "ELEVATES OS (Platform Engine)",
+    subtitle: "The digital operating software powering chapters, clusters, and 400k+ requests",
+    category: "Guide",
+    url: "/elevates-os",
+    tags: ["elevates os", "os", "platform", "software", "tools", "verification", "credentials"],
+  },
+  {
+    id: "sec-blog-all",
+    title: "Blog & Engineering Essays",
+    subtitle: "Manifestos, Kerala tech community comparisons, and production case studies",
+    category: "Blog",
+    url: "/blog",
+    tags: ["blog", "essays", "articles", "stories", "notes", "writeups", "engineering"],
+  },
+  {
+    id: "sec-faq",
+    title: "Frequently Asked Questions (FAQ)",
+    subtitle: "Answers on fees, membership, eligibility, chapter criteria, and quiet talent",
+    category: "Guide",
+    url: "/faq",
+    tags: ["faq", "questions", "answers", "membership", "cost", "eligibility", "fees"],
+  },
+  {
+    id: "sec-history",
+    title: "History & Milestones Timeline",
+    subtitle: "Our journey from 4 years of closed community windows to 18 founders and 400k requests",
+    category: "Guide",
+    url: "/history",
+    tags: ["history", "timeline", "milestones", "origin", "founded", "growth"],
+  },
+  {
+    id: "sec-press",
+    title: "Press & Media Kit",
+    subtitle: "Media assets, factual statements, statistics, and founding team directory",
+    category: "Guide",
+    url: "/press",
+    tags: ["press", "media", "kit", "brand", "inquiries", "journalists", "coverage"],
+  },
+  {
+    id: "sec-contact",
+    title: "Contact & Campus Inquiries",
+    subtitle: "Start a campus chapter, partner with your college, or connect with domain leads",
+    category: "Guide",
+    url: "/contact",
+    tags: ["contact", "inquiry", "email", "support", "expansion", "connect"],
+  },
+
+  // ─── Flagship Blog Articles ───
+  {
+    id: "blog-800-students",
+    title: "What Happens to the 800 Students Nobody Picks?",
+    subtitle: "Manifesto by Sarhan Qadir KVM — The problem every college tech club ignores",
+    category: "Blog",
+    url: "/blog/what-happens-to-the-800-students",
+    tags: ["800 students", "manifesto", "sarhan", "quiet talent", "introverts", "college tech club"],
+  },
+  {
+    id: "blog-kerala-communities",
+    title: "Every Tech Community in Kerala: The 2026 Student Guide",
+    subtitle: "Guide by Arshak Perumballi — TinkerHub, IEDC, µLearn, GDG, and ELEVATES",
+    category: "Blog",
+    url: "/blog/every-tech-community-in-kerala-2026-guide",
+    tags: ["kerala", "tech community", "communities", "tinkerhub", "iedc", "mulearn", "gdg", "arshak"],
+  },
+  {
+    id: "blog-tinkerhub-vs-iedc",
+    title: "TinkerHub vs IEDC vs µLearn: An Honest Comparison",
+    subtitle: "Comparison by Mashood M — Candid strengths, trade-offs, and who each is best for",
+    category: "Blog",
+    url: "/blog/tinkerhub-vs-iedc-vs-mulearn-comparison",
+    tags: ["comparison", "tinkerhub", "iedc", "mulearn", "mashood", "which community", "difference"],
+  },
+  {
+    id: "blog-vibranium-architecture",
+    title: "How We Built a Production Event Platform in 5 Days (400k Requests)",
+    subtitle: "Engineering case study by Naseem Shan — High fest load, zero budget, zero downtime",
+    category: "Blog",
+    url: "/blog/how-we-built-vibranium-event-platform-400k-requests",
+    tags: ["vibranium", "architecture", "naseem", "engineering", "system design", "400k", "concurrency"],
+  },
+
+  // ─── Site Main Pages & Sections ───
   {
     id: "sec-projects-all",
     title: "Projects & Production Proof",
