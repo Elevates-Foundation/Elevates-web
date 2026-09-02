@@ -13,6 +13,26 @@ gsap.registerPlugin(ScrollToPlugin);
 const NAV_ITEMS = [
     {
         num: "01",
+        name: "About",
+        target: "/about",
+        isExternal: true,
+        desc: "The ELEVATES Story — born at EKC, built for quiet & introverted talent in Kerala.",
+        badge: "MANIFESTO",
+        tag: "Our Story",
+        doodle: "crown"
+    },
+    {
+        num: "02",
+        name: "Clusters",
+        target: "/clusters",
+        isExternal: true,
+        desc: "The Cluster Engine — turning open workshops into committed builders & real platforms.",
+        badge: "CLUSTER ENGINE",
+        tag: "Why Clusters Matter",
+        doodle: "crown"
+    },
+    {
+        num: "03",
         name: "Projects",
         target: "/projects",
         isExternal: true,
@@ -22,17 +42,7 @@ const NAV_ITEMS = [
         doodle: "crown"
     },
     {
-        num: "02",
-        name: "Peer Labs",
-        target: "/peer-labs",
-        isExternal: true,
-        desc: "Multi-week hands-on learning series: Operation Java, Cybersec Defense, Spark Electronics.",
-        badge: "3 ACTIVE LABS",
-        tag: "62+ Enrolled",
-        doodle: "star"
-    },
-    {
-        num: "03",
+        num: "04",
         name: "Events",
         target: "/events",
         isExternal: true,
@@ -40,16 +50,6 @@ const NAV_ITEMS = [
         badge: "WORKSHOPS & MEETUPS",
         tag: "8+ Events",
         doodle: "scribble"
-    },
-    {
-        num: "04",
-        name: "Clusters",
-        target: "/clusters",
-        isExternal: true,
-        desc: "The Cluster Engine — turning open workshops into committed builders & real platforms.",
-        badge: "CLUSTER ENGINE",
-        tag: "Why Clusters Matter",
-        doodle: "crown"
     },
     {
         num: "05",
@@ -63,13 +63,13 @@ const NAV_ITEMS = [
     },
     {
         num: "06",
-        name: "About",
-        target: "/about",
+        name: "Peer Labs",
+        target: "/peer-labs",
         isExternal: true,
-        desc: "The ELEVATES Story — born at EKC, built for quiet & introverted talent in Kerala.",
-        badge: "MANIFESTO",
-        tag: "Our Story",
-        doodle: "crown"
+        desc: "Multi-week hands-on learning series: Operation Java, Cybersec Defense, Spark Electronics.",
+        badge: "3 ACTIVE LABS",
+        tag: "62+ Enrolled",
+        doodle: "star"
     },
 ];
 
@@ -181,36 +181,24 @@ export default function Navbar() {
                         </Link>
 
                         <nav className="flex items-center gap-5 font-mono text-xs uppercase font-bold text-graphite">
-                            <Link href="/peer-labs" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/peer-labs') ? 'text-flame underline font-extrabold' : ''}`}>
-                                Peer Labs
-                            </Link>
-                            <Link href="/events" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/events') ? 'text-flame underline font-extrabold' : ''}`}>
-                                Events
+                            <Link href="/about" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/about') ? 'text-flame underline font-extrabold' : ''}`}>
+                                About
                             </Link>
                             <Link href="/clusters" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/clusters') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Clusters
                             </Link>
+                            <Link href="/projects" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/projects') ? 'text-flame underline font-extrabold' : ''}`}>
+                                Projects
+                            </Link>
+                            <Link href="/events" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/events') ? 'text-flame underline font-extrabold' : ''}`}>
+                                Events
+                            </Link>
                             <Link href="/chapters" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/chapters') ? 'text-flame underline font-extrabold' : ''}`}>
                                 Chapters
-                            </Link>
-                            <Link href="/about" className={`hover:text-flame transition-colors cursor-pointer ${pathname.startsWith('/about') ? 'text-flame underline font-extrabold' : ''}`}>
-                                About
                             </Link>
                         </nav>
 
                         <div className="flex items-center gap-2.5">
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_OS_URL ?? "https://os.elevates.live"}/login`}
-                                className="bg-paper text-graphite font-mono text-xs font-bold px-3 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase cursor-pointer"
-                            >
-                                Sign in
-                            </a>
-                            <Link
-                                href="/join"
-                                className="hidden lg:inline-flex bg-indigo text-paper font-mono text-xs font-bold px-3 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all uppercase cursor-pointer"
-                            >
-                                Join
-                            </Link>
                             <button
                                 onClick={() => setSearchOpen(true)}
                                 className="bg-paper text-graphite font-mono text-xs font-bold px-3 py-1 rounded-full border-2 border-graphite shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-1.5 cursor-pointer"
