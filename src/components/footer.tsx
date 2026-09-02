@@ -5,11 +5,15 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 
 const SOCIAL_LINKS = [
-    { name: "Instagram", href: "https://www.instagram.com/elevates.club/", isExternal: true },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/elevates-in", isExternal: true },
-    { name: "GitHub", href: "https://github.com/Elevates-Foundation", isExternal: true },
+    { name: "Ecosystem", href: "/ecosystem", isExternal: false },
+    { name: "ELEVATES OS", href: "/elevates-os", isExternal: false },
     { name: "Chapters", href: "/chapters", isExternal: false },
     { name: "Clusters", href: "/clusters", isExternal: false },
+    { name: "Blog", href: "/blog", isExternal: false },
+    { name: "Contact", href: "/contact", isExternal: false },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/elevates-in", isExternal: true },
+    { name: "GitHub", href: "https://github.com/Elevates-Foundation", isExternal: true },
+    { name: "Instagram", href: "https://www.instagram.com/elevates.club/", isExternal: true },
 ];
 
 export default function Footer() {

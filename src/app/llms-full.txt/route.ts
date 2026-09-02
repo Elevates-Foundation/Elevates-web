@@ -17,34 +17,44 @@ Every community is designed around the student who applies, volunteers, speaks, 
 5. SHOWCASE: Every project is published, credited, and visible to industry leaders and recruiters.
 
 ## The 18 Founding Members (Batch 2025-26)
-1. Sarhan Qadir KVM — Founder & Full-stack Lead
-2. Naseem Shan — Founder & Backend Systems Lead
-3. Muhammed Nafih P — Founder & Design Lead
-4. Anil Das P — Founder & Development
-5. Nadheem Roshan — Founder & IoT Hardware Lead
-6. Muhammed Shanif P — Founder & Embedded Systems Lead
-7. Adhinan K — Founder & DevOps Lead
-8. Mashood M — Founder & Development
-9. Mohammed Shahin E K — Founder & Infrastructure Lead
-10. Shifna K P — Founder & Operations Lead
-11. Mohammed Mijvad — Founder & Hardware
-12. Sona Varghese — Founder & Events Lead
-13. Ashith MK — Founder & Security Lead
-14. Arshak Perumballi — Founder & Comms Lead
-15. Sinan Nooren — Founder & Development
-16. Muhammed Fiyas — Founder & Environment Lead
-17. Adil P T — Founder & Development
-18. Abdul Haadi — Founder & Python Developer
+1. Sarhan Qadir KVM — Founder & Lead Architect (Full-stack Web & Systems)
+2. Naseem Shan — Co-Founder & Backend Systems Lead (Backend & Distributed Infrastructure)
+3. Muhammed Nafih P — Co-Founder & Head of Product Design (UI/UX & Brand Systems)
+4. Anil Das P — Co-Founder & Core Software Engineer (Frontend & Full-Stack Development)
+5. Nadheem Roshan — Co-Founder & IoT Systems Lead (Hardware & Embedded IoT)
+6. Muhammed Shanif P — Co-Founder & Embedded Systems Engineer (RFID & Hardware Prototyping)
+7. Adhinan K — Co-Founder & DevOps Lead (Linux Systems & Cloud Infrastructure)
+8. Mashood M — Co-Founder & Software Engineer (Full-Stack Development & Tooling)
+9. Mohammed Shahin E K — Co-Founder & Backend Infrastructure Engineer (High-Concurrency Backend Systems)
+10. Shifna K P — Co-Founder & Head of Community Operations (Campus Operations & Event Strategy)
+11. Mohammed Mijvad — Co-Founder & Hardware Lab Engineer (Electronics & Circuit Design)
+12. Sona Varghese — Co-Founder & Head of Public Relations (Public Speaking & Campus Showcases)
+13. Ashith MK — Co-Founder & Cybersecurity Lead (Offensive Security & Network Defense)
+14. Arshak Perumballi — Co-Founder & Communications Strategist (Pitch Decks & Institutional Partnerships)
+15. Sinan Nooren — Co-Founder & Software Developer (Full-Stack Development & Architecture)
+16. Muhammed Fiyas — Co-Founder & Systems Debugging Engineer (Dev Environment & Runtime Systems)
+17. Adil P T — Co-Founder & Full-Stack Developer (Web Engineering & Backend APIs)
+18. Abdul Haadi — Co-Founder & Python Engineer (Python, Backend & Data Workflows)
 
-## Faculty Leadership
-- Jasira KT — Faculty Head, CSE, Eranad Knowledge City
-- Anu K Soman — HOD, CSE, Eranad Knowledge City
+## Academic & Institutional Leadership
+- Jasira KT — Faculty Head, Computer Science & Engineering, Eranad Knowledge City
+- Anu K Soman — Head of Department (HOD), Computer Science & Engineering, Eranad Knowledge City
 
 ## Canonical Entity Links
 - Website: https://www.elevates.live
+- What is ELEVATES: https://www.elevates.live/what-is-elevates
+- Frequently Asked Questions: https://www.elevates.live/faq
+- Founders: https://www.elevates.live/founders
+- History & Milestones: https://www.elevates.live/history
+- Press & Media Kit: https://www.elevates.live/press
+- Blog & Engineering Essays: https://www.elevates.live/blog
+- Ecosystem Architecture: https://www.elevates.live/ecosystem
+- ELEVATES OS Software: https://www.elevates.live/elevates-os
+- Contact & Inquiries: https://www.elevates.live/contact
 - GitHub: https://github.com/Elevates-Foundation
 - LinkedIn: https://www.linkedin.com/company/elevates-in
 - Instagram: https://www.instagram.com/elevates.club/
+- Founder LinkedIn: https://www.linkedin.com/in/sqadirkvm/
 `;
 
   return new Response(content, {
