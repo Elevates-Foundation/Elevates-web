@@ -43,7 +43,7 @@ export default async function TeamPage() {
             "@id": `${ELEVATES_BASE_URL}/founders/${f.id}`,
             name: f.name,
             jobTitle: f.role,
-            description: `${f.role} at ELEVATES. Specialization: ${f.specialization ?? f.proof}. Campus moniker: "${f.tag}".`,
+            description: `${f.role} at ELEVATES. Specialization: ${f.specialization ?? f.proof}.`,
             memberOf: organizationRef(),
             image: f.image.startsWith("http") ? f.image : `${ELEVATES_BASE_URL}${f.image}`,
             ...(f.linkedin ? { sameAs: f.linkedin } : {}),
