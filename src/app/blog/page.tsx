@@ -123,7 +123,7 @@ export default async function BlogIndexPage() {
               </div>
 
               <Link href={`/blog/${post.slug}`} className="group block">
-                <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-graphite group-hover:text-flame transition-colors mb-2 leading-snug">
+                <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-graphite group-hover:text-flame transition-colors mb-2 leading-snug">
                   {post.title}
                 </h2>
                 <p className="font-mono text-xs font-bold text-flame mb-3">
