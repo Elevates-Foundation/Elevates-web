@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     }
 
     const host = "www.elevates.live";
-    const key = process.env.INDEXNOW_KEY || "elevates-indexnow-key";
+    const key = process.env.INDEXNOW_KEY || "894deca79d944a4ab8f253cb738c330f";
     const keyLocation = `https://${host}/${key}.txt`;
 
     const payload = {
