@@ -145,7 +145,7 @@ export default function TeamClient({ founders, advisors }: Props) {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-sm border-2 border-graphite overflow-hidden relative shrink-0 shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] group-hover:border-flame transition-colors bg-graphite/5">
                     <img
                       src={f.image}
-                      alt={f.name}
+                      alt={`${f.name} — ${f.role}, ELEVATES`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -156,12 +156,14 @@ export default function TeamClient({ founders, advisors }: Props) {
                     <h3 className="font-mono font-black text-base text-graphite truncate group-hover:text-flame transition-colors">
                       {f.name}
                     </h3>
-                    <span className="font-mono text-[11px] font-bold text-flame bg-flame/10 px-2 py-0.5 rounded border border-flame/30 inline-block mt-1 group-hover:-rotate-2 group-hover:bg-flame group-hover:text-paper group-hover:border-graphite transition-all">
-                      {f.tag}
-                    </span>
-                    <p className="font-mono text-[11px] font-bold text-olive uppercase tracking-wide mt-1.5">
+                    <p className="font-mono text-xs font-bold text-flame tracking-tight mt-0.5">
                       {f.role}
                     </p>
+                    <div className="mt-1 flex items-center gap-1.5 flex-wrap">
+                      <span className="font-mono text-[10px] text-olive/80 font-bold uppercase">
+                        &ldquo;{f.tag}&rdquo;
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -203,7 +205,7 @@ export default function TeamClient({ founders, advisors }: Props) {
                 <div className="w-full aspect-square border-2 border-graphite rounded-sm overflow-hidden mb-4 relative bg-graphite/10">
                   <img
                     src={f.image}
-                    alt={f.name}
+                    alt={`${f.name} — ${f.role}, ELEVATES`}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -214,14 +216,14 @@ export default function TeamClient({ founders, advisors }: Props) {
                 </div>
 
                 <div className="text-center">
-                  <h3 className="font-mono font-black text-lg text-graphite group-hover:text-flame transition-colors mb-1">
+                  <h3 className="font-mono font-black text-lg text-graphite group-hover:text-flame transition-colors mb-0.5">
                     {f.name}
                   </h3>
-                  <span className="font-mono text-xs font-bold text-paper bg-flame px-2.5 py-0.5 rounded border border-graphite inline-block mb-2">
-                    {f.tag}
-                  </span>
-                  <p className="font-mono text-xs text-olive font-bold">{f.role}</p>
-                  <p className="font-mono text-[11px] text-graphite/70 mt-1">⚡ {f.proof}</p>
+                  <p className="font-mono text-xs text-flame font-bold mb-1">{f.role}</p>
+                  <p className="font-mono text-[11px] text-olive/80 font-bold mb-2">
+                    &ldquo;{f.tag}&rdquo;
+                  </p>
+                  <p className="font-mono text-[11px] text-graphite/70">⚡ {f.proof}</p>
                 </div>
               </div>
             ))}
@@ -254,7 +256,7 @@ export default function TeamClient({ founders, advisors }: Props) {
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-sm border-2 border-graphite overflow-hidden relative shrink-0 shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] group-hover:border-flame transition-colors bg-graphite/10">
                 <img
                   src={adv.image}
-                  alt={adv.name}
+                  alt={`${adv.name} — ${adv.role}, ${adv.department} (${adv.college})`}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -301,22 +303,27 @@ export default function TeamClient({ founders, advisors }: Props) {
               <div className="w-28 h-28 md:w-32 md:h-32 border-4 border-graphite rounded-sm overflow-hidden relative shrink-0 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] bg-graphite/10">
                 <img
                   src={selectedFounder.image}
-                  alt={selectedFounder.name}
+                  alt={`${selectedFounder.name} — ${selectedFounder.role}, ELEVATES`}
                   decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               <div>
-                <span className="font-mono text-xs font-bold text-paper bg-flame px-3 py-1 rounded border border-graphite uppercase inline-block mb-2">
-                  {selectedFounder.tag}
-                </span>
                 <h3 className="font-mono font-black text-2xl md:text-3xl text-graphite">
                   {selectedFounder.name}
                 </h3>
-                <p className="font-mono text-xs font-bold text-olive uppercase tracking-wide mt-1">
+                <p className="font-mono text-sm font-bold text-flame tracking-wide mt-1">
                   {selectedFounder.role} · BATCH {selectedFounder.cohort}
                 </p>
+                {selectedFounder.specialization && (
+                  <p className="font-mono text-xs text-olive font-semibold mt-0.5">
+                    Domain: {selectedFounder.specialization}
+                  </p>
+                )}
+                <span className="font-mono text-xs font-bold text-paper bg-graphite px-2.5 py-0.5 rounded border border-graphite uppercase inline-block mt-2">
+                  &ldquo;{selectedFounder.tag}&rdquo;
+                </span>
               </div>
             </div>
 
