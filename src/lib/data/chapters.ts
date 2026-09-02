@@ -21,7 +21,7 @@ export async function fetchChapters(): Promise<Chapter[]> {
   const live = await osGet<OsChapterList>("/chapters", ["chapters"]);
   if (!live?.chapters?.length) return CHAPTERS;
 
-  return live.chapters.map((c) => {
+  const mapped: (Chapter | null)[] = live.chapters.map((c) => {
     const staticChapter = getChapterBySlug(c.slug);
     if (staticChapter) {
       return {
@@ -38,7 +38,9 @@ export async function fetchChapters(): Promise<Chapter[]> {
       };
     }
     return null;
-  }).filter((c): c is Chapter => c !== null);
+  });
+
+  return mapped.filter((c): c is Chapter => c !== null);
 }
 
 export async function fetchChapterBySlug(

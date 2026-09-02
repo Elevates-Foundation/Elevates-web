@@ -27,7 +27,7 @@ export async function fetchPeerLabs(): Promise<PeerLabSeries[]> {
   ]);
   if (!live?.peerLabs?.length) return PEER_LABS;
 
-  return live.peerLabs.map((p) => {
+  const mapped: (PeerLabSeries | null)[] = live.peerLabs.map((p) => {
     const fallback = PEER_LABS.find((x) => x.slug === p.slug);
     if (fallback) {
       return {
@@ -40,7 +40,9 @@ export async function fetchPeerLabs(): Promise<PeerLabSeries[]> {
       };
     }
     return null;
-  }).filter((p): p is PeerLabSeries => p !== null);
+  });
+
+  return mapped.filter((p): p is PeerLabSeries => p !== null);
 }
 
 export async function fetchPeerLabBySlug(

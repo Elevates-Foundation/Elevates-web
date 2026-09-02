@@ -22,7 +22,7 @@ export async function fetchProjects(): Promise<FlagshipProject[]> {
   ]);
   if (!live?.projects?.length) return ALL_CASE_STUDIES;
 
-  return live.projects.map((p) => {
+  const mapped: (FlagshipProject | null)[] = live.projects.map((p) => {
     const fallback = ALL_CASE_STUDIES.find((x) => x.slug === p.slug);
     if (fallback) {
       return {
@@ -34,7 +34,9 @@ export async function fetchProjects(): Promise<FlagshipProject[]> {
       };
     }
     return null;
-  }).filter((p): p is FlagshipProject => p !== null);
+  });
+
+  return mapped.filter((p): p is FlagshipProject => p !== null);
 }
 
 export async function fetchProjectBySlug(
