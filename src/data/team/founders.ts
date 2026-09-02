@@ -6,7 +6,7 @@ export interface Founder {
   role: string; // Real functional role (e.g. "Co-Founder & IoT Systems Lead")
   specialization?: string; // Real technical domain (e.g. "IoT & Embedded Systems")
   proof: string;
-  linkedin?: string; // canonical — no tracking params
+  linkedin?: string; // canonical: no tracking params
   cohort: "2025-26";
   image: string;
 }

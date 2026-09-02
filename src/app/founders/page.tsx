@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Founders & Founding Team | ELEVATES",
     description:
-      "The 18 student builders behind ELEVATES — born from a closed chapter application into Kerala's community for quiet talent.",
+      "The 18 student builders behind ELEVATES, founded after a closed chapter application into Kerala's community for quiet talent.",
     url: `${ELEVATES_BASE_URL}/founders`,
   },
   twitter: {
     card: "summary_large_image",
     title: "Founders & Founding Team | ELEVATES",
     description:
-      "The 18 student builders behind ELEVATES — born from a closed chapter application into Kerala's community for quiet talent.",
+      "The 18 student builders behind ELEVATES, founded after a closed chapter application into Kerala's community for quiet talent.",
   },
 };
 

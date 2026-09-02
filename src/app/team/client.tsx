@@ -29,7 +29,7 @@ export default function TeamClient({ founders, advisors }: Props) {
       <header className="mb-12 border-b-4 border-graphite pb-8 relative">
         <div className="flex items-center gap-3 mb-4">
           <span className="font-mono text-xs uppercase tracking-widest text-paper bg-flame px-3 py-1 font-bold rounded-sm rotate-[-1deg]">
-            FOUNDING TEAM // BATCH 2025–26
+            FOUNDING TEAM // BATCH 2025-26
           </span>
           <span className="font-mono text-xs text-olive font-bold">
             // 18 FOUNDERS
@@ -103,7 +103,7 @@ export default function TeamClient({ founders, advisors }: Props) {
               </p>
             </div>
             <span className="font-mono text-xs font-bold text-paper/60 hidden sm:inline bg-paper/10 px-3 py-1 rounded border border-paper/20">
-              // FOUNDING BATCH · 2025–26
+              // FOUNDING BATCH · 2025-26
             </span>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function TeamClient({ founders, advisors }: Props) {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-sm border-2 border-graphite overflow-hidden relative shrink-0 shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] group-hover:border-flame transition-colors bg-graphite/5">
                     <img
                       src={f.image}
-                      alt={`${f.name} — ${f.role}, ELEVATES`}
+                      alt={`${f.name}, ${f.role}, ELEVATES`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -205,7 +205,7 @@ export default function TeamClient({ founders, advisors }: Props) {
                 <div className="w-full aspect-square border-2 border-graphite rounded-sm overflow-hidden mb-4 relative bg-graphite/10">
                   <img
                     src={f.image}
-                    alt={`${f.name} — ${f.role}, ELEVATES`}
+                    alt={`${f.name}, ${f.role}, ELEVATES`}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -256,7 +256,7 @@ export default function TeamClient({ founders, advisors }: Props) {
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-sm border-2 border-graphite overflow-hidden relative shrink-0 shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] group-hover:border-flame transition-colors bg-graphite/10">
                 <img
                   src={adv.image}
-                  alt={`${adv.name} — ${adv.role}, ${adv.department} (${adv.college})`}
+                  alt={`${adv.name}, ${adv.role}, ${adv.department} (${adv.college})`}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
@@ -303,7 +303,7 @@ export default function TeamClient({ founders, advisors }: Props) {
               <div className="w-28 h-28 md:w-32 md:h-32 border-4 border-graphite rounded-sm overflow-hidden relative shrink-0 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] bg-graphite/10">
                 <img
                   src={selectedFounder.image}
-                  alt={`${selectedFounder.name} — ${selectedFounder.role}, ELEVATES`}
+                  alt={`${selectedFounder.name}, ${selectedFounder.role}, ELEVATES`}
                   decoding="async"
                   className="w-full h-full object-cover"
                 />

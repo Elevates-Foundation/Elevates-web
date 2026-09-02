@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${founder.name} — ${founder.role} | ELEVATES`;
-  const description = `${founder.name} (${founder.tag}) — ${founder.role} at ELEVATES. ${founder.proof}.`;
+  const title = `${founder.name} | ${founder.role} · ELEVATES`;
+  const description = `${founder.name} (${founder.tag}), ${founder.role} at ELEVATES. ${founder.proof}.`;
 
   return {
     title,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: founder.image.startsWith("http")
             ? founder.image
             : `${ELEVATES_BASE_URL}${founder.image}`,
-          alt: `${founder.name} — ${founder.role}, ELEVATES Founding Collective`,
+          alt: `${founder.name}, ${founder.role}, ELEVATES Founding Collective`,
         },
       ],
     },
@@ -106,7 +106,7 @@ export default async function FounderDetailPage({ params }: Props) {
           <div className="relative w-40 h-40 sm:w-48 sm:h-48 shrink-0 border-3 border-graphite overflow-hidden bg-olive/10 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
             <Image
               src={founder.image}
-              alt={`${founder.name} — ${founder.role}, ELEVATES Founding Collective`}
+              alt={`${founder.name}, ${founder.role}, ELEVATES Founding Collective`}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 160px, 192px"
