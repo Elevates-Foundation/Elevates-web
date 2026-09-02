@@ -143,7 +143,7 @@ export default async function ProjectsPage() {
         <div className="space-y-8">
           {FLAGSHIP_PROJECTS.map((proj, idx) => (
             <article
-              key={proj.slug}
+              key={`${proj.slug}-${idx}`}
               className="bg-paper border-4 border-graphite rounded-sm p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(45,45,52,1)] hover:shadow-[12px_12px_0px_0px_rgba(242,100,48,1)] transition-all group relative overflow-hidden"
             >
               {/* Top tape graphic */}

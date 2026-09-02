@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "celestia") {
     return {
-      title: "Celestia — A College Department Website Rebuilt in One Hour | ELEVATES",
+      title: "Celestia: College Department Website Rebuilt in One Hour | ELEVATES",
       description:
         "We were running the event. The guest we had invited was arriving at two o'clock. We had two hours, five juniors, and a specification written on the way to campus. We finished in one hour.",
       keywords: [
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
       alternates: { canonical: `/projects/${project.slug}` },
       openGraph: {
-        title: "Celestia — CSE Association Website Rebuilt in 1 Hour | ELEVATES",
+        title: "Celestia: CSE Association Website Rebuilt in 1 Hour | ELEVATES",
         description: project.summary,
         url: `https://www.elevates.live/projects/${project.slug}`,
       },
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "roadundo") {
     return {
-      title: "RoadUndo — Kerala Dam Levels, Pincodes & Open Data API | ELEVATES",
+      title: "RoadUndo: Kerala Dam Levels, Pincodes & Open Data API | ELEVATES",
       description:
         "A free open API for Kerala: 5,057 pincodes with LSGD ward mapping, OpenStreetMap roads, live KSEB dam levels and IMD district alerts. Built and open-sourced by students at ELEVATES.",
       keywords: [
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
       alternates: { canonical: `/projects/${project.slug}` },
       openGraph: {
-        title: "RoadUndo — Kerala Open Data API & Disaster Board | ELEVATES",
+        title: "RoadUndo: Kerala Open Data API & Disaster Board | ELEVATES",
         description: project.summary,
         url: `https://www.elevates.live/projects/${project.slug}`,
       },
@@ -72,11 +72,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} — ${project.metrics[0]?.value} ${project.metrics[0]?.label} | ELEVATES`,
+    title: `${project.title}: ${project.metrics[0]?.value} ${project.metrics[0]?.label} | ELEVATES`,
     description: project.tagline || project.summary,
     alternates: { canonical: `/projects/${project.slug}` },
     openGraph: {
-      title: `${project.title} — Case Study | ELEVATES`,
+      title: `${project.title}: Case Study | ELEVATES`,
       description: project.tagline,
       url: `https://www.elevates.live/projects/${project.slug}`,
     },
@@ -140,7 +140,7 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
       {
         "@type": "Article",
         "@id": `https://www.elevates.live/projects/${project.slug}#article`,
-        "headline": `${project.title} — ${project.tagline}`,
+        "headline": `${project.title}: ${project.tagline}`,
         "datePublished": "2025-10-09",
         "author": { "@id": "https://www.elevates.live/#organization" },
         "about": {
