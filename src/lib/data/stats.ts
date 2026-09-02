@@ -9,9 +9,9 @@ export type LiveStats = {
 
 const FALLBACK: LiveStats = {
   chapters: 1,
-  events: 8,
+  events: 19,
   projects: 3,
-  students: 400,
+  students: 800,
 };
 
 export async function fetchStats(): Promise<LiveStats> {

@@ -1,5 +1,5 @@
 /**
- * ELEVATES — Canonical Entity Definition & Structured Data
+ * ELEVATES: Canonical Entity Definition & Structured Data
  *
  * This file is the single source of truth for:
  * 1. The canonical ELEVATES definition sentence
