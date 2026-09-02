@@ -33,34 +33,8 @@ export async function fetchProjects(): Promise<FlagshipProject[]> {
         repo: p.repositoryUrl ?? fallback.repo,
       };
     }
-    // Minimal projection when OS has a project not yet in static case studies
-    return {
-      slug: p.slug,
-      title: p.title,
-      client: p.chapterName ?? "ELEVATES",
-      date: "",
-      type: "open-tool",
-      status: "live",
-      summary: p.description ?? "",
-      tagline: p.description?.slice(0, 80) ?? "",
-      metrics: [],
-      stack: [],
-      repo: p.repositoryUrl ?? null,
-      live: p.demoUrl ?? null,
-      cover: "/og-image.png",
-      situation: { title: p.title, paragraphs: [p.description ?? ""] },
-      numbers: [],
-      whatWeBuilt: [],
-      howItHeldUp: { summary: "", metrics: [], details: [] },
-      whatWeWouldDoDifferently: [],
-      builders: [],
-      stackAndCode: {
-        technologies: [],
-        repoUrl: p.repositoryUrl ?? null,
-        repoNote: "",
-      },
-    } satisfies FlagshipProject;
-  });
+    return null;
+  }).filter((p): p is FlagshipProject => p !== null);
 }
 
 export async function fetchProjectBySlug(

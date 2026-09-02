@@ -37,23 +37,8 @@ export async function fetchChapters(): Promise<Chapter[]> {
         },
       };
     }
-    return {
-      slug: c.slug,
-      chapterNumber: c.slug === "ekc" ? "01" : "—",
-      name: c.name,
-      college: c.college,
-      district: c.district ?? c.city ?? "Kerala",
-      foundedDate: c.foundedAt ?? "2025",
-      lead: { name: "Campus Coordinator", role: "Chapter Lead" },
-      team: [],
-      events: [],
-      projects: [],
-      stats: {
-        eventsCount: c.eventCount ?? 0,
-        studentsImpacted: c.memberCount ?? 0,
-      },
-    } satisfies Chapter;
-  });
+    return null;
+  }).filter((c): c is Chapter => c !== null);
 }
 
 export async function fetchChapterBySlug(

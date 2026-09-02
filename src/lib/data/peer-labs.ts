@@ -39,30 +39,8 @@ export async function fetchPeerLabs(): Promise<PeerLabSeries[]> {
         coverImage: p.bannerUrl ?? fallback.coverImage,
       };
     }
-    return {
-      id: p.id,
-      slug: p.slug,
-      title: p.title,
-      subtitle: p.track ?? "",
-      description: p.description ?? "",
-      campusName: "ELEVATES",
-      status: mapStatus(p.status),
-      joinedCount: p.enrolledCount ?? 0,
-      lessons:
-        p.syllabus?.map((s, i) => ({
-          id: `${p.slug}-${i}`,
-          slug: p.slug,
-          title: s.title ?? `Week ${s.week ?? i + 1}`,
-          date: "",
-          time: "",
-          location: "",
-        })) ?? [],
-      facilitators: [],
-      resources: [],
-      coverImage: p.bannerUrl,
-      featured: true,
-    } satisfies PeerLabSeries;
-  });
+    return null;
+  }).filter((p): p is PeerLabSeries => p !== null);
 }
 
 export async function fetchPeerLabBySlug(
