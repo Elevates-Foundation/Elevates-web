@@ -97,7 +97,7 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
     "name": ds.name,
     "description": ds.description,
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "creator": { "@id": "https://elevates.live/#organization" },
+    "creator": { "@id": "https://www.elevates.live/#organization" },
     "spatialCoverage": "Kerala, India",
     "distribution": [
       {
@@ -141,16 +141,16 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
         "@id": `https://www.elevates.live/projects/${project.slug}#article`,
         "headline": `${project.title} — ${project.tagline}`,
         "datePublished": "2025-10-09",
-        "author": { "@id": "https://elevates.live/#organization" },
+        "author": { "@id": "https://www.elevates.live/#organization" },
         "about": {
           "@type": project.type === "open-tool" ? "SoftwareApplication" : "SoftwareApplication",
-          "@id": `https://elevates.live/projects/${project.slug}#app`,
+          "@id": `https://www.elevates.live/projects/${project.slug}#app`,
           "name": project.title,
           "applicationCategory": project.type === "open-tool" ? "UtilitiesApplication" : "BusinessApplication",
           "operatingSystem": "Web",
-          "author": { "@id": "https://elevates.live/#organization" },
+          "author": { "@id": "https://www.elevates.live/#organization" },
           "contributor": project.builders.map((b) => ({
-            "@id": `https://elevates.live/team#${b.founderId}`,
+            "@id": `https://www.elevates.live/team#${b.founderId}`,
           })),
         },
       },

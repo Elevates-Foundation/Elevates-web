@@ -3,18 +3,25 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Doodle from "@/components/doodle";
 import ProjectStatusChip from "@/components/status-chip";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES, ALSO_BUILT_ARCHIVE } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects & Production Proof | ELEVATES Kerala",
+  title: "Projects & Case Studies | ELEVATES",
   description:
     "Production software built by ELEVATES for real college fests. Handling 400,000+ requests under extreme load with zero downtime. Proof beats certificates.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Projects & Production Proof | ELEVATES Kerala",
+    title: "Projects & Case Studies | ELEVATES",
     description:
       "Production software built for real college fests with real load. Vibranium Event Platform, Aaroh Arts Platform, RoadUndo Open Data API.",
     url: "https://www.elevates.live/projects",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects & Case Studies | ELEVATES",
+    description:
+      "Production software built for real college fests with real load. Vibranium Event Platform, Aaroh Arts Platform, RoadUndo Open Data API.",
   },
 };
 
@@ -38,6 +45,12 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-6xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
