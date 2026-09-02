@@ -81,8 +81,8 @@ export async function fetchChapterBySlug(
       events: [],
       projects: [],
       stats: {
-        eventsCount: live.eventCount ?? 17,
-        studentsImpacted: live.memberCount ?? 400,
+        eventsCount: live.eventCount ?? 19,
+        studentsImpacted: live.memberCount ?? 800,
       },
     };
   }
@@ -100,8 +100,8 @@ export async function fetchChapterBySlug(
     projects: fallback.projects,
     stats: {
       ...fallback.stats,
-      eventsCount: live.eventCount ?? fallback.stats.eventsCount,
-      studentsImpacted: live.memberCount ?? fallback.stats.studentsImpacted,
+      eventsCount: live.eventCount ?? fallback.stats.eventsCount ?? 19,
+      studentsImpacted: live.memberCount ?? fallback.stats.studentsImpacted ?? 800,
     },
   };
 }

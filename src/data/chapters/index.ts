@@ -8,7 +8,44 @@ export interface ChapterMember {
   linkedin?: string;
 }
 
+export interface ExecomMember {
+  name: string;
+  role: string;
+  year?: string;
+  branch?: string;
+  tag?: string;
+  github?: string;
+  linkedin?: string;
+}
+
+export interface ExecomTeamGroup {
+  teamName: string;
+  tagline?: string;
+  badge: string;
+  heads: ExecomMember[];
+  members: ExecomMember[];
+}
+
+export interface ChapterTerm {
+  id: string;
+  termNumber: string; // e.g. "02"
+  academicYear: string; // e.g. "2026-27"
+  isCurrent: boolean;
+  executiveCore: {
+    chairman: ExecomMember;
+    secretary: ExecomMember;
+    viceChairmen: ExecomMember[];
+    jointSecretaries: ExecomMember[];
+  };
+  yearCoordinators: {
+    year: string;
+    coordinators: ExecomMember[];
+  }[];
+  domainTeams: ExecomTeamGroup[];
+}
+
 export interface ChapterEvent {
+  slug?: string;
   title: string;
   date: string;
   headcount: number;
@@ -38,8 +75,10 @@ export interface Chapter {
     name: string;
     designation: string;
     department: string;
+    image?: string;
   };
-  team: ChapterMember[];
+  team: ChapterMember[]; // Backward compatibility flat list
+  terms?: ChapterTerm[]; // Multi-term tree structure
   events: ChapterEvent[];
   projects: ChapterProject[];
   stats: {
