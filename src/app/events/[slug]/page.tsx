@@ -6,6 +6,7 @@ import { fetchEventBySlug, fetchEvents, fetchEventSlugs } from "@/lib/data/event
 import EventBadge from "@/components/events/event-badge";
 import Doodle from "@/components/doodle";
 import EventRsvpForm from "@/components/events/event-rsvp-form";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -79,11 +80,7 @@ export default async function EventDetailPage({ params }: PageProps) {
         "addressCountry": "IN",
       },
     },
-    "organizer": event.organizer.map((org) => ({
-      "@type": "Organization",
-      "name": org.name,
-      "url": "https://www.elevates.live",
-    })),
+    "organizer": { "@id": "https://www.elevates.live/#organization" },
     "performer": event.hosts.map((host) => ({
       "@type": "Person",
       "name": host.name,
@@ -93,6 +90,13 @@ export default async function EventDetailPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-32 md:pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Events", path: "/events" },
+          { name: event.title, path: `/events/${event.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}

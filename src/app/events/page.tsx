@@ -3,18 +3,24 @@ import Link from "next/link";
 import EventCard from "@/components/events/event-card";
 import EventBadge from "@/components/events/event-badge";
 import Doodle from "@/components/doodle";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 import { fetchEvents } from "@/lib/data/events";
 
 export const metadata = {
-  title: "Events & Workshops | ELEVATES Kerala",
-  description: "Browse ELEVATES events, workshops, hackathons, and meetups across Kerala for quiet & shy builders.",
+  title: "Events & Workshops | ELEVATES",
+  description: "Browse ELEVATES events, workshops, hackathons, and meetups across Kerala. Hands-on learning for quiet builders and introverted students.",
   alternates: {
     canonical: "/events",
   },
   openGraph: {
-    title: "Events & Workshops | ELEVATES Kerala",
-    description: "Browse ELEVATES events, workshops, hackathons, and meetups across Kerala for quiet & shy builders.",
+    title: "Events & Workshops | ELEVATES",
+    description: "Browse ELEVATES events, workshops, hackathons, and meetups across Kerala. Hands-on learning for quiet builders.",
     url: "https://www.elevates.live/events",
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Events & Workshops | ELEVATES",
+    description: "Browse ELEVATES events, workshops, hackathons, and meetups across Kerala. Hands-on learning for quiet builders.",
   },
 };
 
@@ -37,10 +43,23 @@ export default async function EventsPage() {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Events", path: "/events" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="mb-8 font-mono text-xs text-olive flex items-center gap-2">
+        <Link href="/" className="hover:underline">Home</Link>
+        <span>/</span>
+        <span className="text-graphite font-bold">Events</span>
+      </nav>
 
       {/* Header Section */}
       <div className="mb-14 border-b-4 border-graphite pb-8 relative">
