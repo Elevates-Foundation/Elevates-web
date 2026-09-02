@@ -38,7 +38,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "sec-elevates-os",
     title: "ELEVATES OS (Platform Engine)",
-    subtitle: "The digital operating software powering chapters, clusters, and 400k+ requests",
+    subtitle: "The digital operating software powering campus chapters, clusters, and tools",
     category: "Guide",
     url: "/elevates-os",
     tags: ["elevates os", "os", "platform", "software", "tools", "verification", "credentials"],
@@ -62,7 +62,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "sec-history",
     title: "History & Milestones Timeline",
-    subtitle: "Our journey from 4 years of closed community windows to 18 founders and 400k requests",
+    subtitle: "Our journey from 4 years of closed community windows to 18 founders building real software",
     category: "Guide",
     url: "/history",
     tags: ["history", "timeline", "milestones", "origin", "founded", "growth"],
@@ -88,7 +88,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "blog-800-students",
     title: "What Happens to the 800 Students Nobody Picks?",
-    subtitle: "Manifesto by Sarhan Qadir KVM — The problem every college tech club ignores",
+    subtitle: "Manifesto by Sarhan Qadir KVM: The problem every college tech club ignores",
     category: "Blog",
     url: "/blog/what-happens-to-the-800-students",
     tags: ["800 students", "manifesto", "sarhan", "quiet talent", "introverts", "college tech club"],
@@ -96,7 +96,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "blog-kerala-communities",
     title: "Every Tech Community in Kerala: The 2026 Student Guide",
-    subtitle: "Guide by Arshak Perumballi — TinkerHub, IEDC, µLearn, GDG, and ELEVATES",
+    subtitle: "Guide by Arshak Perumballi: TinkerHub, IEDC, µLearn, GDG, and ELEVATES",
     category: "Blog",
     url: "/blog/every-tech-community-in-kerala-2026-guide",
     tags: ["kerala", "tech community", "communities", "tinkerhub", "iedc", "mulearn", "gdg", "arshak"],
@@ -104,7 +104,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "blog-tinkerhub-vs-iedc",
     title: "TinkerHub vs IEDC vs µLearn: An Honest Comparison",
-    subtitle: "Comparison by Mashood M — Candid strengths, trade-offs, and who each is best for",
+    subtitle: "Comparison by Mashood M: Candid strengths, trade-offs, and who each is best for",
     category: "Blog",
     url: "/blog/tinkerhub-vs-iedc-vs-mulearn-comparison",
     tags: ["comparison", "tinkerhub", "iedc", "mulearn", "mashood", "which community", "difference"],
@@ -112,7 +112,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "blog-vibranium-architecture",
     title: "How We Built a Production Event Platform in 5 Days (400k Requests)",
-    subtitle: "Engineering case study by Naseem Shan — High fest load, zero budget, zero downtime",
+    subtitle: "Engineering case study by Naseem Shan: High fest load, zero budget, zero downtime",
     category: "Blog",
     url: "/blog/how-we-built-vibranium-event-platform-400k-requests",
     tags: ["vibranium", "architecture", "naseem", "engineering", "system design", "400k", "concurrency"],
@@ -122,7 +122,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   {
     id: "sec-projects-all",
     title: "Projects & Production Proof",
-    subtitle: "Built & Shipped — 400k requests handled, zero downtime, real fest software",
+    subtitle: "Built & Shipped: Production event platforms and open-source utilities",
     category: "Projects",
     url: "/projects",
     tags: ["projects", "vibranium", "aaroh", "proof", "showcase", "400k", "makemypass"],
@@ -190,7 +190,7 @@ const DYNAMIC_SEARCH_INDEX: SearchItem[] = [
   ...MEMBER_SHOWCASES.map((item) => ({
     id: `show-${item.id}`,
     title: item.title,
-    subtitle: `Built by ${item.builder} (${item.cohort}) — ${item.description}`,
+    subtitle: `Built by ${item.builder} (${item.cohort}) · ${item.description}`,
     category: "Projects" as const,
     url: item.repo || "/projects",
     tags: [item.title, item.builder, "showcase", item.cohort],

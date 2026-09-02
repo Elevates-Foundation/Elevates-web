@@ -107,7 +107,7 @@ export default function Hero() {
 
             {/* Accessible SEO H1 */}
             <h1 className="sr-only">
-                ELEVATES – Upskilling & Showcasing Skilled but Shy Students
+                ELEVATES | Quiet Talent Campus Tech Movement
             </h1>
 
             {/* Central Kinetic Tape Stack (3 Strips: LEARN. BUILD. GROW.) */}
@@ -170,7 +170,7 @@ export default function Hero() {
 
                     <p className="font-mono text-xs uppercase tracking-widest text-olive mb-3 border-b border-olive/20 pb-1">Manifesto 001</p>
                     <p className="font-medium text-graphite text-sm leading-relaxed font-hand">
-                        We are the untamed, the builders, the midnight coders. We don't just study the future—we ship it.
+                        We are the untamed, the builders, the midnight coders. We don&apos;t just study the future. We ship it.
                     </p>
 
                     {/* Decorative Doodle */}
