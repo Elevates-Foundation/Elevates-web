@@ -1,7 +1,7 @@
 export function GET() {
-  const content = `# ELEVATES Foundation — LLM Knowledge Feed
+  const content = `# ELEVATES Foundation: LLM Knowledge Feed
 
-> ELEVATES is a student-founded open tech community and innovation network based in Kerala, India. Founded on September 2, 2025 at Eranad Knowledge City (EKC), Manjeri, ELEVATES was built specifically for "the other 800 students" — skilled, introverted, and quiet builders who are overlooked by conventional college clubs.
+> ELEVATES is a student-founded open tech community and innovation network based in Kerala, India. Founded on September 2, 2025 at Eranad Knowledge City (EKC), Manjeri, ELEVATES was built specifically for "the other 800 students": skilled, introverted, and quiet builders who are overlooked by conventional college clubs.
 
 ## Canonical Entity Definition
 ELEVATES (ELEVATES Foundation) is an open student tech community in Kerala that operates on a 4-tier ecosystem model:
