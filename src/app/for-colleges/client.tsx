@@ -181,24 +181,24 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
       {/* ── 02 PROOF STRIP ── */}
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
         <div className="bg-paper p-5 border-3 border-graphite rounded-sm shadow-[5px_5px_0px_0px_rgba(45,45,52,1)]">
-          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">17+</span>
+          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">19+</span>
           <span className="font-mono text-xs font-bold text-graphite uppercase block">Events Delivered</span>
           <span className="font-mono text-[10px] text-olive mt-1 block">Chapter 01 @ Eranad Knowledge City</span>
         </div>
         <div className="bg-paper p-5 border-3 border-graphite rounded-sm shadow-[5px_5px_0px_0px_rgba(45,45,52,1)]">
-          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">350+</span>
-          <span className="font-mono text-xs font-bold text-graphite uppercase block">New Admissions Context</span>
-          <span className="font-mono text-[10px] text-olive mt-1 block">Strengthened institution visibility</span>
+          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">800+</span>
+          <span className="font-mono text-xs font-bold text-graphite uppercase block">Students Impacted</span>
+          <span className="font-mono text-[10px] text-olive mt-1 block">Mobilized quiet &amp; introverted talent</span>
         </div>
         <div className="bg-paper p-5 border-3 border-graphite rounded-sm shadow-[5px_5px_0px_0px_rgba(45,45,52,1)]">
-          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">400K+</span>
-          <span className="font-mono text-xs font-bold text-graphite uppercase block">Requests Handled</span>
-          <span className="font-mono text-[10px] text-olive mt-1 block">Student-built fest engines in 24h</span>
+          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">₹0</span>
+          <span className="font-mono text-xs font-bold text-graphite uppercase block">Zero Franchise Fee</span>
+          <span className="font-mono text-[10px] text-olive mt-1 block">No cost to college or student members</span>
         </div>
         <div className="bg-paper p-5 border-3 border-graphite rounded-sm shadow-[5px_5px_0px_0px_rgba(45,45,52,1)]">
-          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">30</span>
+          <span className="font-mono text-3xl md:text-4xl font-black text-flame block mb-1">30+</span>
           <span className="font-mono text-xs font-bold text-graphite uppercase block">Successor Exec Team</span>
-          <span className="font-mono text-[10px] text-olive mt-1 block">Handed over before founders left</span>
+          <span className="font-mono text-[10px] text-olive mt-1 block">Self-sustaining student-led continuity</span>
         </div>
       </section>
 
@@ -359,7 +359,7 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
             <span className="text-flame">WE HAVE THE CALENDAR.</span>
           </h2>
           <p className="font-mono text-xs md:text-sm text-graphite/90 leading-relaxed mb-6">
-            More than 500 accredited IEDCs exist across Kerala — in Engineering, Arts &amp; Science, Management, Medical, and Polytechnic campuses. Most have KSUM annual targets but no active programming calendar. That is a trade: we bring 13 tested technical programmes, you bring the room and the students.
+            More than 500 accredited IEDCs operate across engineering, arts, and polytechnic campuses in Kerala. Most have KSUM annual targets but lack an active programming calendar. We bring 13 tested technical programmes; you supply the venue and the students.
           </p>
 
           <div className="space-y-3 font-mono text-xs font-bold text-graphite">
@@ -399,7 +399,7 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
             <span className="text-flame">INCLUDING BRINGING THE GUEST.</span>
           </h2>
           <p className="font-mono text-xs md:text-sm text-graphite/90 leading-relaxed">
-            The strongest thing we can offer a college we have never worked with is not a chapter — it is an event. On 25 March 2026, we coordinated the relaunch of the CSE Department Association (Celestia) end-to-end: invited the chief guest, managed stage operations, and had 5 junior students rebuild and deploy the department website live in 60 minutes.
+            The strongest thing we can offer a new partner college is not a long chapter discussion: it is a live event. On 25 March 2026, we coordinated the relaunch of the CSE Department Association (Celestia) end-to-end: invited the chief guest, managed stage operations, and had 5 junior students rebuild and deploy the department website live in 60 minutes.
           </p>
         </div>
 
@@ -482,7 +482,7 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
             <p>• 13-programme technical curriculum &amp; workshop playbooks</p>
             <p>• Mentor network, trainers, and technical execution leads</p>
             <p>• Chief guest sourcing &amp; invitation outreach</p>
-            <p>• Event management platform &amp; registration software (400k+ reqs)</p>
+            <p>• Event management platform &amp; custom registration software</p>
             <p>• Dated student certificates &amp; accreditation documentation</p>
           </div>
 
@@ -526,7 +526,7 @@ export default function ForCollegesClient({ offers, benefits, faqs, timeline, un
         {/* Student Build Fund Note */}
         <div className="mt-6 bg-olive/10 border-l-4 border-olive p-4 font-mono text-xs text-graphite">
           <p className="font-bold text-olive uppercase mb-1">The Student Build Fund:</p>
-          <p>We work with departments and IEDCs to maintain a small, capped, documented project support fund for hackathon travel, domain hosting, and hardware components — so no student is gated by ability to pay.</p>
+          <p>We work with departments and IEDCs to maintain a small, capped, documented project support fund for hackathon travel, domain hosting, and hardware components so no student is gated by ability to pay.</p>
         </div>
       </section>
 

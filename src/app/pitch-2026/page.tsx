@@ -113,7 +113,7 @@ const slides: Slide[] = [
         <div className="shrink-0 w-full md:w-[340px] h-[180px] sm:h-[220px] md:h-[320px] border-2 border-graphite shadow-[6px_6px_0px_0px_rgba(45,45,52,1)] overflow-hidden relative">
           <Image src="/images/elevates-campus-launch.jpeg" alt="ELEVATES Campus Launch at EKC" fill className="object-cover object-center" priority />
           <div className="absolute bottom-0 left-0 right-0 bg-graphite/80 px-3 py-1.5">
-            <p className="font-mono text-[10px] text-paper font-bold">ELEVATES Campus Launch — Ernad Knowledge City</p>
+            <p className="font-mono text-[10px] text-paper font-bold">ELEVATES Campus Launch: Eranad Knowledge City</p>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ const slides: Slide[] = [
           <div className="flex flex-col gap-1.5">
             {["Have skills but lack confidence.", "Build quietly but never showcase their work.", "Want to learn but don't know where to start.", "Graduate without real project experience."].map(item => (
               <div key={item} className="flex items-center gap-3 bg-indigo/5 border border-indigo/20 px-3 py-2 rounded-sm">
-                <span className="text-indigo font-black text-base shrink-0">—</span>
+                <span className="text-indigo font-black text-base shrink-0">→</span>
                 <p className="font-sans text-xs md:text-sm text-graphite">{item}</p>
               </div>
             ))}
@@ -412,7 +412,7 @@ const slides: Slide[] = [
           />
           <PortraitCard
             src="/images/naval-teaching-iot.png"
-            alt="Focused Cluster Group — Naval teaching IoT"
+            alt="Focused Cluster Group: Naval teaching IoT"
             label="Cluster Session"
             sublabel="Focused Mentorship"
             badge="CLUSTER"
@@ -691,8 +691,8 @@ const slides: Slide[] = [
             <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-2 py-1"><p className="font-mono text-[9px] text-paper font-bold">Selection Proof · 126+ Registrations</p></div>
           </div>
           <div className="relative h-[140px] border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] overflow-hidden">
-            <Image src="/images/new-execom-team.jpeg" alt="2026–27 Executive Team conducting events" fill className="object-cover object-center" />
-            <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-2 py-1"><p className="font-mono text-[9px] text-paper font-bold">2026–27 Executive Team (Independent)</p></div>
+            <Image src="/images/new-execom-team.jpeg" alt="2026-27 Executive Team conducting events" fill className="object-cover object-center" />
+            <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-2 py-1"><p className="font-mono text-[9px] text-paper font-bold">2026-27 Executive Team (Independent)</p></div>
           </div>
         </div>
       </div>
@@ -706,7 +706,7 @@ const slides: Slide[] = [
       <div className="flex flex-col gap-4 h-full justify-center">
         <Tag color="graphite">Industry Exposure</Tag>
         <h2 className="font-black text-3xl uppercase text-graphite leading-none">Learning Beyond <span className="text-flame">The Classroom</span></h2>
-        <p className="font-sans text-sm text-graphite/70">Students learn directly from industry professionals & ecosystem leaders at Elevates events — real sessions, real interaction.</p>
+        <p className="font-sans text-sm text-graphite/70">Students learn directly from industry professionals and ecosystem leaders at Elevates events through real sessions and live interaction.</p>
 
         {/* 4 Portrait Cards Grid (3:4 ratio for phone/portrait shots) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -826,7 +826,7 @@ const slides: Slide[] = [
             ))}
           </div>
           <div className="bg-olive/10 border-l-4 border-olive p-2.5 w-full">
-            <p className="font-sans text-xs text-graphite"><strong>Every batch prepares the next.</strong> The 2026–27 team was trained by the 2025–26 founding team.</p>
+            <p className="font-sans text-xs text-graphite"><strong>Every batch prepares the next.</strong> The 2026-27 team was trained by the 2025-26 founding team.</p>
           </div>
         </div>
         {/* Right — uncropped photos */}
@@ -843,8 +843,8 @@ const slides: Slide[] = [
             </div>
           </div>
           <div className="relative h-[140px] border-2 border-graphite shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] overflow-hidden">
-            <Image src="/images/new-execom-team.jpeg" alt="2026–27 Executive Team" fill className="object-cover object-center" />
-            <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-2 py-1 font-mono text-[9px] text-paper font-bold">2026–27 Executive Team</div>
+            <Image src="/images/new-execom-team.jpeg" alt="2026-27 Executive Team" fill className="object-cover object-center" />
+            <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-2 py-1 font-mono text-[9px] text-paper font-bold">2026-27 Executive Team</div>
           </div>
         </div>
       </div>
@@ -874,7 +874,7 @@ const slides: Slide[] = [
             ))}
             {/* Faculty optional */}
             <div className="mt-3 border-2 border-dashed border-olive/60 bg-olive/5 px-5 py-2 font-mono text-[11px] text-olive text-center w-[280px]">
-              📋  FACULTY COORDINATOR — <span className="font-bold">OPTIONAL</span>
+              📋  FACULTY COORDINATOR: <span className="font-bold">OPTIONAL</span>
             </div>
           </div>
           {/* Key points */}
@@ -991,7 +991,7 @@ const slides: Slide[] = [
           </div>
 
           <div className="bg-graphite text-paper p-3.5 shadow-[4px_4px_0px_0px_rgba(242,100,48,1)] border-2 border-graphite mt-1">
-            <p className="font-mono text-xs text-paper">Confidence · Career · Community — Students graduate with <span className="text-flame font-black uppercase">real proof</span>, not just a certificate.</p>
+            <p className="font-mono text-xs text-paper">Confidence · Career · Community: Students graduate with <span className="text-flame font-black uppercase">real proof</span>, not just a certificate.</p>
           </div>
         </div>
       </div>
@@ -1077,7 +1077,7 @@ const slides: Slide[] = [
               { label: "→  Campus 2", bg: "bg-graphite/10 border-2 border-graphite/40 text-graphite", shadow: "", w: "w-56" },
               { label: "→  10 Campuses", bg: "bg-olive text-paper", shadow: "shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]", w: "w-64" },
               { label: "→  50+ Campuses", bg: "bg-indigo text-paper", shadow: "shadow-[5px_5px_0px_0px_rgba(45,45,52,1)]", w: "w-72" },
-              { label: "ELEVATES NETWORK — Kerala", bg: "bg-graphite text-paper", shadow: "shadow-[6px_6px_0px_0px_rgba(242,100,48,1)]", w: "w-full" },
+              { label: "ELEVATES NETWORK (Kerala)", bg: "bg-graphite text-paper", shadow: "shadow-[6px_6px_0px_0px_rgba(242,100,48,1)]", w: "w-full" },
             ].map((node, i, arr) => (
               <React.Fragment key={node.label}>
                 <div className={`${node.bg} ${node.shadow} ${node.w} px-4 py-2.5 font-black text-sm`}>{node.label}</div>
@@ -1090,7 +1090,7 @@ const slides: Slide[] = [
         <div className="shrink-0 w-full md:w-[260px] h-[280px] md:h-[340px] border-2 border-graphite shadow-[6px_6px_0px_0px_rgba(65,64,102,0.5)] overflow-hidden relative">
           <Image src="/pitch-network.png" alt="Kerala campus expansion map" fill className="object-cover" />
           <div className="absolute bottom-0 left-0 right-0 bg-graphite/85 px-3 py-1.5">
-            <p className="font-mono text-[10px] text-paper font-bold">Kerala Campus Network — Expanding</p>
+            <p className="font-mono text-[10px] text-paper font-bold">Kerala Campus Network: Expanding</p>
           </div>
         </div>
       </div>
@@ -1102,7 +1102,7 @@ const slides: Slide[] = [
     id: 23, label: "Become a Chapter",
     content: (
       <div className="relative h-[440px] md:h-[480px] w-full border-2 border-graphite shadow-[6px_6px_0px_0px_rgba(45,45,52,1)] overflow-hidden rounded-sm my-auto">
-        <Image src="/images/elevates-campus-launch.jpeg" alt="ELEVATES — Campus Launch Event" fill className="object-cover object-center" />
+        <Image src="/images/elevates-campus-launch.jpeg" alt="ELEVATES: Campus Launch Event" fill className="object-cover object-center" />
         <div className="absolute inset-0 bg-graphite/75" />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 text-center px-8">
           <h2 className="font-black text-3xl md:text-5xl uppercase text-paper leading-none max-w-2xl">

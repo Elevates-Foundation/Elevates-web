@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pitch Deck — ELEVATES Chapters | Building Kerala's Largest Student Innovation Network",
+  title: "Pitch Deck: ELEVATES Chapters | Building Kerala's Largest Student Innovation Network",
   description:
-    "The official ELEVATES pitch deck. A proven model from Ernad Knowledge City — open community, cluster system, real projects, and now expanding across campuses in Kerala.",
+    "The official ELEVATES pitch deck. A proven model from Ernad Knowledge City: open community, cluster system, real projects, and expanding across campuses in Kerala.",
   openGraph: {
-    title: "ELEVATES Chapters — Pitch Deck 2026",
+    title: "ELEVATES Chapters: Pitch Deck 2026",
     description:
       "Building Kerala's Largest Student Innovation Network. Open community · Cluster-based · Project-driven · Student-led.",
     url: "https://elevates.live/pitch-2026",

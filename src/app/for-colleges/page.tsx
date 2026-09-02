@@ -8,16 +8,16 @@ import universityLookupsData from "@/data/for-colleges/university-lookups.json";
 import ForCollegesClient from "@/app/for-colleges/client";
 
 export const metadata: Metadata = {
-  title: "Bring ELEVATES to Your College — Chapter Partnerships in Kerala | ELEVATES",
+  title: "Bring ELEVATES to Your College | Chapter Partnerships in Kerala",
   description:
-    "Project-based programmes, event operations and documented student activity — mapped to NAAC and to your own university's requirements. Any college in Kerala. No fee.",
+    "Project-based programmes, event operations and documented student activity mapped to NAAC and university requirements. Any college in Kerala. Zero fee.",
   alternates: {
     canonical: "/for-colleges",
   },
   openGraph: {
-    title: "Bring ELEVATES to Your College | College & Faculty Guide",
+    title: "Bring ELEVATES to Your College | Chapter Partnerships in Kerala",
     description:
-      "Project-based programmes, event operations and documented student activity — mapped to NAAC and to your own university's requirements. No fee.",
+      "Project-based programmes, event operations and documented student activity mapped to NAAC and university requirements. Zero fee.",
     url: "https://www.elevates.live/for-colleges",
   },
 };
