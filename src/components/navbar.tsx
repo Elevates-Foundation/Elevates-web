@@ -16,7 +16,7 @@ const NAV_ITEMS = [
         name: "About",
         target: "/about",
         isExternal: true,
-        desc: "The ELEVATES Story — born at EKC, built for quiet & introverted talent in Kerala.",
+        desc: "The ELEVATES Story: born at EKC, built for quiet and introverted talent in Kerala.",
         badge: "MANIFESTO",
         tag: "Our Story",
         doodle: "crown"
@@ -26,7 +26,7 @@ const NAV_ITEMS = [
         name: "Clusters",
         target: "/clusters",
         isExternal: true,
-        desc: "The Cluster Engine — turning open workshops into committed builders & real platforms.",
+        desc: "The Cluster Engine: turning open workshops into committed builders and live platforms.",
         badge: "CLUSTER ENGINE",
         tag: "Why Clusters Matter",
         doodle: "crown"
@@ -36,9 +36,9 @@ const NAV_ITEMS = [
         name: "Projects",
         target: "/projects",
         isExternal: true,
-        desc: "Built & Shipped — Production software for real college fests with real load.",
+        desc: "Built and Shipped: production software for real college fests under live traffic.",
         badge: "PRODUCTION PROOF",
-        tag: "400k Requests",
+        tag: "Case Studies",
         doodle: "crown"
     },
     {
@@ -46,9 +46,9 @@ const NAV_ITEMS = [
         name: "Events",
         target: "/events",
         isExternal: true,
-        desc: "Single & multi-day workshops, CTF escape rooms, and campus hackathons across Kerala.",
+        desc: "Single and multi-day workshops, CTF escape rooms, and campus hackathons across Kerala.",
         badge: "WORKSHOPS & MEETUPS",
-        tag: "8+ Events",
+        tag: "19 Events",
         doodle: "scribble"
     },
     {
@@ -56,7 +56,7 @@ const NAV_ITEMS = [
         name: "Chapters",
         target: "/chapters",
         isExternal: true,
-        desc: "Expand ELEVATES to your college — building Kerala's largest student innovation network.",
+        desc: "Expand ELEVATES to your college and build Kerala's student innovation network.",
         badge: "EXPANSION",
         tag: "Campus Chapters",
         doodle: "arrow"
@@ -172,7 +172,10 @@ export default function Navbar() {
             ) : (
                 /* Inner Pages: 3D Neo-brutalist Floating Header Bar */
                 <>
-                    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl hidden md:flex items-center justify-between bg-paper/95 backdrop-blur-md px-6 py-2.5 border-4 border-graphite shadow-[8px_8px_0px_0px_rgba(45,45,52,1)] rounded-full transition-all">
+                    {/* Top edge shield: solid paper in the top margin so scrolling text never peeks above the floating pill */}
+                    <div className="fixed top-0 left-0 right-0 h-24 bg-gradient-to-b from-paper from-70% via-paper/80 to-transparent pointer-events-none z-40 hidden md:block" />
+
+                    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl hidden md:flex items-center justify-between bg-paper px-6 py-2.5 border-4 border-graphite shadow-[8px_8px_0px_0px_rgba(45,45,52,1)] rounded-full transition-all">
                         <Link href="/" className="font-black text-xl uppercase tracking-tighter text-graphite hover:text-flame transition-colors flex items-center gap-2 cursor-pointer">
                             <span className="bg-flame text-paper px-3 py-1 rounded-sm font-mono text-xs rotate-[-2deg] border border-graphite shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                                 ELEVATES

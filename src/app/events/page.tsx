@@ -4,6 +4,7 @@ import EventCard from "@/components/events/event-card";
 import EventBadge from "@/components/events/event-badge";
 import Doodle from "@/components/doodle";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
+import EventsDirectoryClient from "@/components/events/events-directory-client";
 import { fetchEvents } from "@/lib/data/events";
 
 export const metadata = {
@@ -42,7 +43,7 @@ export default async function EventsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+    <main className="min-h-screen bg-paper text-graphite pt-40 md:pt-48 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
@@ -65,18 +66,18 @@ export default async function EventsPage() {
       <div className="mb-14 border-b-4 border-graphite pb-8 relative">
         <div className="flex items-center gap-3 mb-3">
           <span className="font-mono text-xs uppercase tracking-widest text-paper bg-flame px-3 py-1 border border-graphite font-bold rounded-sm rotate-[-1deg]">
-            ELEVATES // WORKSHOPS & MEETUPS
+            ELEVATES // WORKSHOPS &amp; MEETUPS
           </span>
           <span className="font-mono text-xs text-olive font-bold">
-            // SINGLE & MULTI-DAY EVENTS
+            // SINGLE &amp; MULTI-DAY EVENTS
           </span>
         </div>
 
         <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tight text-graphite">
-          EVENTS & <span className="text-flame">WORKSHOPS</span>
+          EVENTS &amp; <span className="text-flame">WORKSHOPS</span>
         </h1>
         <p className="font-hand text-xl md:text-2xl text-olive mt-3 max-w-3xl">
-          Hands-on workshops, hackathons, and campus meetups designed for quiet & introverted talent across Kerala.
+          Hands-on workshops, hackathons, and campus meetups designed for quiet &amp; introverted talent across Kerala.
         </p>
 
         {/* Tape Graphic */}
@@ -90,69 +91,62 @@ export default async function EventsPage() {
 
       {/* Featured Event Hero Banner */}
       {featuredEvent && (
-        <section className="mb-16 bg-graphite text-paper p-8 md:p-12 rounded-sm border-4 border-graphite shadow-[12px_12px_0px_0px_rgba(242,100,48,1)] relative overflow-hidden">
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="flex items-center gap-2 mb-4 flex-wrap">
-                <EventBadge type={featuredEvent.format} />
-                <EventBadge type={featuredEvent.category} />
-                <span className="font-mono text-xs text-flame font-bold bg-paper px-2.5 py-0.5 rounded text-graphite">
-                  FEATURED EVENT
-                </span>
+        <section className="mb-16 bg-graphite text-paper p-6 sm:p-8 md:p-12 rounded-sm border-4 border-graphite shadow-[12px_12px_0px_0px_rgba(242,100,48,1)] relative overflow-hidden">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Column (Span 7) */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-4 flex-wrap">
+                  <EventBadge type={featuredEvent.format} />
+                  <EventBadge type={featuredEvent.category} />
+                  <span className="font-mono text-xs text-flame font-bold bg-paper px-2.5 py-0.5 rounded text-graphite">
+                    FEATURED EVENT
+                  </span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-paper mb-3 leading-tight tracking-tight">
+                  {featuredEvent.title}
+                </h2>
+                <p className="font-hand text-flame text-xl md:text-2xl mb-4">
+                  {featuredEvent.tagline}
+                </p>
+                <p className="font-mono text-xs sm:text-sm text-paper/80 mb-6 leading-relaxed max-w-xl">
+                  {featuredEvent.description}
+                </p>
+
+                <div className="flex items-center gap-4 sm:gap-6 font-mono text-xs text-olive mb-6 flex-wrap">
+                  <span>📍 {featuredEvent.venue}</span>
+                  <span>📅 {featuredEvent.startDate}</span>
+                  <span>👥 {featuredEvent.attendeesCount} Quiet Builders Attended</span>
+                </div>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-black uppercase text-paper mb-4 leading-tight">
-                {featuredEvent.title}
-              </h2>
-              <p className="font-hand text-flame text-xl md:text-2xl mb-4">
-                {featuredEvent.tagline}
-              </p>
-              <p className="font-mono text-sm text-paper/80 mb-6 max-w-lg">
-                {featuredEvent.description}
-              </p>
-
-              <div className="flex items-center gap-6 font-mono text-xs text-olive mb-6 flex-wrap">
-                <span>📍 {featuredEvent.venue}</span>
-                <span>📅 {featuredEvent.startDate}</span>
-                <span>👥 {featuredEvent.attendeesCount} Quiet Builders Attended</span>
+              <div>
+                <Link
+                  href={`/events/${featuredEvent.slug}`}
+                  className="inline-flex items-center gap-2 bg-flame text-paper font-mono font-bold px-6 py-3 border-2 border-paper hover:bg-paper hover:text-graphite transition-colors text-xs sm:text-sm rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  VIEW EVENT DETAILS ↗
+                </Link>
               </div>
-
-              <Link
-                href={`/events/${featuredEvent.slug}`}
-                className="inline-flex items-center gap-2 bg-flame text-paper font-mono font-bold px-6 py-3 border-2 border-paper hover:bg-paper hover:text-graphite transition-colors text-sm rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-              >
-                VIEW EVENT DETAILS ↗
-              </Link>
             </div>
 
-            <div className="relative border-4 border-paper/20 p-4 bg-paper/5 backdrop-blur-sm rounded-sm">
-              <img
-                src={featuredEvent.coverImage}
-                alt={featuredEvent.title}
-                className="w-full h-64 object-cover rounded-sm border border-paper/20"
-              />
+            {/* Right Column (Span 5): Uncropped Full Poster */}
+            <div className="lg:col-span-5 flex items-center justify-center">
+              <div className="relative border-4 border-paper/30 p-2 sm:p-3 bg-paper/10 rounded-sm shadow-[8px_8px_0px_0px_rgba(0,0,0,0.5)] w-full max-w-sm flex items-center justify-center">
+                <img
+                  src={featuredEvent.coverImage}
+                  alt={featuredEvent.title}
+                  className="w-full h-auto max-h-[460px] md:max-h-[500px] object-contain rounded-sm shadow-sm"
+                />
+              </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* Directory Grid */}
-      <section>
-        <div className="flex justify-between items-center mb-8 border-b-2 border-graphite/20 pb-4">
-          <h2 className="text-2xl md:text-3xl font-black uppercase text-graphite">
-            ALL EVENTS & MEETUPS
-          </h2>
-          <span className="font-mono text-xs text-olive font-bold">
-            Total {allEvents.length} Events
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
-        </div>
-      </section>
+      {/* Directory Grid with Filters, Search, and Pagination */}
+      <EventsDirectoryClient events={allEvents} />
     </main>
   );
 }
