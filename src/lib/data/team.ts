@@ -47,3 +47,8 @@ export async function fetchTeam(): Promise<{ founders: Founder[]; advisors: Advi
 
   return { founders, advisors: ADVISORS };
 }
+
+export async function fetchFounderBySlug(slug: string): Promise<Founder | undefined> {
+  const { founders } = await fetchTeam();
+  return founders.find((f) => f.id === slug);
+}

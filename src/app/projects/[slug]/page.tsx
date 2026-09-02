@@ -6,6 +6,7 @@ import Image from "next/image";
 import Doodle from "@/components/doodle";
 import ProjectStatusChip from "@/components/status-chip";
 import { ALL_CASE_STUDIES } from "@/data/projects";
+import { fetchProjectBySlug } from "@/lib/data/projects";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -19,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = ALL_CASE_STUDIES.find((p) => p.slug === slug);
+  const project = await fetchProjectBySlug(slug);
 
   if (!project) {
     return {
@@ -84,7 +85,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectCaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const project = ALL_CASE_STUDIES.find((p) => p.slug === slug);
+  const project = await fetchProjectBySlug(slug);
 
   if (!project) {
     notFound();

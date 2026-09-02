@@ -5,6 +5,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 import { FOUNDERS } from "@/data/team/founders";
+import { fetchFounderBySlug } from "@/lib/data/team";
 import {
   ELEVATES_BASE_URL,
   organizationRef,
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const founder = FOUNDERS.find((f) => f.id === slug);
+  const founder = await fetchFounderBySlug(slug);
 
   if (!founder) {
     return {
@@ -44,8 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${ELEVATES_BASE_URL}/founders/${founder.id}`,
       images: [
         {
-          url: `${ELEVATES_BASE_URL}${founder.image}`,
-          alt: founder.name,
+          url: founder.image.startsWith("http")
+            ? founder.image
+            : `${ELEVATES_BASE_URL}${founder.image}`,
+          alt: `${founder.name} — ${founder.role}, ELEVATES Founding Collective`,
         },
       ],
     },
@@ -60,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function FounderDetailPage({ params }: Props) {
   const { slug } = await params;
-  const founder = FOUNDERS.find((f) => f.id === slug);
+  const founder = await fetchFounderBySlug(slug);
 
   if (!founder) {
     notFound();

@@ -4,7 +4,8 @@ import Link from "next/link";
 import Doodle from "@/components/doodle";
 import ProjectStatusChip from "@/components/status-chip";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
-import { FLAGSHIP_PROJECTS, MEMBER_SHOWCASES, ALSO_BUILT_ARCHIVE } from "@/data/projects";
+import { fetchProjects } from "@/lib/data/projects";
+import { MEMBER_SHOWCASES, ALSO_BUILT_ARCHIVE } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects & Case Studies | ELEVATES",
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const FLAGSHIP_PROJECTS = await fetchProjects();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
