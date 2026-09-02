@@ -5,6 +5,11 @@ import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import CustomCursor from "@/components/custom-cursor";
 import Navbar from "@/components/navbar";
+import { OrganizationJsonLd } from "@/components/seo/organization-jsonld";
+import {
+  ELEVATES_CANONICAL_DEFINITION,
+  ELEVATES_SHORT_DESCRIPTION,
+} from "@/lib/schema/organization";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -26,14 +31,15 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: {
-    default: "ELEVATES — Student Tech Community in Kerala",
-    template: "%s | ELEVATES Kerala",
+    default: "ELEVATES | Student Innovation & Technology Community in Kerala",
+    template: "%s | ELEVATES",
   },
-  description: "ELEVATES is a student-run tech community in Kerala finding skilled, quiet builders to build and ship real-world projects.",
+  description: ELEVATES_CANONICAL_DEFINITION,
   keywords: [
     "ELEVATES",
     "student tech community kerala",
     "tech community for college students kerala",
+    "student innovation ecosystem kerala",
     "student community manjeri",
     "student community malappuram",
     "project based learning community kerala",
@@ -41,7 +47,7 @@ export const metadata: Metadata = {
     "skilled but shy students",
     "upskilling students kerala",
     "student projects kerala",
-    "learn build grow"
+    "learn build grow",
   ],
   authors: [{ name: "ELEVATES Community" }],
   creator: "ELEVATES",
@@ -51,8 +57,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "ELEVATES — Student Tech Community in Kerala",
-    description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
+    title: "ELEVATES | Student Innovation & Technology Community in Kerala",
+    description: ELEVATES_SHORT_DESCRIPTION,
     url: "https://www.elevates.live",
     siteName: "ELEVATES",
     locale: "en_US",
@@ -62,14 +68,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ELEVATES | Student Tech Community in Kerala",
+        alt: "ELEVATES: Student Innovation & Technology Community in Kerala",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ELEVATES — Student Tech Community in Kerala",
-    description: "ELEVATES finds skilled but introverted students, upskills them through real projects, and showcases their work so quiet talent gets seen.",
+    title: "ELEVATES | Student Innovation & Technology Community in Kerala",
+    description: ELEVATES_SHORT_DESCRIPTION,
     images: ["/og-image.png"],
   },
   icons: {
@@ -92,138 +98,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["Organization", "EducationalOrganization"],
-      "@id": "https://www.elevates.live/#organization",
-      "name": "ELEVATES",
-      "alternateName": ["ELEVATES Community", "ELEVATES Student Tech Community"],
-      "url": "https://www.elevates.live",
-      "logo": "https://www.elevates.live/favicon-32x32.png",
-      "image": "https://www.elevates.live/og-image.png",
-      "description": "ELEVATES is a student-driven community based in Kerala, India, that finds skilled but shy or introverted students, upskills them through real projects and support, and showcases their work so they no longer stay invisible.",
-      "slogan": "Upskilling and showcasing skilled but shy students.",
-      "foundingDate": "2025",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Kerala, India"
-      },
-      "knowsAbout": [
-        "Software Engineering",
-        "Web Development",
-        "Cybersecurity",
-        "IoT & Hardware Robotics",
-        "AI & Machine Learning",
-        "Open Source Collaboration",
-        "UI/UX Product Design"
-      ],
-      "sameAs": [
-        "https://www.instagram.com/elevates.club/",
-        "https://www.linkedin.com/company/elevates-in",
-        "https://github.com/Elevates-Foundation"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.elevates.live/#website",
-      "url": "https://www.elevates.live",
-      "name": "ELEVATES | Upskilling & Showcasing Skilled but Shy Students",
-      "description": "Official website of ELEVATES - Helping skilled but introverted students get seen and ship real projects.",
-      "publisher": { "@id": "https://www.elevates.live/#organization" },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.elevates.live/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.elevates.live/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About ELEVATES",
-          "item": "https://www.elevates.live/#about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Programs & Lineup",
-          "item": "https://www.elevates.live/#programs"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Student Workflow",
-          "item": "https://www.elevates.live/#workflow"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Domains & Fields",
-          "item": "https://www.elevates.live/#domains"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.elevates.live/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is ELEVATES?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ELEVATES is a student-driven community based in Kerala, India, built for skilled but shy or introverted students. We upskill them through real projects and support, and showcase their work so quiet talent no longer stays invisible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who can join ELEVATES?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ELEVATES is open to students across all engineering departments and years who demonstrate curiosity, a willingness to learn, and a passion for building shippable projects in a zero-gatekeeping environment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What programs and workshops does ELEVATES offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ELEVATES hosts hands-on workshops and challenges including Cybersecurity Basics, Spark Electronics, STAP Skill Assessment, DGPS Land Survey, IoT Hands-on, n8n Automations, Build-A-Thons, and Escape Rooms."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does ELEVATES support introverted and shy students?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ELEVATES provides a supportive cohort environment (max 25 students), pair mentorship, and project-based showcase opportunities to help quiet talent gain confidence, build portfolios, and get seen by industry leaders."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://www.elevates.live/#programs-list",
-      "name": "ELEVATES Programs & Workshops",
-      "description": "List of active, completed, and upcoming technical programs by ELEVATES.",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "CYBER RAID CTF - Capture The Flag Challenge" },
-        { "@type": "ListItem", "position": 2, "name": "VIBRANIUM 5.0 - QR Treasure Hunt" },
-        { "@type": "ListItem", "position": 3, "name": "FIRST SPARK - Basics of Electronics Workshop" },
-        { "@type": "ListItem", "position": 4, "name": "STAP - Skill Taste Assessment Program by Skilltrai" },
-        { "@type": "ListItem", "position": 5, "name": "CYBERSECURITY WORKSHOP - 3-Phase Kali Linux & Terminal Defense" }
-      ]
-    }
-  ]
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -232,10 +106,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <OrganizationJsonLd />
         {/* Google Tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7J7QQSR9ZZ"
