@@ -20,23 +20,31 @@ export async function fetchProjects(): Promise<FlagshipProject[]> {
   const live = await osGet<{ projects: OsProject[] }>("/projects", [
     "projects",
   ]);
-  if (!live?.projects?.length) return ALL_CASE_STUDIES;
+  const result: FlagshipProject[] = !live?.projects?.length
+    ? ALL_CASE_STUDIES
+    : (live.projects
+        .map((p) => {
+          const fallback = ALL_CASE_STUDIES.find((x) => x.slug === p.slug);
+          if (fallback) {
+            return {
+              ...fallback,
+              title: p.title || fallback.title,
+              summary: p.description ?? fallback.summary,
+              live: p.demoUrl ?? fallback.live,
+              repo: p.repositoryUrl ?? fallback.repo,
+            };
+          }
+          return null;
+        })
+        .filter((p): p is FlagshipProject => p !== null));
 
-  const mapped: (FlagshipProject | null)[] = live.projects.map((p) => {
-    const fallback = ALL_CASE_STUDIES.find((x) => x.slug === p.slug);
-    if (fallback) {
-      return {
-        ...fallback,
-        title: p.title || fallback.title,
-        summary: p.description ?? fallback.summary,
-        live: p.demoUrl ?? fallback.live,
-        repo: p.repositoryUrl ?? fallback.repo,
-      };
-    }
-    return null;
+  // Deduplicate by slug
+  const seen = new Set<string>();
+  return result.filter((p) => {
+    if (seen.has(p.slug)) return false;
+    seen.add(p.slug);
+    return true;
   });
-
-  return mapped.filter((p): p is FlagshipProject => p !== null);
 }
 
 export async function fetchProjectBySlug(

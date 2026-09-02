@@ -2,8 +2,8 @@ import { FlagshipProject, MemberShowcase } from "@/types/project";
 
 export const CELESTIA_CASE_STUDY: FlagshipProject = {
   slug: "celestia",
-  title: "Celestia — CSE Association Website",
-  client: "Celestia, CSE Association — Eranad Knowledge City Technical Campus",
+  title: "Celestia: CSE Association Website",
+  client: "Celestia, CSE Association · Eranad Knowledge City Technical Campus",
   date: "March 25, 2026",
   type: "flagship",
   status: "live-incomplete",
@@ -64,11 +64,11 @@ export const CELESTIA_CASE_STUDY: FlagshipProject = {
     { role: "Walked into the classrooms and fetched the builders", name: "Arshak", founderId: "arshak", did: "Walked into the classrooms and fetched the builders" },
   ],
   contributors: [
-    { name: "Faseen", detail: "3rd year, CSE — Frontend Build" },
-    { name: "Shibin", detail: "3rd year, CSE — Frontend Build" },
-    { name: "Zakariya", detail: "3rd year, CSE — Frontend Build" },
-    { name: "Danish", detail: "1st year, T2 — Frontend Build" },
-    { name: "Abhijith CJ", detail: "3rd year, AI & DS — Build & Gesture Launch Developer", did: "Built the gesture-controlled launch" },
+    { name: "Faseen", detail: "3rd year, CSE · Frontend Build" },
+    { name: "Shibin", detail: "3rd year, CSE · Frontend Build" },
+    { name: "Zakariya", detail: "3rd year, CSE · Frontend Build" },
+    { name: "Danish", detail: "1st year, T2 · Frontend Build" },
+    { name: "Abhijith CJ", detail: "3rd year, AI & DS · Build & Gesture Launch Developer", did: "Built the gesture-controlled launch" },
   ],
   faculty: [
     { name: "Jasira KT", detail: "ELEVATES Faculty Head, CSE" },
@@ -110,7 +110,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       paragraphs: [
         "Vibranium is Eranad Knowledge City's flagship annual tech fest.",
         "Five days before registrations opened, it had no system to handle them. The options were a Google Form and a spreadsheet, or something that actually worked.",
-        "ELEVATES was about a month old at that point — founded in September 2025. In our final year, we stopped waiting for permission and built the software our college actually ran on.",
+        "ELEVATES was about a month old at that point, founded in September 2025. In our final year, we stopped waiting for permission and built the software our college actually ran on.",
       ],
       highlight: "Five days before registrations opened, our college had no system. So we built one.",
     },
@@ -151,7 +151,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     stackAndCode: {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Vercel Edge"],
       repoUrl: null,
-      repoNote: "Private repository — production software built for Eranad Knowledge City (Chapter 01) TechFest.",
+      repoNote: "Private repository: production software built for Eranad Knowledge City (Chapter 01) TechFest.",
       attribution: {
         name: "MakeMyPass",
         url: "https://makemypass.com",
@@ -161,31 +161,31 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     gallery: [
       {
         src: "/projects/vibranium/digital-entry-pass.png",
-        caption: "Digital Entry Pass — Unique QR verification pass for participants (Participant ID: VIBFC70D711), powered by ELEVATES for gate entry.",
+        caption: "Digital Entry Pass: Unique QR verification pass for participants (Participant ID: VIBFC70D711), powered by ELEVATES for gate entry.",
       },
       {
         src: "/projects/vibranium/organizer-dashboard.png",
-        caption: "Organizer Console — Real-time overview monitoring 42 total events, 901 registrations, 468 participants, and live check-in rates.",
+        caption: "Organizer Console: Real-time overview monitoring 42 total events, 901 registrations, 468 participants, and live check-in rates.",
       },
       {
         src: "/projects/vibranium/events-catalog.png",
-        caption: "Events & Competitions Catalog — Live department filters (CS, Electronics, Mechanical, Civil, Safety & Fire, S&H) with real-time seat capacity bars.",
+        caption: "Events & Competitions Catalog: Live department filters (CS, Electronics, Mechanical, Civil, Safety & Fire, S&H) with real-time seat capacity bars.",
       },
       {
         src: "/projects/vibranium/staff-dashboard.png",
-        caption: "Department Staff Dashboard — Managing Computer Science events (286 participants, 15 events, 20 assigned coordinators, 37 volunteers).",
+        caption: "Department Staff Dashboard: Managing Computer Science events (286 participants, 15 events, 20 assigned coordinators, 37 volunteers).",
       },
       {
         src: "/projects/vibranium/volunteer-scanner.png",
-        caption: "Volunteer Gate Check-in Console — Live assignment tracking for volunteer gate stewards at event entry points.",
+        caption: "Volunteer Gate Check-in Console: Live assignment tracking for volunteer gate stewards at event entry points.",
       },
       {
         src: "/projects/vibranium/roles-and-access.png",
-        caption: "Roles & Access Control — Admin management interface to invite organizers, staff, coordinators, and assign system privileges.",
+        caption: "Roles & Access Control: Admin management interface to invite organizers, staff, coordinators, and assign system privileges.",
       },
       {
         src: "/projects/vibranium/coordinator-analytics.png",
-        caption: "Coordinator Analytics Dashboard — Real-time registration approval monitoring and participation volume tracking.",
+        caption: "Coordinator Analytics Dashboard: Real-time registration approval monitoring and participation volume tracking.",
       },
     ],
   },
@@ -197,7 +197,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     type: "flagship",
     status: "live",
     tagline: "The second platform. This time we knew what we were doing.",
-    summary: "Sophisticated web application streamlining the entire lifecycle of an arts festival — from student enrollment and event scheduling to real-time participation monitoring and automated PDF reporting.",
+    summary: "Sophisticated web application streamlining the entire lifecycle of an arts festival: from student enrollment and event scheduling to real-time participation monitoring and automated PDF reporting.",
     metrics: [
       { value: "2nd", label: "production platform shipped" },
       { value: "50+", label: "stage competitions & events" },
@@ -212,7 +212,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       paragraphs: [
         "Aaroh (meaning 'Ascent') is Eranad Knowledge City's annual inter-department arts festival.",
         "After Vibranium 5.0 succeeded, the college leadership returned to ask ELEVATES to build the complete event management, scoring, and scheduling system for the arts fest.",
-        "A repeat client is the strongest proof available — one platform is luck, two platforms is a pattern.",
+        "A repeat client is the strongest proof available: one platform is luck, two platforms is a pattern.",
       ],
       highlight: "After Vibranium succeeded under 400k requests, our college returned to ask ELEVATES to build the arts fest platform.",
     },
@@ -230,7 +230,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
       "Professional Reporting: Integrated PDF generation for student registrations and event rosters using jsPDF.",
     ],
     howItHeldUp: {
-      summary: "Built with lessons learned from Vibranium — cleaner architecture with Vite + Supabase, zero rush-hour bugs, and instant real-time result updates.",
+      summary: "Built with lessons learned from Vibranium: cleaner architecture with Vite + Supabase, zero rush-hour bugs, and instant real-time result updates.",
       metrics: [
         { value: "0", label: "critical bugs during live scoring" },
         { value: "Real-time", label: "Supabase live sync for 1,000+ audience" },
@@ -257,23 +257,23 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     gallery: [
       {
         src: "/projects/aaroh/dashboard-overview.png",
-        caption: "Admin Dashboard — System Overview, Live Activity Feed, and Participation Density breakdown across First to Fourth Year batches.",
+        caption: "Admin Dashboard: System Overview, Live Activity Feed, and Participation Density breakdown across First to Fourth Year batches.",
       },
       {
         src: "/projects/aaroh/user-management.png",
-        caption: "Role-Based Access Control — Managing Administrators, Year Coordinators, Event Managers, and Student roles with instant role switching.",
+        caption: "Role-Based Access Control: Managing Administrators, Year Coordinators, Event Managers, and Student roles with instant role switching.",
       },
       {
         src: "/projects/aaroh/system-settings.png",
-        caption: "System Settings Console — Dynamic On-Stage (Max 5) and Off-Stage (Max 4) event registration limit controls and Auto-Approval toggles.",
+        caption: "System Settings Console: Dynamic On-Stage (Max 5) and Off-Stage (Max 4) event registration limit controls and Auto-Approval toggles.",
       },
       {
         src: "/projects/aaroh/activity-logs.png",
-        caption: "System Activity Log (Dark Mode) — Real-time security audit trail tracking user logins, event updates, and IP addresses with CSV export.",
+        caption: "System Activity Log (Dark Mode): Real-time security audit trail tracking user logins, event updates, and IP addresses with CSV export.",
       },
       {
         src: "/projects/aaroh/coordinator-dashboard.png",
-        caption: "Year Coordinator Dashboard — Live event capacity reminders (Pencil Drawing 6/5, Cartoon 5/5, Quiz 5/5) and year registration stats.",
+        caption: "Year Coordinator Dashboard: Live event capacity reminders (Pencil Drawing 6/5, Cartoon 5/5, Quiz 5/5) and year registration stats.",
       },
     ],
   },
@@ -380,7 +380,6 @@ export const ROADUNDO_CASE_STUDY: FlagshipProject = {
 
 export const ALL_CASE_STUDIES: FlagshipProject[] = [
   ...FLAGSHIP_PROJECTS,
-  CELESTIA_CASE_STUDY,
   ROADUNDO_CASE_STUDY,
 ];
 
