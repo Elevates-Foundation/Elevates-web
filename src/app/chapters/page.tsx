@@ -1,19 +1,25 @@
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 import { fetchChapters } from "@/lib/data/chapters";
 
 export const metadata: Metadata = {
-  title: "Campus Chapters Directory | ELEVATES Kerala",
+  title: "ELEVATES Chapters | Campus Communities Across Kerala",
   description:
     "Explore active ELEVATES campus chapters across engineering and technology institutions in Kerala. Chapter 01 is live at Eranad Knowledge City, Manjeri.",
   alternates: {
     canonical: "/chapters",
   },
   openGraph: {
-    title: "Campus Chapters Directory | ELEVATES Kerala",
+    title: "ELEVATES Chapters | Campus Communities Across Kerala",
     description: "Explore active ELEVATES campus chapters. Chapter 01 is live at Eranad Knowledge City.",
     url: "https://www.elevates.live/chapters",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ELEVATES Chapters | Campus Communities Across Kerala",
+    description: "Explore active ELEVATES campus chapters. Chapter 01 is live at Eranad Knowledge City.",
   },
 };
 
@@ -30,6 +36,12 @@ export default async function ChaptersPage() {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Chapters", path: "/chapters" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

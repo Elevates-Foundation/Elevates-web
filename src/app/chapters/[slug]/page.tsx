@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Doodle from "@/components/doodle";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 import { getAllChapterSlugs } from "@/data/chapters";
 import { fetchChapterBySlug } from "@/lib/data/chapters";
 
@@ -51,11 +52,7 @@ export default async function ChapterDetailPage({ params }: Props) {
     "name": `ELEVATES ${chapter.name}`,
     "url": `https://www.elevates.live/chapters/${chapter.slug}`,
     "description": `Campus chapter of ELEVATES at ${chapter.college}.`,
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "ELEVATES Foundation",
-      "url": "https://www.elevates.live",
-    },
+    "parentOrganization": { "@id": "https://www.elevates.live/#organization" },
     "member": chapter.team.map((m) => ({
       "@type": "Person",
       "name": m.name,
@@ -65,6 +62,13 @@ export default async function ChapterDetailPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Chapters", path: "/chapters" },
+          { name: chapter.name, path: `/chapters/${chapter.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

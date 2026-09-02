@@ -39,12 +39,12 @@ export async function fetchChapters(): Promise<Chapter[]> {
     }
     return {
       slug: c.slug,
-      chapterNumber: "—",
+      chapterNumber: c.slug === "ekc" ? "01" : "—",
       name: c.name,
       college: c.college,
-      district: c.district ?? c.city ?? "",
-      foundedDate: c.foundedAt ?? "",
-      lead: { name: "TBA", role: "Campus Lead" },
+      district: c.district ?? c.city ?? "Kerala",
+      foundedDate: c.foundedAt ?? "2025",
+      lead: { name: "Campus Coordinator", role: "Chapter Lead" },
       team: [],
       events: [],
       projects: [],
