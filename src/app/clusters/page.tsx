@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title: "Clusters | ELEVATES Learning Groups",
-  description: "Why Clusters Matter — turning open workshops into committed builders, real student projects, and future leaders.",
+  description: "Why Clusters Matter: turning open workshops into committed builders, real student projects, and future leaders.",
   alternates: {
     canonical: "/clusters",
   },
@@ -35,8 +35,8 @@ const CLUSTERS = [
     id: "fullstack",
     title: "Full-Stack & Web Systems Cluster",
     badge: "WEB & DEVOPS",
-    description: "High-concurrency web systems, Next.js, Turbo, and cloud deployment. Built Vibranium 400k platform.",
-    projects: ["Vibranium Tech Fest (400k Requests)", "Arts Fest Platform"],
+    description: "High-concurrency web systems, Next.js, Turbo, and cloud deployment for live campus platforms.",
+    projects: ["Vibranium Event Platform", "Aaroh Arts Platform"],
     metrics: "32 Active Builders"
   },
   {
