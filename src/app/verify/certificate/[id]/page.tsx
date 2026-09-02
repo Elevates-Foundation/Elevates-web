@@ -37,7 +37,7 @@ export default async function VerifyCertificatePage({ params }: Props) {
           Certificate Check
         </h1>
         <p className="font-hand text-olive text-lg mb-8">
-          Paste this URL on resumes — proof that ships.
+          Paste this URL on resumes: verifiable production proof.
         </p>
 
         {cert?.valid ? (

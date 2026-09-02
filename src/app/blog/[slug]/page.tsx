@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="w-12 h-12 rounded-sm border-2 border-graphite overflow-hidden relative shrink-0 shadow-[2px_2px_0px_0px_rgba(45,45,52,1)] bg-olive/10">
             <Image
               src={post.author.avatar}
-              alt={`${post.author.name} — ${post.author.role}`}
+              alt={`${post.author.name}, ${post.author.role}`}
               fill
               className="object-cover"
               sizes="48px"
