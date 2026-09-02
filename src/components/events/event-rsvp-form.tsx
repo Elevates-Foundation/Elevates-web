@@ -42,11 +42,11 @@ export default function EventRsvpForm({ eventSlug, eventTitle }: Props) {
       setStatus("ok");
       setMessage(
         data.message ??
-          "Registration received — pending chapter approval. Check your email.",
+          "Registration received: pending chapter approval. Check your email.",
       );
     } catch {
       setStatus("error");
-      setMessage("Network error — try again shortly.");
+      setMessage("Network error: please try again shortly.");
     }
   }
 

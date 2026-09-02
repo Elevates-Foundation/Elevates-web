@@ -195,7 +195,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                   <span className="text-olive text-[11px]">{event.startTime}</span>
                 </div>
               </div>
-              <span className="text-xl font-bold text-flame">—</span>
+              <span className="text-xl font-bold text-flame">→</span>
               <div className="flex items-center gap-2 text-right">
                 <div>
                   <strong className="block font-bold">{event.endDate}</strong>
