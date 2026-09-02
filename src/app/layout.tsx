@@ -104,7 +104,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <OrganizationJsonLd />
         {/* Google Tag (gtag.js) */}
@@ -134,6 +134,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} ${kalam.variable} ${vt323.variable} antialiased cursor-none`}
+        suppressHydrationWarning
       >
         <CustomCursor />
         <Navbar />
