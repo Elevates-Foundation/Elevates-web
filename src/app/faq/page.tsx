@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frequently Asked Questions (FAQ) | ELEVATES",
     description:
-      "Frequently asked questions about ELEVATES — Kerala's student-led innovation ecosystem for quiet and introverted builders.",
+      "Frequently asked questions about ELEVATES, Kerala's student-led innovation ecosystem for quiet and introverted builders.",
     url: `${ELEVATES_BASE_URL}/faq`,
   },
   twitter: {
     card: "summary_large_image",
     title: "Frequently Asked Questions (FAQ) | ELEVATES",
     description:
-      "Frequently asked questions about ELEVATES — Kerala's student-led innovation ecosystem for quiet and introverted builders.",
+      "Frequently asked questions about ELEVATES, Kerala's student-led innovation ecosystem for quiet and introverted builders.",
   },
 };
 

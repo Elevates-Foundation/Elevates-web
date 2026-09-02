@@ -90,7 +90,7 @@ export default function AboutPage() {
           </blockquote>
 
           <p>
-            We tried the next year. And the year after that. Almost four years — the same answer.
+            We tried the next year. And the year after that. Almost four years of the same answer.
           </p>
           <p>
             We understood the reason. Good programmes have to say no to stay good. But in our final year we tried one last time and got the same sentence back.
@@ -102,7 +102,7 @@ export default function AboutPage() {
             And that&apos;s how Elevates started in September 2025.
           </p>
           <p>
-            Within months, our students had built a complete Event Management System in 5 days for Vibranium TechFest — handling 400,000 requests in 24 hours. Then a second platform for Aaroh Arts Fest. Cybersecurity workshops, automation sessions, industry tech.
+            Within months, our students built a complete Event Management System in 5 days for Vibranium TechFest, handling 400,000 requests in 24 hours. Then a second platform for Aaroh Arts Fest. Cybersecurity workshops, automation sessions, industry tech.
           </p>
           <p className="font-bold text-flame">
             Nobody ever gave us a window. We stopped needing one.
@@ -136,7 +136,7 @@ export default function AboutPage() {
             Skilled. Silent.<br />Graduating invisible.
           </p>
           <p className="font-mono text-sm text-paper/80 leading-relaxed">
-            The one actually being wasted is sitting at the back with a half-finished project on a laptop — better than the people on stage — with an abandoned LinkedIn and no idea that any of it counts for anything. We know, because that was us.
+            The one actually being wasted is sitting at the back with a half-finished project on a laptop, sharper than the people on stage, with an abandoned LinkedIn and no idea that any of it counts for anything. We know, because that was us.
           </p>
           <p className="font-mono text-sm text-paper font-bold mt-3">
             So we don't wait for applications. We go and find them.
@@ -157,7 +157,7 @@ export default function AboutPage() {
             We are not a lecture series. We are not a certificate mill. Nobody is getting a participation PDF from us.
           </p>
           <p>
-            In our first months, our students built a complete Event Management System in 5 days for Vibranium TechFest — inspired by MakeMyPass — handling 400,000 requests in 24 hours. Then built a second platform for Aaroh Arts Fest. Not mock projects. The software the college actually ran on.
+            In our first months, our students built a complete Event Management System in 5 days for Vibranium TechFest, inspired by MakeMyPass, handling 400,000 requests in 24 hours. Then built a second platform for Aaroh Arts Fest. Not mock projects. The software the college actually ran on.
           </p>
           <p className="font-bold text-graphite">
             You come in. You build something real, with help. It goes on the internet with your name on it. That is the whole product.
@@ -168,7 +168,7 @@ export default function AboutPage() {
       {/* ─── SCREEN 5: HOW IT WORKS ─── */}
       <section className="mb-14">
         <h2 className="font-mono font-bold text-xl md:text-2xl uppercase text-graphite mb-6 border-b-2 border-graphite/20 pb-3">
-          FIVE STEPS — AND THE LAST ONE IS THE POINT
+          FIVE STEPS: AND THE LAST ONE IS THE POINT
         </h2>
 
         <div className="space-y-3">
@@ -205,7 +205,7 @@ export default function AboutPage() {
             We are not trying to be the biggest club on campus.
           </p>
           <p>
-            25 executive members. Two representatives from every class, so there is always someone sitting in your own classroom you can talk to. After each workshop we split into learning clusters — small groups that keep going after the event is over.
+            25 executive members. Two representatives from every class, so there is always someone sitting in your own classroom you can talk to. After each workshop we split into learning clusters: small groups that keep going after the event is over.
           </p>
           <div className="flex items-center gap-2 md:gap-4 py-3 font-mono text-xs font-bold flex-wrap">
             <span className="bg-flame text-paper px-3 py-1.5 rounded-sm border border-graphite">EXECUTIVE TEAM</span>
@@ -258,7 +258,7 @@ export default function AboutPage() {
           </div>
           <div>
             <span className="text-flame text-3xl font-black block">2</span>
-            <span className="text-xs text-paper/70">Production platforms shipped — Vibranium TechFest &amp; Aaroh Arts Fest</span>
+            <span className="text-xs text-paper/70">Production platforms shipped: Vibranium TechFest and Aaroh Arts Fest</span>
           </div>
           <div>
             <span className="text-flame text-3xl font-black block">400K+</span>
@@ -266,7 +266,7 @@ export default function AboutPage() {
           </div>
           <div>
             <span className="text-flame text-3xl font-black block">120</span>
-            <span className="text-xs text-paper/70">Seats at our annual Campus Launch Event — filled in 1–2 hours. Chief Guest: Shibili Rahiman KP.</span>
+            <span className="text-xs text-paper/70">Seats at our annual Campus Launch Event, filled in under 2 hours. Chief Guest: Shibili Rahiman KP.</span>
           </div>
           <div>
             <span className="text-flame text-3xl font-black block">30+</span>
@@ -280,8 +280,8 @@ export default function AboutPage() {
 
         <div className="border-t border-paper/20 pt-6 space-y-1.5 font-mono text-xs text-paper/75">
           <p className="font-bold text-paper/90 mb-2">Faculty Support</p>
-          <p>Jasira KT — Faculty Head, CSE · Eranad Knowledge City, Manjeri</p>
-          <p>Anu K Soman — HOD, CSE · Eranad Knowledge City, Manjeri</p>
+          <p>Jasira KT · Faculty Head, CSE · Eranad Knowledge City, Manjeri</p>
+          <p>Anu K Soman · HOD, CSE · Eranad Knowledge City, Manjeri</p>
           <p className="pt-1 text-paper/40">Founded at Eranad Knowledge City · Expanding across all 14 districts in Kerala</p>
         </div>
 
@@ -302,7 +302,7 @@ export default function AboutPage() {
             MEET THE 18 FOUNDERS &amp; ADVISORS
           </h2>
           <p className="font-mono text-xs md:text-sm text-olive max-w-xl">
-            18 back benchers, front benchers, main class bunkers, and quiet builders who stopped waiting for permission — plus our CSE faculty leadership.
+            18 back benchers, front benchers, main class bunkers, and quiet builders who stopped waiting for permission, plus our CSE faculty leadership.
           </p>
         </div>
         <Link
@@ -317,7 +317,7 @@ export default function AboutPage() {
       {/* ─── SCREEN 9: CLOSE ─── */}
       <section className="border-t-4 border-graphite pt-10 text-center">
         <p className="font-hand text-2xl md:text-3xl text-graphite mb-3 max-w-2xl mx-auto leading-relaxed">
-          If you have been building things quietly and nobody has noticed —
+          If you have been building things quietly and nobody has noticed:
         </p>
         <p className="font-hand text-2xl md:text-3xl text-flame mb-10 max-w-2xl mx-auto leading-relaxed">
           that is exactly who this is for.

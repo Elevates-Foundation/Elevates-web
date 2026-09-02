@@ -64,7 +64,7 @@ export default function JoinPage() {
           Become a member
         </h1>
         <p className="font-hand text-olive text-lg mb-8">
-          Not an account yet — HQ reviews leads in Elevates OS.
+          Not an account yet: HQ reviews leads in Elevates OS.
         </p>
 
         {status === "ok" ? (

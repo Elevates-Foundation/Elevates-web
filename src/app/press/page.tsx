@@ -67,16 +67,16 @@ export default function PressPage() {
       {/* Quick Stats Grid */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
         <div className="border-3 border-graphite p-5 rounded-sm bg-paper shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
-          <span className="text-3xl md:text-4xl font-black text-flame block">400k+</span>
-          <span className="font-mono text-xs text-olive font-bold uppercase">Requests Handled</span>
+          <span className="text-3xl md:text-4xl font-black text-flame block">19+</span>
+          <span className="font-mono text-xs text-olive font-bold uppercase">Events Delivered</span>
+        </div>
+        <div className="border-3 border-graphite p-5 rounded-sm bg-paper shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
+          <span className="text-3xl md:text-4xl font-black text-flame block">800+</span>
+          <span className="font-mono text-xs text-olive font-bold uppercase">Students Impacted</span>
         </div>
         <div className="border-3 border-graphite p-5 rounded-sm bg-paper shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
           <span className="text-3xl md:text-4xl font-black text-flame block">18</span>
           <span className="font-mono text-xs text-olive font-bold uppercase">Founding Builders</span>
-        </div>
-        <div className="border-3 border-graphite p-5 rounded-sm bg-paper shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
-          <span className="text-3xl md:text-4xl font-black text-flame block">120+</span>
-          <span className="font-mono text-xs text-olive font-bold uppercase">Launch Seats</span>
         </div>
         <div className="border-3 border-graphite p-5 rounded-sm bg-paper shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
           <span className="text-3xl md:text-4xl font-black text-flame block">6</span>
