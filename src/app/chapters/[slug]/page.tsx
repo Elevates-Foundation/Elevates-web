@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Doodle from "@/components/doodle";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
+import ChapterViewClient from "@/components/chapters/chapter-view-client";
 import { getAllChapterSlugs } from "@/data/chapters";
 import { fetchChapterBySlug } from "@/lib/data/chapters";
 
@@ -114,12 +115,10 @@ export default async function ChapterDetailPage({ params }: Props) {
             <span className="text-flame text-xl sm:text-2xl font-black block">{chapter.stats.studentsImpacted}+</span>
             <span className="text-olive">Students Impacted</span>
           </div>
-          {chapter.stats.platformRequests && (
-            <div className="col-span-2 sm:col-span-1">
-              <span className="text-flame text-xl sm:text-2xl font-black block">{chapter.stats.platformRequests}</span>
-              <span className="text-olive font-bold">Platform Traffic</span>
-            </div>
-          )}
+          <div className="col-span-2 sm:col-span-1">
+            <span className="text-flame text-xl sm:text-2xl font-black block">Term 02</span>
+            <span className="text-olive font-bold">Active Cycle (2026-27)</span>
+          </div>
         </div>
 
         <Doodle
@@ -129,130 +128,8 @@ export default async function ChapterDetailPage({ params }: Props) {
         />
       </header>
 
-      {/* ─── CHAPTER TEAM ─── */}
-      <section className="mb-10 sm:mb-14">
-        <div className="flex items-center justify-between mb-6 border-b-2 border-graphite/20 pb-3 gap-2">
-          <div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-black uppercase text-graphite">
-              CHAPTER TEAM &amp; LEADERSHIP
-            </h2>
-            <p className="font-mono text-xs text-olive mt-0.5">The student leads running operations, workshops, and cohorts at {chapter.name}.</p>
-          </div>
-          <span className="font-mono text-xs font-bold text-paper bg-graphite px-3 py-1 rounded-sm shrink-0">
-            LOCAL TEAM
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {chapter.team.map((member, i) => (
-            <div
-              key={member.name}
-              className="bg-paper p-4 rounded-sm border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] hover:border-flame hover:shadow-[5px_5px_0px_0px_rgba(242,100,48,1)] transition-all flex items-center gap-4 group"
-            >
-              <div className="w-10 h-10 rounded-full bg-flame text-paper font-mono font-bold text-xs flex items-center justify-center border border-graphite shrink-0">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <div className="min-w-0">
-                <h3 className="font-mono font-bold text-sm text-graphite truncate group-hover:text-flame transition-colors">
-                  {member.name}
-                </h3>
-                <span className="font-mono text-xs text-olive block">{member.role}</span>
-                {member.tag && (
-                  <span className="font-mono text-[10px] font-bold text-flame bg-flame/10 px-2 py-0.5 rounded border border-flame/30 inline-block mt-0.5">
-                    {member.tag}
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── FACULTY COORDINATOR ─── */}
-      {chapter.facultyCoordinator && (
-        <section className="mb-10 sm:mb-14 bg-graphite text-paper rounded-sm border-4 border-graphite p-5 sm:p-8 shadow-[6px_6px_0px_0px_rgba(242,100,48,1)] sm:shadow-[8px_8px_0px_0px_rgba(242,100,48,1)]">
-          <span className="font-mono text-xs font-bold text-flame uppercase tracking-wider block mb-1.5">
-            FACULTY LEADERSHIP
-          </span>
-          <h2 className="font-mono font-bold text-base sm:text-lg md:text-xl uppercase text-paper mb-4">
-            FACULTY COORDINATOR
-          </h2>
-          <div className="bg-paper/10 border border-paper/20 rounded-sm p-4 sm:p-5 max-w-md">
-            <h3 className="font-mono font-bold text-base text-paper">{chapter.facultyCoordinator.name}</h3>
-            <span className="font-mono text-xs font-bold text-flame block mb-0.5">{chapter.facultyCoordinator.designation}</span>
-            <span className="font-mono text-xs text-paper/70 block">{chapter.facultyCoordinator.department}</span>
-            <span className="font-mono text-[11px] text-paper/50 block mt-1">📍 {chapter.college}</span>
-          </div>
-        </section>
-      )}
-
-      {/* ─── EVENTS RUN HERE ─── */}
-      <section className="mb-10 sm:mb-14">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-black uppercase text-graphite mb-6 border-b-2 border-graphite/20 pb-3">
-          EVENTS &amp; WORKSHOPS CONDUCTED HERE
-        </h2>
-        <div className="space-y-4">
-          {chapter.events.map((evt, i) => (
-            <div
-              key={i}
-              className="bg-paper p-4 sm:p-5 border-2 border-graphite rounded-sm shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] sm:shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
-              <div>
-                <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <span className="font-mono text-xs font-bold text-flame">{evt.date}</span>
-                  <span className="text-olive">•</span>
-                  <span className="font-mono text-xs text-olive font-bold">{evt.headcount} attendees</span>
-                </div>
-                <h3 className="font-mono font-bold text-base text-graphite mb-1">{evt.title}</h3>
-                <p className="font-mono text-xs text-graphite/80 leading-relaxed">{evt.description}</p>
-              </div>
-              <span className="font-mono text-xs font-bold text-paper bg-graphite px-3 py-1.5 rounded-sm shrink-0 self-start md:self-center">
-                COMPLETED
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── PROJECTS BUILT HERE ─── */}
-      <section className="mb-10 sm:mb-14">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-black uppercase text-graphite mb-6 border-b-2 border-graphite/20 pb-3">
-          PROJECTS SHIPPED AT THIS CAMPUS
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {chapter.projects.map((proj, i) => {
-            const projectUrl = proj.url || (proj.slug ? `/projects/${proj.slug}` : "/projects");
-            return (
-              <Link
-                key={i}
-                href={projectUrl}
-                className="group bg-paper p-4 sm:p-5 border-2 border-graphite rounded-sm shadow-[3px_3px_0px_0px_rgba(45,45,52,1)] sm:shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] hover:border-flame hover:shadow-[5px_5px_0px_0px_rgba(242,100,48,1)] transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-wider block mb-1">
-                    PRODUCTION SHIPPED
-                  </span>
-                  <h3 className="font-mono font-bold text-base md:text-lg text-graphite group-hover:text-flame transition-colors mb-2">
-                    {proj.title}
-                  </h3>
-                  <p className="font-mono text-xs text-olive mb-4 leading-relaxed">
-                    {proj.description}
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between border-t border-graphite/20 pt-3 mt-2">
-                  <span className="font-mono text-xs font-bold text-graphite">
-                    Builder: {proj.builder}
-                  </span>
-                  <span className="font-mono font-bold text-xs text-flame group-hover:translate-x-0.5 transition-transform">
-                    Read Case Study →
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
+      {/* ─── CHAPTER INTERACTIVE TABBED SECTIONS (LEADERSHIP | EVENTS | PROJECTS) ─── */}
+      <ChapterViewClient chapter={chapter} />
 
       {/* ─── BOTTOM CTA ─── */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t-4 border-graphite">

@@ -125,7 +125,7 @@ export default async function ChaptersPage() {
                     Lead: {ch.lead.name}
                   </span>
                   <span className="text-[11px] text-olive block">
-                    {ch.stats.eventsCount} Events • {ch.stats.platformRequests ?? "Active"}
+                    {ch.stats.studentsImpacted}+ Students • {ch.district}, Kerala
                   </span>
                 </div>
                 <span className="text-xs sm:text-sm font-bold text-flame group-hover:translate-x-1 transition-transform shrink-0 whitespace-nowrap bg-flame/10 sm:bg-transparent px-2 py-1 sm:p-0 rounded border border-flame/30 sm:border-0">
