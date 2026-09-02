@@ -29,9 +29,7 @@ export default function ForCollegesPage() {
       "@type": "Service",
       "name": "ELEVATES Campus Chapter Partnership & Event Operations",
       "provider": {
-        "@type": "Organization",
-        "name": "ELEVATES Foundation",
-        "url": "https://www.elevates.live",
+        "@id": "https://www.elevates.live/#organization",
       },
       "areaServed": {
         "@type": "State",

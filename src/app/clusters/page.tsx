@@ -2,17 +2,23 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import Doodle from "@/components/doodle";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
-  title: "The Cluster System | ELEVATES Kerala",
+  title: "Clusters | ELEVATES Learning Groups",
   description: "Why Clusters Matter — turning open workshops into committed builders, real student projects, and future leaders.",
   alternates: {
     canonical: "/clusters",
   },
   openGraph: {
-    title: "The Cluster System | ELEVATES Kerala",
+    title: "Clusters | ELEVATES Learning Groups",
     description: "Turning open workshops into committed builders and real software projects.",
     url: "https://www.elevates.live/clusters",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clusters | ELEVATES Learning Groups",
+    description: "Turning open workshops into committed builders and real software projects.",
   },
 };
 
@@ -82,6 +88,12 @@ export default function ClustersPage() {
 
   return (
     <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto selection:bg-flame selection:text-paper relative overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Clusters", path: "/clusters" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
