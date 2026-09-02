@@ -99,7 +99,7 @@ export default function ForCollegesPDFPage() {
                 FACULTY &amp; INSTITUTIONAL GUIDE
               </span>
               <span className="font-mono text-[11px] text-paper/60 block">
-                Kerala Student Tech Network · 2026–27
+                Kerala Student Tech Network · 2026-27
               </span>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function ForCollegesPDFPage() {
           <div className="border-3 border-graphite p-6 bg-paper shadow-[5px_5px_0px_0px_rgba(45,45,52,1)] mb-6 relative">
             <div className="absolute -top-3 left-6 w-24 h-4 bg-flame rotate-[-1.5deg] border border-graphite/40" />
             <h1 className="text-xl sm:text-3xl font-black uppercase text-graphite leading-tight mb-2">
-              BRING <span className="text-flame">ELEVATES</span> TO YOUR CAMPUS —<br className="hidden sm:inline" />
+              BRING <span className="text-flame">ELEVATES</span> TO YOUR CAMPUS:<br className="hidden sm:inline" />
               ZERO COST. REAL PROOF. FULLY DOCUMENTED.
             </h1>
             <p className="font-mono text-xs sm:text-sm text-olive font-semibold">
@@ -119,15 +119,15 @@ export default function ForCollegesPDFPage() {
           {/* Key Proof Stats Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
             <div className="bg-paper p-3.5 border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]">
-              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">17+</span>
+              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">19+</span>
               <span className="font-mono text-[10px] text-olive font-bold uppercase block mt-1">
                 Events Delivered (Chapter 01)
               </span>
             </div>
             <div className="bg-paper p-3.5 border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]">
-              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">400K+</span>
+              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">800+</span>
               <span className="font-mono text-[10px] text-olive font-bold uppercase block mt-1">
-                Platform Requests (24h)
+                Students Impacted
               </span>
             </div>
             <div className="bg-paper p-3.5 border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]">
@@ -137,9 +137,9 @@ export default function ForCollegesPDFPage() {
               </span>
             </div>
             <div className="bg-paper p-3.5 border-2 border-graphite shadow-[3px_3px_0px_0px_rgba(45,45,52,1)]">
-              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">120</span>
+              <span className="font-black text-xl sm:text-2xl text-flame block leading-none">100%</span>
               <span className="font-mono text-[10px] text-olive font-bold uppercase block mt-1">
-                Launch Seats (2 Hours)
+                Student-Run Continuity
               </span>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function ForCollegesPDFPage() {
             {/* Left Box: §1 What ELEVATES Is */}
             <div className="bg-paper border-3 border-graphite p-5 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
               <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-widest block mb-1">
-                §1 — WHAT ELEVATES IS
+                §1 · WHAT ELEVATES IS
               </span>
               <h2 className="font-mono font-black text-base uppercase text-graphite mb-3">
                 WHAT YOU GET
@@ -181,7 +181,7 @@ export default function ForCollegesPDFPage() {
             {/* Right Box: §2 Compliance & Accreditation */}
             <div className="bg-paper border-3 border-graphite p-5 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
               <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-widest block mb-1">
-                §2 — ACCREDITATION MAPPING
+                §2 · ACCREDITATION MAPPING
               </span>
               <h2 className="font-mono font-black text-base uppercase text-graphite mb-3">
                 UNIVERSITY COMPLIANCE
@@ -209,14 +209,14 @@ export default function ForCollegesPDFPage() {
             {/* Left Box: §3 College Contribution & Budget */}
             <div className="bg-paper border-3 border-graphite p-5 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
               <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-widest block mb-1">
-                §3 — COLLEGE CONTRIBUTION
+                §3 · COLLEGE CONTRIBUTION
               </span>
               <h2 className="font-mono font-black text-base uppercase text-graphite mb-3">
                 WHAT YOU PROVIDE
               </h2>
               <ol className="space-y-1.5 text-xs text-graphite/90 mb-3">
                 <li>1. Venue access (seminar hall / lab) for workshops.</li>
-                <li>2. One named Faculty Coordinator (1–2 hrs/month).</li>
+                <li>2. One named Faculty Coordinator (1-2 hrs/month).</li>
                 <li>3. Co-branding permission alongside institution name.</li>
                 <li>4. Operational expenses paid from existing heads:</li>
               </ol>
@@ -240,7 +240,7 @@ export default function ForCollegesPDFPage() {
             {/* Right Box: §4 Zero Obligations & Governance */}
             <div className="bg-paper border-3 border-graphite p-5 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)]">
               <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-widest block mb-1">
-                §4 — ZERO OBLIGATIONS &amp; RISK
+                §4 · ZERO OBLIGATIONS &amp; RISK
               </span>
               <h2 className="font-mono font-black text-base uppercase text-graphite mb-3">
                 NO ASKS &amp; GOVERNANCE
@@ -270,7 +270,7 @@ export default function ForCollegesPDFPage() {
           {/* MOU Terms Summary */}
           <div className="bg-paper border-3 border-graphite p-5 shadow-[4px_4px_0px_0px_rgba(45,45,52,1)] mb-6">
             <span className="font-mono text-[10px] font-bold text-flame uppercase tracking-widest block mb-1">
-              §5 — MOU TERMS SUMMARY
+              §5 · MOU TERMS SUMMARY
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
               <div>
@@ -308,31 +308,46 @@ export default function ForCollegesPDFPage() {
       {/* ─── PRINT CSS STYLES ─── */}
       <style>{`
         @media print {
-          html, body, main, .pdf-page-wrapper, .printable-doc, .printable-card {
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+
+          html, body {
             background: #f8fff4 !important;
             color: #2d2d34 !important;
             margin: 0 !important;
             padding: 0 !important;
             height: auto !important;
-            min-height: 0 !important;
-            max-height: none !important;
+            min-height: 100% !important;
             overflow: visible !important;
             position: static !important;
-            transform: none !important;
-            box-shadow: none !important;
-            float: none !important;
+          }
+
+          body::before,
+          body::after {
+            display: none !important;
           }
 
           .no-print,
           nav,
-          header,
           footer,
           .navbar,
           [data-navbar],
-          [class*="CustomCursor"],
-          [class*="cursor-none"] {
+          .custom-cursor {
             display: none !important;
             visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
+            overflow: hidden !important;
+          }
+
+          .pdf-page-wrapper {
+            background: #f8fff4 !important;
+            color: #2d2d34 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            overflow: visible !important;
           }
 
           .printable-doc {
@@ -341,13 +356,16 @@ export default function ForCollegesPDFPage() {
             max-width: 100% !important;
             margin: 0 !important;
             padding: 0 !important;
+            overflow: visible !important;
           }
 
           .printable-card {
             border: 2px solid #2d2d34 !important;
             box-shadow: none !important;
-            padding: 12px !important;
+            padding: 12px 16px !important;
             background: #f8fff4 !important;
+            margin: 0 auto !important;
+            max-width: 100% !important;
           }
 
           @page {

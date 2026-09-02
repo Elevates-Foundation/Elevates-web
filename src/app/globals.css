@@ -112,6 +112,11 @@ html.lenis body {
 
 /* Print Overrides to prevent blank PDF previews */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   html, body {
     background-color: #f8fff4 !important;
     color: #2d2d34 !important;
@@ -121,7 +126,12 @@ html.lenis body {
     position: static !important;
   }
 
-  body::before {
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  .custom-cursor {
     display: none !important;
   }
 }
