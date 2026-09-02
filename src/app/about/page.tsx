@@ -2,71 +2,39 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import Doodle from "@/components/doodle";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-jsonld";
+import {
+  ELEVATES_CANONICAL_DEFINITION,
+  organizationRef,
+  ELEVATES_BASE_URL,
+} from "@/lib/schema/organization";
 
 export const metadata: Metadata = {
-  title: "About Us | ELEVATES Kerala",
+  title: "About ELEVATES | Student Innovation Ecosystem in Kerala",
   description:
-    "We started because a chapter application window was closed. ELEVATES is a student-run tech community in Kerala that finds skilled but overlooked students, helps them build real projects, and makes sure the work gets seen.",
+    ELEVATES_CANONICAL_DEFINITION,
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Us | ELEVATES Kerala",
+    title: "About ELEVATES | Student Innovation Ecosystem in Kerala",
     description:
       "We started because a chapter application window was closed. ELEVATES finds skilled but silent students, helps them build real projects, and makes sure the work gets seen.",
     url: "https://www.elevates.live/about",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About ELEVATES | Student Innovation Ecosystem in Kerala",
+    description:
+      "We started because a chapter application window was closed. ELEVATES finds skilled but silent students, helps them build real projects, and makes sure the work gets seen.",
+  },
 };
 
 export default function AboutPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "ELEVATES Foundation",
-    "url": "https://www.elevates.live",
-    "logo": "https://www.elevates.live/icon.png",
-    "foundingDate": "2025-09",
-    "description": "Student-driven tech community in Kerala finding skilled but overlooked students, giving them real work, and making sure the work is visible.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cherukulam",
-      "addressLocality": "Manjeri",
-      "addressRegion": "Malappuram, Kerala",
-      "postalCode": "676122",
-      "addressCountry": "IN",
-    },
-    "areaServed": "Kerala, India",
-    "founder": [
-      {
-        "@type": "Person",
-        "name": "Sarhan Qadir KVM",
-        "jobTitle": "Founder",
-        "sameAs": "https://www.linkedin.com/in/sarhanqadir/",
-      },
-    ],
-    "employee": [
-      {
-        "@type": "Person",
-        "name": "Jasira KT",
-        "jobTitle": "Faculty Head, CSE, Eranad Knowledge City",
-      },
-      {
-        "@type": "Person",
-        "name": "Anu K Soman",
-        "jobTitle": "HOD, CSE, Eranad Knowledge City",
-      },
-    ],
-    "sameAs": [
-      "https://github.com/Elevates-Foundation",
-      "https://www.linkedin.com/company/elevates-in",
-      "https://www.instagram.com/elevates.club/",
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-paper text-graphite pt-36 md:pt-40 pb-24 px-6 md:px-12 max-w-5xl mx-auto selection:bg-flame selection:text-paper">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", path: "/" },
+        { name: "About ELEVATES", path: "/about" },
+      ]} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-10 font-mono text-xs text-olive flex items-center gap-2">
@@ -92,7 +60,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="font-hand text-xl md:text-2xl text-olive max-w-2xl leading-relaxed mb-3">
-          ELEVATES is a student-built tech community in Kerala for the people who are already good and nobody knows it yet.
+          {ELEVATES_CANONICAL_DEFINITION}
         </p>
         <p className="font-mono text-xs text-olive/80">
           Founded September 2025 in Kerala. Open to every campus across the state.
